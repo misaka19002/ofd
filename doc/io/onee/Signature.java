@@ -1,32 +1,25 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlID;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * <p>anonymous complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -116,8 +109,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -135,11 +128,11 @@ public class Signature {
 
     /**
      * 获取signedInfo属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Signature.SignedInfo }
-     *     
+     *
      */
     public Signature.SignedInfo getSignedInfo() {
         return signedInfo;
@@ -147,11 +140,11 @@ public class Signature {
 
     /**
      * 设置signedInfo属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Signature.SignedInfo }
-     *     
+     *
      */
     public void setSignedInfo(Signature.SignedInfo value) {
         this.signedInfo = value;
@@ -159,11 +152,11 @@ public class Signature {
 
     /**
      * 获取signedValue属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getSignedValue() {
         return signedValue;
@@ -171,11 +164,11 @@ public class Signature {
 
     /**
      * 设置signedValue属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setSignedValue(String value) {
         this.signedValue = value;
@@ -184,9 +177,9 @@ public class Signature {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -265,8 +258,8 @@ public class Signature {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -294,11 +287,11 @@ public class Signature {
 
         /**
          * 获取provider属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Signature.SignedInfo.Provider }
-         *     
+         *
          */
         public Signature.SignedInfo.Provider getProvider() {
             return provider;
@@ -306,11 +299,11 @@ public class Signature {
 
         /**
          * 设置provider属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Signature.SignedInfo.Provider }
-         *     
+         *
          */
         public void setProvider(Signature.SignedInfo.Provider value) {
             this.provider = value;
@@ -318,11 +311,11 @@ public class Signature {
 
         /**
          * 获取signatureMethod属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getSignatureMethod() {
             return signatureMethod;
@@ -330,11 +323,11 @@ public class Signature {
 
         /**
          * 设置signatureMethod属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setSignatureMethod(String value) {
             this.signatureMethod = value;
@@ -342,11 +335,11 @@ public class Signature {
 
         /**
          * 获取signatureDateTime属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getSignatureDateTime() {
             return signatureDateTime;
@@ -354,11 +347,11 @@ public class Signature {
 
         /**
          * 设置signatureDateTime属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setSignatureDateTime(String value) {
             this.signatureDateTime = value;
@@ -366,11 +359,11 @@ public class Signature {
 
         /**
          * 获取references属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Signature.SignedInfo.References }
-         *     
+         *
          */
         public Signature.SignedInfo.References getReferences() {
             return references;
@@ -378,11 +371,11 @@ public class Signature {
 
         /**
          * 设置references属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Signature.SignedInfo.References }
-         *     
+         *
          */
         public void setReferences(Signature.SignedInfo.References value) {
             this.references = value;
@@ -390,25 +383,25 @@ public class Signature {
 
         /**
          * Gets the value of the stampAnnot property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the stampAnnot property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getStampAnnot().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Signature.SignedInfo.StampAnnot }
-         * 
-         * 
+         *
+         *
          */
         public List<Signature.SignedInfo.StampAnnot> getStampAnnot() {
             if (stampAnnot == null) {
@@ -419,11 +412,11 @@ public class Signature {
 
         /**
          * 获取seal属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Signature.SignedInfo.Seal }
-         *     
+         *
          */
         public Signature.SignedInfo.Seal getSeal() {
             return seal;
@@ -431,11 +424,11 @@ public class Signature {
 
         /**
          * 设置seal属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Signature.SignedInfo.Seal }
-         *     
+         *
          */
         public void setSeal(Signature.SignedInfo.Seal value) {
             this.seal = value;
@@ -444,9 +437,9 @@ public class Signature {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -458,8 +451,8 @@ public class Signature {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -474,11 +467,11 @@ public class Signature {
 
             /**
              * 获取providerName属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getProviderName() {
                 return providerName;
@@ -486,11 +479,11 @@ public class Signature {
 
             /**
              * 设置providerName属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setProviderName(String value) {
                 this.providerName = value;
@@ -498,11 +491,11 @@ public class Signature {
 
             /**
              * 获取version属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getVersion() {
                 return version;
@@ -510,11 +503,11 @@ public class Signature {
 
             /**
              * 设置version属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setVersion(String value) {
                 this.version = value;
@@ -522,11 +515,11 @@ public class Signature {
 
             /**
              * 获取company属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getCompany() {
                 return company;
@@ -534,11 +527,11 @@ public class Signature {
 
             /**
              * 设置company属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setCompany(String value) {
                 this.company = value;
@@ -549,9 +542,9 @@ public class Signature {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -582,8 +575,8 @@ public class Signature {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -598,25 +591,25 @@ public class Signature {
 
             /**
              * Gets the value of the reference property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the reference property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getReference().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link Signature.SignedInfo.References.Reference }
-             * 
-             * 
+             *
+             *
              */
             public List<Signature.SignedInfo.References.Reference> getReference() {
                 if (reference == null) {
@@ -627,11 +620,11 @@ public class Signature {
 
             /**
              * 获取checkMethod属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getCheckMethod() {
                 if (checkMethod == null) {
@@ -643,11 +636,11 @@ public class Signature {
 
             /**
              * 设置checkMethod属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setCheckMethod(String value) {
                 this.checkMethod = value;
@@ -656,9 +649,9 @@ public class Signature {
 
             /**
              * <p>anonymous complex type的 Java 类。
-             * 
+             *
              * <p>以下模式片段指定包含在此类中的预期内容。
-             * 
+             *
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -671,8 +664,8 @@ public class Signature {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
+             *
+             *
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -687,7 +680,7 @@ public class Signature {
 
                 /**
                  * 获取checkValue属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     byte[]
@@ -698,7 +691,7 @@ public class Signature {
 
                 /**
                  * 设置checkValue属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     byte[]
@@ -709,11 +702,11 @@ public class Signature {
 
                 /**
                  * 获取fileRef属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public String getFileRef() {
                     return fileRef;
@@ -721,11 +714,11 @@ public class Signature {
 
                 /**
                  * 设置fileRef属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public void setFileRef(String value) {
                     this.fileRef = value;
@@ -738,9 +731,9 @@ public class Signature {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -752,8 +745,8 @@ public class Signature {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -767,11 +760,11 @@ public class Signature {
 
             /**
              * 获取baseLoc属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getBaseLoc() {
                 return baseLoc;
@@ -779,11 +772,11 @@ public class Signature {
 
             /**
              * 设置baseLoc属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setBaseLoc(String value) {
                 this.baseLoc = value;
@@ -794,9 +787,9 @@ public class Signature {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -809,8 +802,8 @@ public class Signature {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -830,11 +823,11 @@ public class Signature {
 
             /**
              * 获取id属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getID() {
                 return id;
@@ -842,11 +835,11 @@ public class Signature {
 
             /**
              * 设置id属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setID(String value) {
                 this.id = value;
@@ -854,7 +847,7 @@ public class Signature {
 
             /**
              * 获取pageRef属性的值。
-             * 
+             *
              */
             public long getPageRef() {
                 return pageRef;
@@ -862,7 +855,7 @@ public class Signature {
 
             /**
              * 设置pageRef属性的值。
-             * 
+             *
              */
             public void setPageRef(long value) {
                 this.pageRef = value;
@@ -870,11 +863,11 @@ public class Signature {
 
             /**
              * 获取boundary属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getBoundary() {
                 return boundary;
@@ -882,11 +875,11 @@ public class Signature {
 
             /**
              * 设置boundary属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setBoundary(String value) {
                 this.boundary = value;
@@ -894,11 +887,11 @@ public class Signature {
 
             /**
              * 获取clip属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getClip() {
                 return clip;
@@ -906,11 +899,11 @@ public class Signature {
 
             /**
              * 设置clip属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setClip(String value) {
                 this.clip = value;

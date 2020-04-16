@@ -1,31 +1,24 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
+import javax.xml.datatype.XMLGregorianCalendar;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>anonymous complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -95,8 +88,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -110,25 +103,25 @@ public class PageAnnot {
 
     /**
      * Gets the value of the annot property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the annot property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAnnot().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link PageAnnot.Annot }
-     * 
-     * 
+     *
+     *
      */
     public List<PageAnnot.Annot> getAnnot() {
         if (annot == null) {
@@ -140,9 +133,9 @@ public class PageAnnot {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -202,8 +195,8 @@ public class PageAnnot {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -243,11 +236,11 @@ public class PageAnnot {
 
         /**
          * 获取remark属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getRemark() {
             return remark;
@@ -255,11 +248,11 @@ public class PageAnnot {
 
         /**
          * 设置remark属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setRemark(String value) {
             this.remark = value;
@@ -267,11 +260,11 @@ public class PageAnnot {
 
         /**
          * 获取parameters属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link PageAnnot.Annot.Parameters }
-         *     
+         *
          */
         public PageAnnot.Annot.Parameters getParameters() {
             return parameters;
@@ -279,11 +272,11 @@ public class PageAnnot {
 
         /**
          * 设置parameters属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link PageAnnot.Annot.Parameters }
-         *     
+         *
          */
         public void setParameters(PageAnnot.Annot.Parameters value) {
             this.parameters = value;
@@ -291,11 +284,11 @@ public class PageAnnot {
 
         /**
          * 获取appearance属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link PageAnnot.Annot.Appearance }
-         *     
+         *
          */
         public PageAnnot.Annot.Appearance getAppearance() {
             return appearance;
@@ -303,11 +296,11 @@ public class PageAnnot {
 
         /**
          * 设置appearance属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link PageAnnot.Annot.Appearance }
-         *     
+         *
          */
         public void setAppearance(PageAnnot.Annot.Appearance value) {
             this.appearance = value;
@@ -315,7 +308,7 @@ public class PageAnnot {
 
         /**
          * 获取id属性的值。
-         * 
+         *
          */
         public long getID() {
             return id;
@@ -323,7 +316,7 @@ public class PageAnnot {
 
         /**
          * 设置id属性的值。
-         * 
+         *
          */
         public void setID(long value) {
             this.id = value;
@@ -331,11 +324,11 @@ public class PageAnnot {
 
         /**
          * 获取type属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getType() {
             return type;
@@ -343,11 +336,11 @@ public class PageAnnot {
 
         /**
          * 设置type属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setType(String value) {
             this.type = value;
@@ -355,11 +348,11 @@ public class PageAnnot {
 
         /**
          * 获取creator属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getCreator() {
             return creator;
@@ -367,11 +360,11 @@ public class PageAnnot {
 
         /**
          * 设置creator属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setCreator(String value) {
             this.creator = value;
@@ -379,11 +372,11 @@ public class PageAnnot {
 
         /**
          * 获取lastModDate属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public XMLGregorianCalendar getLastModDate() {
             return lastModDate;
@@ -391,11 +384,11 @@ public class PageAnnot {
 
         /**
          * 设置lastModDate属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public void setLastModDate(XMLGregorianCalendar value) {
             this.lastModDate = value;
@@ -403,11 +396,11 @@ public class PageAnnot {
 
         /**
          * 获取visible属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isVisible() {
             if (visible == null) {
@@ -419,11 +412,11 @@ public class PageAnnot {
 
         /**
          * 设置visible属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setVisible(Boolean value) {
             this.visible = value;
@@ -431,11 +424,11 @@ public class PageAnnot {
 
         /**
          * 获取subtype属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getSubtype() {
             return subtype;
@@ -443,11 +436,11 @@ public class PageAnnot {
 
         /**
          * 设置subtype属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setSubtype(String value) {
             this.subtype = value;
@@ -455,11 +448,11 @@ public class PageAnnot {
 
         /**
          * 获取print属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isPrint() {
             if (print == null) {
@@ -471,11 +464,11 @@ public class PageAnnot {
 
         /**
          * 设置print属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setPrint(Boolean value) {
             this.print = value;
@@ -483,11 +476,11 @@ public class PageAnnot {
 
         /**
          * 获取noZoom属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isNoZoom() {
             if (noZoom == null) {
@@ -499,11 +492,11 @@ public class PageAnnot {
 
         /**
          * 设置noZoom属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setNoZoom(Boolean value) {
             this.noZoom = value;
@@ -511,11 +504,11 @@ public class PageAnnot {
 
         /**
          * 获取noRotate属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isNoRotate() {
             if (noRotate == null) {
@@ -527,11 +520,11 @@ public class PageAnnot {
 
         /**
          * 设置noRotate属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setNoRotate(Boolean value) {
             this.noRotate = value;
@@ -539,11 +532,11 @@ public class PageAnnot {
 
         /**
          * 获取readOnly属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isReadOnly() {
             if (readOnly == null) {
@@ -555,11 +548,11 @@ public class PageAnnot {
 
         /**
          * 设置readOnly属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setReadOnly(Boolean value) {
             this.readOnly = value;
@@ -568,9 +561,9 @@ public class PageAnnot {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -580,8 +573,8 @@ public class PageAnnot {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -594,11 +587,11 @@ public class PageAnnot {
 
             /**
              * 获取boundary属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getBoundary() {
                 return boundary;
@@ -606,11 +599,11 @@ public class PageAnnot {
 
             /**
              * 设置boundary属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setBoundary(String value) {
                 this.boundary = value;
@@ -621,9 +614,9 @@ public class PageAnnot {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -643,8 +636,8 @@ public class PageAnnot {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -657,25 +650,25 @@ public class PageAnnot {
 
             /**
              * Gets the value of the parameter property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the parameter property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getParameter().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link PageAnnot.Annot.Parameters.Parameter }
-             * 
-             * 
+             *
+             *
              */
             public List<PageAnnot.Annot.Parameters.Parameter> getParameter() {
                 if (parameter == null) {
@@ -687,9 +680,9 @@ public class PageAnnot {
 
             /**
              * <p>anonymous complex type的 Java 类。
-             * 
+             *
              * <p>以下模式片段指定包含在此类中的预期内容。
-             * 
+             *
              * <pre>
              * &lt;complexType>
              *   &lt;simpleContent>
@@ -699,8 +692,8 @@ public class PageAnnot {
              *   &lt;/simpleContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
+             *
+             *
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "", propOrder = {
@@ -715,11 +708,11 @@ public class PageAnnot {
 
                 /**
                  * 获取value属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public String getValue() {
                     return value;
@@ -727,11 +720,11 @@ public class PageAnnot {
 
                 /**
                  * 设置value属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public void setValue(String value) {
                     this.value = value;
@@ -739,11 +732,11 @@ public class PageAnnot {
 
                 /**
                  * 获取name属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public String getName() {
                     return name;
@@ -751,11 +744,11 @@ public class PageAnnot {
 
                 /**
                  * 设置name属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public void setName(String value) {
                     this.name = value;

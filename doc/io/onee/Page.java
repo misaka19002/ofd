@@ -1,29 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>anonymous complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -83,8 +77,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -111,25 +105,25 @@ public class Page {
 
     /**
      * Gets the value of the template property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the template property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getTemplate().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link Page.Template }
-     * 
-     * 
+     *
+     *
      */
     public List<Page.Template> getTemplate() {
         if (template == null) {
@@ -140,25 +134,25 @@ public class Page {
 
     /**
      * Gets the value of the pageRes property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the pageRes property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getPageRes().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link String }
-     * 
-     * 
+     *
+     *
      */
     public List<String> getPageRes() {
         if (pageRes == null) {
@@ -169,11 +163,11 @@ public class Page {
 
     /**
      * 获取area属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTPageArea }
-     *     
+     *
      */
     public CTPageArea getArea() {
         return area;
@@ -181,11 +175,11 @@ public class Page {
 
     /**
      * 设置area属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTPageArea }
-     *     
+     *
      */
     public void setArea(CTPageArea value) {
         this.area = value;
@@ -193,11 +187,11 @@ public class Page {
 
     /**
      * 获取content属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Page.Content }
-     *     
+     *
      */
     public Page.Content getContent() {
         return content;
@@ -205,11 +199,11 @@ public class Page {
 
     /**
      * 设置content属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Page.Content }
-     *     
+     *
      */
     public void setContent(Page.Content value) {
         this.content = value;
@@ -217,11 +211,11 @@ public class Page {
 
     /**
      * 获取actions属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Page.Actions }
-     *     
+     *
      */
     public Page.Actions getActions() {
         return actions;
@@ -229,11 +223,11 @@ public class Page {
 
     /**
      * 设置actions属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Page.Actions }
-     *     
+     *
      */
     public void setActions(Page.Actions value) {
         this.actions = value;
@@ -242,9 +236,9 @@ public class Page {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -256,8 +250,8 @@ public class Page {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -270,25 +264,25 @@ public class Page {
 
         /**
          * Gets the value of the action property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the action property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAction().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link CTAction }
-         * 
-         * 
+         *
+         *
          */
         public List<CTAction> getAction() {
             if (action == null) {
@@ -302,9 +296,9 @@ public class Page {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -324,8 +318,8 @@ public class Page {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -338,25 +332,25 @@ public class Page {
 
         /**
          * Gets the value of the layer property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the layer property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getLayer().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link Page.Content.Layer }
-         * 
-         * 
+         *
+         *
          */
         public List<Page.Content.Layer> getLayer() {
             if (layer == null) {
@@ -368,9 +362,9 @@ public class Page {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -380,8 +374,8 @@ public class Page {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -394,7 +388,7 @@ public class Page {
 
             /**
              * 获取id属性的值。
-             * 
+             *
              */
             public long getID() {
                 return id;
@@ -402,7 +396,7 @@ public class Page {
 
             /**
              * 设置id属性的值。
-             * 
+             *
              */
             public void setID(long value) {
                 this.id = value;
@@ -415,9 +409,9 @@ public class Page {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -435,8 +429,8 @@ public class Page {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -449,7 +443,7 @@ public class Page {
 
         /**
          * 获取templateID属性的值。
-         * 
+         *
          */
         public long getTemplateID() {
             return templateID;
@@ -457,7 +451,7 @@ public class Page {
 
         /**
          * 设置templateID属性的值。
-         * 
+         *
          */
         public void setTemplateID(long value) {
             this.templateID = value;
@@ -465,11 +459,11 @@ public class Page {
 
         /**
          * 获取zOrder属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getZOrder() {
             if (zOrder == null) {
@@ -481,11 +475,11 @@ public class Page {
 
         /**
          * 设置zOrder属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setZOrder(String value) {
             this.zOrder = value;

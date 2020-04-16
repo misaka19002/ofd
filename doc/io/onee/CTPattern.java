@@ -1,25 +1,21 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>CT_Pattern complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Pattern">
  *   &lt;complexContent>
@@ -62,8 +58,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Pattern", propOrder = {
@@ -90,11 +86,11 @@ public class CTPattern {
 
     /**
      * 获取cellContent属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTPattern.CellContent }
-     *     
+     *
      */
     public CTPattern.CellContent getCellContent() {
         return cellContent;
@@ -102,11 +98,11 @@ public class CTPattern {
 
     /**
      * 设置cellContent属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTPattern.CellContent }
-     *     
+     *
      */
     public void setCellContent(CTPattern.CellContent value) {
         this.cellContent = value;
@@ -114,7 +110,7 @@ public class CTPattern {
 
     /**
      * 获取width属性的值。
-     * 
+     *
      */
     public double getWidth() {
         return width;
@@ -122,7 +118,7 @@ public class CTPattern {
 
     /**
      * 设置width属性的值。
-     * 
+     *
      */
     public void setWidth(double value) {
         this.width = value;
@@ -130,7 +126,7 @@ public class CTPattern {
 
     /**
      * 获取height属性的值。
-     * 
+     *
      */
     public double getHeight() {
         return height;
@@ -138,7 +134,7 @@ public class CTPattern {
 
     /**
      * 设置height属性的值。
-     * 
+     *
      */
     public void setHeight(double value) {
         this.height = value;
@@ -146,11 +142,11 @@ public class CTPattern {
 
     /**
      * 获取xStep属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public Double getXStep() {
         return xStep;
@@ -158,11 +154,11 @@ public class CTPattern {
 
     /**
      * 设置xStep属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setXStep(Double value) {
         this.xStep = value;
@@ -170,11 +166,11 @@ public class CTPattern {
 
     /**
      * 获取yStep属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public Double getYStep() {
         return yStep;
@@ -182,11 +178,11 @@ public class CTPattern {
 
     /**
      * 设置yStep属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setYStep(Double value) {
         this.yStep = value;
@@ -194,11 +190,11 @@ public class CTPattern {
 
     /**
      * 获取reflectMethod属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getReflectMethod() {
         if (reflectMethod == null) {
@@ -210,11 +206,11 @@ public class CTPattern {
 
     /**
      * 设置reflectMethod属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setReflectMethod(String value) {
         this.reflectMethod = value;
@@ -222,11 +218,11 @@ public class CTPattern {
 
     /**
      * 获取relativeTo属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getRelativeTo() {
         if (relativeTo == null) {
@@ -238,11 +234,11 @@ public class CTPattern {
 
     /**
      * 设置relativeTo属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setRelativeTo(String value) {
         this.relativeTo = value;
@@ -250,11 +246,11 @@ public class CTPattern {
 
     /**
      * 获取ctm属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCTM() {
         return ctm;
@@ -262,11 +258,11 @@ public class CTPattern {
 
     /**
      * 设置ctm属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCTM(String value) {
         this.ctm = value;
@@ -275,9 +271,9 @@ public class CTPattern {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -287,8 +283,8 @@ public class CTPattern {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -301,11 +297,11 @@ public class CTPattern {
 
         /**
          * 获取thumbnail属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Long }
-         *     
+         *
          */
         public Long getThumbnail() {
             return thumbnail;
@@ -313,11 +309,11 @@ public class CTPattern {
 
         /**
          * 设置thumbnail属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Long }
-         *     
+         *
          */
         public void setThumbnail(Long value) {
             this.thumbnail = value;

@@ -1,28 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>CT_GraphicUnit complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_GraphicUnit">
  *   &lt;complexContent>
@@ -83,8 +78,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_GraphicUnit", propOrder = {
@@ -130,11 +125,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取actions属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTGraphicUnit.Actions }
-     *     
+     *
      */
     public CTGraphicUnit.Actions getActions() {
         return actions;
@@ -142,11 +137,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置actions属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTGraphicUnit.Actions }
-     *     
+     *
      */
     public void setActions(CTGraphicUnit.Actions value) {
         this.actions = value;
@@ -154,11 +149,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取clips属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTGraphicUnit.Clips }
-     *     
+     *
      */
     public CTGraphicUnit.Clips getClips() {
         return clips;
@@ -166,11 +161,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置clips属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTGraphicUnit.Clips }
-     *     
+     *
      */
     public void setClips(CTGraphicUnit.Clips value) {
         this.clips = value;
@@ -178,11 +173,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取boundary属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getBoundary() {
         return boundary;
@@ -190,11 +185,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置boundary属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setBoundary(String value) {
         this.boundary = value;
@@ -202,11 +197,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取name属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getName() {
         return name;
@@ -214,11 +209,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置name属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setName(String value) {
         this.name = value;
@@ -226,11 +221,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取visible属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isVisible() {
         if (visible == null) {
@@ -242,11 +237,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置visible属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setVisible(Boolean value) {
         this.visible = value;
@@ -254,11 +249,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取ctm属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCTM() {
         return ctm;
@@ -266,11 +261,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置ctm属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCTM(String value) {
         this.ctm = value;
@@ -278,11 +273,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取drawParam属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Long }
-     *     
+     *
      */
     public Long getDrawParam() {
         return drawParam;
@@ -290,11 +285,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置drawParam属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Long }
-     *     
+     *
      */
     public void setDrawParam(Long value) {
         this.drawParam = value;
@@ -302,11 +297,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取lineWidth属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getLineWidth() {
         if (lineWidth == null) {
@@ -318,11 +313,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置lineWidth属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setLineWidth(Double value) {
         this.lineWidth = value;
@@ -330,11 +325,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取cap属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCap() {
         if (cap == null) {
@@ -346,11 +341,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置cap属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCap(String value) {
         this.cap = value;
@@ -358,11 +353,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取join属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getJoin() {
         if (join == null) {
@@ -374,11 +369,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置join属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setJoin(String value) {
         this.join = value;
@@ -386,11 +381,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取miterLimit属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getMiterLimit() {
         if (miterLimit == null) {
@@ -402,11 +397,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置miterLimit属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setMiterLimit(Double value) {
         this.miterLimit = value;
@@ -414,11 +409,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取dashOffset属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getDashOffset() {
         if (dashOffset == null) {
@@ -430,11 +425,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置dashOffset属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setDashOffset(Double value) {
         this.dashOffset = value;
@@ -442,11 +437,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取dashPattern属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDashPattern() {
         return dashPattern;
@@ -454,11 +449,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置dashPattern属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDashPattern(String value) {
         this.dashPattern = value;
@@ -466,11 +461,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 获取alpha属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getAlpha() {
         if (alpha == null) {
@@ -482,11 +477,11 @@ public abstract class CTGraphicUnit {
 
     /**
      * 设置alpha属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setAlpha(Integer value) {
         this.alpha = value;
@@ -495,9 +490,9 @@ public abstract class CTGraphicUnit {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -509,8 +504,8 @@ public abstract class CTGraphicUnit {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -523,25 +518,25 @@ public abstract class CTGraphicUnit {
 
         /**
          * Gets the value of the action property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the action property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getAction().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link CTAction }
-         * 
-         * 
+         *
+         *
          */
         public List<CTAction> getAction() {
             if (action == null) {
@@ -555,9 +550,9 @@ public abstract class CTGraphicUnit {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -569,8 +564,8 @@ public abstract class CTGraphicUnit {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -583,25 +578,25 @@ public abstract class CTGraphicUnit {
 
         /**
          * Gets the value of the clip property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the clip property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getClip().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link CTClip }
-         * 
-         * 
+         *
+         *
          */
         public List<CTClip> getClip() {
             if (clip == null) {

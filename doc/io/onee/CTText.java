@@ -1,30 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.XmlValue;
 
 
 /**
  * <p>CT_Text complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Text">
  *   &lt;complexContent>
@@ -77,8 +70,8 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Text", propOrder = {
@@ -123,11 +116,11 @@ public class CTText
 
     /**
      * 获取fillColor属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTColor }
-     *     
+     *
      */
     public CTColor getFillColor() {
         return fillColor;
@@ -135,11 +128,11 @@ public class CTText
 
     /**
      * 设置fillColor属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTColor }
-     *     
+     *
      */
     public void setFillColor(CTColor value) {
         this.fillColor = value;
@@ -147,11 +140,11 @@ public class CTText
 
     /**
      * 获取strokeColor属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTColor }
-     *     
+     *
      */
     public CTColor getStrokeColor() {
         return strokeColor;
@@ -159,11 +152,11 @@ public class CTText
 
     /**
      * 设置strokeColor属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTColor }
-     *     
+     *
      */
     public void setStrokeColor(CTColor value) {
         this.strokeColor = value;
@@ -171,26 +164,26 @@ public class CTText
 
     /**
      * Gets the value of the cgTransformAndTextCode property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the cgTransformAndTextCode property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getCGTransformAndTextCode().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CTCGTransform }
      * {@link CTText.TextCode }
-     * 
-     * 
+     *
+     *
      */
     public List<Object> getCGTransformAndTextCode() {
         if (cgTransformAndTextCode == null) {
@@ -201,7 +194,7 @@ public class CTText
 
     /**
      * 获取font属性的值。
-     * 
+     *
      */
     public long getFont() {
         return font;
@@ -209,7 +202,7 @@ public class CTText
 
     /**
      * 设置font属性的值。
-     * 
+     *
      */
     public void setFont(long value) {
         this.font = value;
@@ -217,7 +210,7 @@ public class CTText
 
     /**
      * 获取size属性的值。
-     * 
+     *
      */
     public double getSize() {
         return size;
@@ -225,7 +218,7 @@ public class CTText
 
     /**
      * 设置size属性的值。
-     * 
+     *
      */
     public void setSize(double value) {
         this.size = value;
@@ -233,11 +226,11 @@ public class CTText
 
     /**
      * 获取stroke属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isStroke() {
         if (stroke == null) {
@@ -249,11 +242,11 @@ public class CTText
 
     /**
      * 设置stroke属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setStroke(Boolean value) {
         this.stroke = value;
@@ -261,11 +254,11 @@ public class CTText
 
     /**
      * 获取fill属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isFill() {
         if (fill == null) {
@@ -277,11 +270,11 @@ public class CTText
 
     /**
      * 设置fill属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setFill(Boolean value) {
         this.fill = value;
@@ -289,11 +282,11 @@ public class CTText
 
     /**
      * 获取hScale属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getHScale() {
         if (hScale == null) {
@@ -305,11 +298,11 @@ public class CTText
 
     /**
      * 设置hScale属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setHScale(Double value) {
         this.hScale = value;
@@ -317,11 +310,11 @@ public class CTText
 
     /**
      * 获取readDirection属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getReadDirection() {
         if (readDirection == null) {
@@ -333,11 +326,11 @@ public class CTText
 
     /**
      * 设置readDirection属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setReadDirection(Integer value) {
         this.readDirection = value;
@@ -345,11 +338,11 @@ public class CTText
 
     /**
      * 获取charDirection属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getCharDirection() {
         if (charDirection == null) {
@@ -361,11 +354,11 @@ public class CTText
 
     /**
      * 设置charDirection属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setCharDirection(Integer value) {
         this.charDirection = value;
@@ -373,11 +366,11 @@ public class CTText
 
     /**
      * 获取weight属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getWeight() {
         if (weight == null) {
@@ -389,11 +382,11 @@ public class CTText
 
     /**
      * 设置weight属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setWeight(Integer value) {
         this.weight = value;
@@ -401,11 +394,11 @@ public class CTText
 
     /**
      * 获取italic属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isItalic() {
         if (italic == null) {
@@ -417,11 +410,11 @@ public class CTText
 
     /**
      * 设置italic属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setItalic(Boolean value) {
         this.italic = value;
@@ -430,9 +423,9 @@ public class CTText
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;simpleContent>
@@ -445,8 +438,8 @@ public class CTText
      *   &lt;/simpleContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -467,11 +460,11 @@ public class CTText
 
         /**
          * 获取value属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getValue() {
             return value;
@@ -479,11 +472,11 @@ public class CTText
 
         /**
          * 设置value属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setValue(String value) {
             this.value = value;
@@ -491,11 +484,11 @@ public class CTText
 
         /**
          * 获取x属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public Double getX() {
             return x;
@@ -503,11 +496,11 @@ public class CTText
 
         /**
          * 设置x属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setX(Double value) {
             this.x = value;
@@ -515,11 +508,11 @@ public class CTText
 
         /**
          * 获取y属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public Double getY() {
             return y;
@@ -527,11 +520,11 @@ public class CTText
 
         /**
          * 设置y属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setY(Double value) {
             this.y = value;
@@ -539,11 +532,11 @@ public class CTText
 
         /**
          * 获取deltaX属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getDeltaX() {
             return deltaX;
@@ -551,11 +544,11 @@ public class CTText
 
         /**
          * 设置deltaX属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setDeltaX(String value) {
             this.deltaX = value;
@@ -563,11 +556,11 @@ public class CTText
 
         /**
          * 获取deltaY属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getDeltaY() {
             return deltaY;
@@ -575,11 +568,11 @@ public class CTText
 
         /**
          * 设置deltaY属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setDeltaY(String value) {
             this.deltaY = value;

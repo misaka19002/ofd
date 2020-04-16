@@ -1,27 +1,21 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlIDREF;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>CT_Action complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Action">
  *   &lt;complexContent>
@@ -116,8 +110,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Action", propOrder = {
@@ -147,11 +141,11 @@ public class CTAction {
 
     /**
      * 获取region属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTRegion }
-     *     
+     *
      */
     public CTRegion getRegion() {
         return region;
@@ -159,11 +153,11 @@ public class CTAction {
 
     /**
      * 设置region属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTRegion }
-     *     
+     *
      */
     public void setRegion(CTRegion value) {
         this.region = value;
@@ -171,11 +165,11 @@ public class CTAction {
 
     /**
      * 获取goto属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTAction.Goto }
-     *     
+     *
      */
     public CTAction.Goto getGoto() {
         return _goto;
@@ -183,11 +177,11 @@ public class CTAction {
 
     /**
      * 设置goto属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTAction.Goto }
-     *     
+     *
      */
     public void setGoto(CTAction.Goto value) {
         this._goto = value;
@@ -195,11 +189,11 @@ public class CTAction {
 
     /**
      * 获取uri属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTAction.URI }
-     *     
+     *
      */
     public CTAction.URI getURI() {
         return uri;
@@ -207,11 +201,11 @@ public class CTAction {
 
     /**
      * 设置uri属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTAction.URI }
-     *     
+     *
      */
     public void setURI(CTAction.URI value) {
         this.uri = value;
@@ -219,11 +213,11 @@ public class CTAction {
 
     /**
      * 获取gotoA属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTAction.GotoA }
-     *     
+     *
      */
     public CTAction.GotoA getGotoA() {
         return gotoA;
@@ -231,11 +225,11 @@ public class CTAction {
 
     /**
      * 设置gotoA属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTAction.GotoA }
-     *     
+     *
      */
     public void setGotoA(CTAction.GotoA value) {
         this.gotoA = value;
@@ -243,11 +237,11 @@ public class CTAction {
 
     /**
      * 获取sound属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTAction.Sound }
-     *     
+     *
      */
     public CTAction.Sound getSound() {
         return sound;
@@ -255,11 +249,11 @@ public class CTAction {
 
     /**
      * 设置sound属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTAction.Sound }
-     *     
+     *
      */
     public void setSound(CTAction.Sound value) {
         this.sound = value;
@@ -267,11 +261,11 @@ public class CTAction {
 
     /**
      * 获取movie属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTAction.Movie }
-     *     
+     *
      */
     public CTAction.Movie getMovie() {
         return movie;
@@ -279,11 +273,11 @@ public class CTAction {
 
     /**
      * 设置movie属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTAction.Movie }
-     *     
+     *
      */
     public void setMovie(CTAction.Movie value) {
         this.movie = value;
@@ -291,11 +285,11 @@ public class CTAction {
 
     /**
      * 获取event属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getEvent() {
         return event;
@@ -303,11 +297,11 @@ public class CTAction {
 
     /**
      * 设置event属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setEvent(String value) {
         this.event = value;
@@ -316,9 +310,9 @@ public class CTAction {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -339,8 +333,8 @@ public class CTAction {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -356,11 +350,11 @@ public class CTAction {
 
         /**
          * 获取dest属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTDest }
-         *     
+         *
          */
         public CTDest getDest() {
             return dest;
@@ -368,11 +362,11 @@ public class CTAction {
 
         /**
          * 设置dest属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTDest }
-         *     
+         *
          */
         public void setDest(CTDest value) {
             this.dest = value;
@@ -380,11 +374,11 @@ public class CTAction {
 
         /**
          * 获取bookmark属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTAction.Goto.Bookmark }
-         *     
+         *
          */
         public CTAction.Goto.Bookmark getBookmark() {
             return bookmark;
@@ -392,11 +386,11 @@ public class CTAction {
 
         /**
          * 设置bookmark属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTAction.Goto.Bookmark }
-         *     
+         *
          */
         public void setBookmark(CTAction.Goto.Bookmark value) {
             this.bookmark = value;
@@ -405,9 +399,9 @@ public class CTAction {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -417,8 +411,8 @@ public class CTAction {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -429,11 +423,11 @@ public class CTAction {
 
             /**
              * 获取name属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getName() {
                 return name;
@@ -441,11 +435,11 @@ public class CTAction {
 
             /**
              * 设置name属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setName(String value) {
                 this.name = value;
@@ -458,9 +452,9 @@ public class CTAction {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -471,8 +465,8 @@ public class CTAction {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -487,11 +481,11 @@ public class CTAction {
 
         /**
          * 获取attachID属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Object }
-         *     
+         *
          */
         public Object getAttachID() {
             return attachID;
@@ -499,11 +493,11 @@ public class CTAction {
 
         /**
          * 设置attachID属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Object }
-         *     
+         *
          */
         public void setAttachID(Object value) {
             this.attachID = value;
@@ -511,11 +505,11 @@ public class CTAction {
 
         /**
          * 获取newWindow属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public boolean isNewWindow() {
             if (newWindow == null) {
@@ -527,11 +521,11 @@ public class CTAction {
 
         /**
          * 设置newWindow属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setNewWindow(Boolean value) {
             this.newWindow = value;
@@ -542,9 +536,9 @@ public class CTAction {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -564,8 +558,8 @@ public class CTAction {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -578,7 +572,7 @@ public class CTAction {
 
         /**
          * 获取resourceID属性的值。
-         * 
+         *
          */
         public long getResourceID() {
             return resourceID;
@@ -586,7 +580,7 @@ public class CTAction {
 
         /**
          * 设置resourceID属性的值。
-         * 
+         *
          */
         public void setResourceID(long value) {
             this.resourceID = value;
@@ -594,11 +588,11 @@ public class CTAction {
 
         /**
          * 获取operator属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getOperator() {
             if (operator == null) {
@@ -610,11 +604,11 @@ public class CTAction {
 
         /**
          * 设置operator属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setOperator(String value) {
             this.operator = value;
@@ -625,9 +619,9 @@ public class CTAction {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -640,8 +634,8 @@ public class CTAction {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -658,7 +652,7 @@ public class CTAction {
 
         /**
          * 获取resourceID属性的值。
-         * 
+         *
          */
         public long getResourceID() {
             return resourceID;
@@ -666,7 +660,7 @@ public class CTAction {
 
         /**
          * 设置resourceID属性的值。
-         * 
+         *
          */
         public void setResourceID(long value) {
             this.resourceID = value;
@@ -674,11 +668,11 @@ public class CTAction {
 
         /**
          * 获取volume属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Integer }
-         *     
+         *
          */
         public Integer getVolume() {
             return volume;
@@ -686,11 +680,11 @@ public class CTAction {
 
         /**
          * 设置volume属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *     
+         *
          */
         public void setVolume(Integer value) {
             this.volume = value;
@@ -698,11 +692,11 @@ public class CTAction {
 
         /**
          * 获取repeat属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public Boolean isRepeat() {
             return repeat;
@@ -710,11 +704,11 @@ public class CTAction {
 
         /**
          * 设置repeat属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setRepeat(Boolean value) {
             this.repeat = value;
@@ -722,11 +716,11 @@ public class CTAction {
 
         /**
          * 获取synchronous属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Boolean }
-         *     
+         *
          */
         public Boolean isSynchronous() {
             return synchronous;
@@ -734,11 +728,11 @@ public class CTAction {
 
         /**
          * 设置synchronous属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Boolean }
-         *     
+         *
          */
         public void setSynchronous(Boolean value) {
             this.synchronous = value;
@@ -749,9 +743,9 @@ public class CTAction {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -763,8 +757,8 @@ public class CTAction {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -779,11 +773,11 @@ public class CTAction {
 
         /**
          * 获取uri属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getURI() {
             return uri;
@@ -791,11 +785,11 @@ public class CTAction {
 
         /**
          * 设置uri属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setURI(String value) {
             this.uri = value;
@@ -803,11 +797,11 @@ public class CTAction {
 
         /**
          * 获取base属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getBase() {
             return base;
@@ -815,11 +809,11 @@ public class CTAction {
 
         /**
          * 设置base属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setBase(String value) {
             this.base = value;
@@ -827,11 +821,11 @@ public class CTAction {
 
         /**
          * 获取target属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getTarget() {
             return target;
@@ -839,11 +833,11 @@ public class CTAction {
 
         /**
          * 设置target属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setTarget(String value) {
             this.target = value;

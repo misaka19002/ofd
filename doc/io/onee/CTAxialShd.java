@@ -1,27 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>CT_AxialShd complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_AxialShd">
  *   &lt;complexContent>
@@ -66,8 +62,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_AxialShd", propOrder = {
@@ -90,25 +86,25 @@ public class CTAxialShd {
 
     /**
      * Gets the value of the segment property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the segment property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSegment().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CTAxialShd.Segment }
-     * 
-     * 
+     *
+     *
      */
     public List<CTAxialShd.Segment> getSegment() {
         if (segment == null) {
@@ -119,11 +115,11 @@ public class CTAxialShd {
 
     /**
      * 获取mapType属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMapType() {
         if (mapType == null) {
@@ -135,11 +131,11 @@ public class CTAxialShd {
 
     /**
      * 设置mapType属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMapType(String value) {
         this.mapType = value;
@@ -147,11 +143,11 @@ public class CTAxialShd {
 
     /**
      * 获取mapUnit属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public Double getMapUnit() {
         return mapUnit;
@@ -159,11 +155,11 @@ public class CTAxialShd {
 
     /**
      * 设置mapUnit属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setMapUnit(Double value) {
         this.mapUnit = value;
@@ -171,11 +167,11 @@ public class CTAxialShd {
 
     /**
      * 获取extend属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getExtend() {
         if (extend == null) {
@@ -187,11 +183,11 @@ public class CTAxialShd {
 
     /**
      * 设置extend属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setExtend(Integer value) {
         this.extend = value;
@@ -199,11 +195,11 @@ public class CTAxialShd {
 
     /**
      * 获取startPoint属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getStartPoint() {
         return startPoint;
@@ -211,11 +207,11 @@ public class CTAxialShd {
 
     /**
      * 设置startPoint属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setStartPoint(String value) {
         this.startPoint = value;
@@ -223,11 +219,11 @@ public class CTAxialShd {
 
     /**
      * 获取endPoint属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getEndPoint() {
         return endPoint;
@@ -235,11 +231,11 @@ public class CTAxialShd {
 
     /**
      * 设置endPoint属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setEndPoint(String value) {
         this.endPoint = value;
@@ -248,9 +244,9 @@ public class CTAxialShd {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -263,8 +259,8 @@ public class CTAxialShd {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -279,11 +275,11 @@ public class CTAxialShd {
 
         /**
          * 获取color属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTColor }
-         *     
+         *
          */
         public CTColor getColor() {
             return color;
@@ -291,11 +287,11 @@ public class CTAxialShd {
 
         /**
          * 设置color属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTColor }
-         *     
+         *
          */
         public void setColor(CTColor value) {
             this.color = value;
@@ -303,11 +299,11 @@ public class CTAxialShd {
 
         /**
          * 获取position属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public Double getPosition() {
             return position;
@@ -315,11 +311,11 @@ public class CTAxialShd {
 
         /**
          * 设置position属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setPosition(Double value) {
             this.position = value;

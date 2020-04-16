@@ -1,27 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>CT_RadialShd complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_RadialShd">
  *   &lt;complexContent>
@@ -61,8 +57,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_RadialShd", propOrder = {
@@ -93,25 +89,25 @@ public class CTRadialShd {
 
     /**
      * Gets the value of the segment property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the segment property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getSegment().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CTRadialShd.Segment }
-     * 
-     * 
+     *
+     *
      */
     public List<CTRadialShd.Segment> getSegment() {
         if (segment == null) {
@@ -122,11 +118,11 @@ public class CTRadialShd {
 
     /**
      * 获取mapType属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getMapType() {
         if (mapType == null) {
@@ -138,11 +134,11 @@ public class CTRadialShd {
 
     /**
      * 设置mapType属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setMapType(String value) {
         this.mapType = value;
@@ -150,11 +146,11 @@ public class CTRadialShd {
 
     /**
      * 获取mapUnit属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public Double getMapUnit() {
         return mapUnit;
@@ -162,11 +158,11 @@ public class CTRadialShd {
 
     /**
      * 设置mapUnit属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setMapUnit(Double value) {
         this.mapUnit = value;
@@ -174,11 +170,11 @@ public class CTRadialShd {
 
     /**
      * 获取eccentricity属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getEccentricity() {
         if (eccentricity == null) {
@@ -190,11 +186,11 @@ public class CTRadialShd {
 
     /**
      * 设置eccentricity属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setEccentricity(Double value) {
         this.eccentricity = value;
@@ -202,11 +198,11 @@ public class CTRadialShd {
 
     /**
      * 获取angle属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getAngle() {
         if (angle == null) {
@@ -218,11 +214,11 @@ public class CTRadialShd {
 
     /**
      * 设置angle属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setAngle(Double value) {
         this.angle = value;
@@ -230,11 +226,11 @@ public class CTRadialShd {
 
     /**
      * 获取startPoint属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getStartPoint() {
         return startPoint;
@@ -242,11 +238,11 @@ public class CTRadialShd {
 
     /**
      * 设置startPoint属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setStartPoint(String value) {
         this.startPoint = value;
@@ -254,11 +250,11 @@ public class CTRadialShd {
 
     /**
      * 获取startRadius属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getStartRadius() {
         if (startRadius == null) {
@@ -270,11 +266,11 @@ public class CTRadialShd {
 
     /**
      * 设置startRadius属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setStartRadius(Double value) {
         this.startRadius = value;
@@ -282,11 +278,11 @@ public class CTRadialShd {
 
     /**
      * 获取endPoint属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getEndPoint() {
         return endPoint;
@@ -294,11 +290,11 @@ public class CTRadialShd {
 
     /**
      * 设置endPoint属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setEndPoint(String value) {
         this.endPoint = value;
@@ -306,7 +302,7 @@ public class CTRadialShd {
 
     /**
      * 获取endRadius属性的值。
-     * 
+     *
      */
     public double getEndRadius() {
         return endRadius;
@@ -314,7 +310,7 @@ public class CTRadialShd {
 
     /**
      * 设置endRadius属性的值。
-     * 
+     *
      */
     public void setEndRadius(double value) {
         this.endRadius = value;
@@ -322,11 +318,11 @@ public class CTRadialShd {
 
     /**
      * 获取extend属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Integer }
-     *     
+     *
      */
     public int getExtend() {
         if (extend == null) {
@@ -338,11 +334,11 @@ public class CTRadialShd {
 
     /**
      * 设置extend属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Integer }
-     *     
+     *
      */
     public void setExtend(Integer value) {
         this.extend = value;
@@ -351,9 +347,9 @@ public class CTRadialShd {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -366,8 +362,8 @@ public class CTRadialShd {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -382,11 +378,11 @@ public class CTRadialShd {
 
         /**
          * 获取color属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTColor }
-         *     
+         *
          */
         public CTColor getColor() {
             return color;
@@ -394,11 +390,11 @@ public class CTRadialShd {
 
         /**
          * 设置color属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTColor }
-         *     
+         *
          */
         public void setColor(CTColor value) {
             this.color = value;
@@ -406,11 +402,11 @@ public class CTRadialShd {
 
         /**
          * 获取position属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public Double getPosition() {
             return position;
@@ -418,11 +414,11 @@ public class CTRadialShd {
 
         /**
          * 设置position属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setPosition(Double value) {
             this.position = value;

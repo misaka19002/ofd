@@ -1,27 +1,21 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>CT_Font complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Font">
  *   &lt;complexContent>
@@ -52,8 +46,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Font", propOrder = {
@@ -84,11 +78,11 @@ public class CTFont {
 
     /**
      * 获取fontFile属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getFontFile() {
         return fontFile;
@@ -96,11 +90,11 @@ public class CTFont {
 
     /**
      * 设置fontFile属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setFontFile(String value) {
         this.fontFile = value;
@@ -108,11 +102,11 @@ public class CTFont {
 
     /**
      * 获取fontName属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getFontName() {
         return fontName;
@@ -120,11 +114,11 @@ public class CTFont {
 
     /**
      * 设置fontName属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setFontName(String value) {
         this.fontName = value;
@@ -132,11 +126,11 @@ public class CTFont {
 
     /**
      * 获取familyName属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getFamilyName() {
         return familyName;
@@ -144,11 +138,11 @@ public class CTFont {
 
     /**
      * 设置familyName属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setFamilyName(String value) {
         this.familyName = value;
@@ -156,11 +150,11 @@ public class CTFont {
 
     /**
      * 获取charset属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCharset() {
         if (charset == null) {
@@ -172,11 +166,11 @@ public class CTFont {
 
     /**
      * 设置charset属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCharset(String value) {
         this.charset = value;
@@ -184,11 +178,11 @@ public class CTFont {
 
     /**
      * 获取italic属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isItalic() {
         if (italic == null) {
@@ -200,11 +194,11 @@ public class CTFont {
 
     /**
      * 设置italic属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setItalic(Boolean value) {
         this.italic = value;
@@ -212,11 +206,11 @@ public class CTFont {
 
     /**
      * 获取bold属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isBold() {
         if (bold == null) {
@@ -228,11 +222,11 @@ public class CTFont {
 
     /**
      * 设置bold属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setBold(Boolean value) {
         this.bold = value;
@@ -240,11 +234,11 @@ public class CTFont {
 
     /**
      * 获取serif属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isSerif() {
         if (serif == null) {
@@ -256,11 +250,11 @@ public class CTFont {
 
     /**
      * 设置serif属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setSerif(Boolean value) {
         this.serif = value;
@@ -268,11 +262,11 @@ public class CTFont {
 
     /**
      * 获取fixedWidth属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public boolean isFixedWidth() {
         if (fixedWidth == null) {
@@ -284,11 +278,11 @@ public class CTFont {
 
     /**
      * 设置fixedWidth属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setFixedWidth(Boolean value) {
         this.fixedWidth = value;

@@ -1,26 +1,21 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>CT_Image complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Image">
  *   &lt;complexContent>
@@ -50,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Image", propOrder = {
@@ -75,11 +70,11 @@ public class CTImage
 
     /**
      * 获取border属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTImage.Border }
-     *     
+     *
      */
     public CTImage.Border getBorder() {
         return border;
@@ -87,11 +82,11 @@ public class CTImage
 
     /**
      * 设置border属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTImage.Border }
-     *     
+     *
      */
     public void setBorder(CTImage.Border value) {
         this.border = value;
@@ -99,7 +94,7 @@ public class CTImage
 
     /**
      * 获取resourceID属性的值。
-     * 
+     *
      */
     public long getResourceID() {
         return resourceID;
@@ -107,7 +102,7 @@ public class CTImage
 
     /**
      * 设置resourceID属性的值。
-     * 
+     *
      */
     public void setResourceID(long value) {
         this.resourceID = value;
@@ -115,11 +110,11 @@ public class CTImage
 
     /**
      * 获取substitution属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Long }
-     *     
+     *
      */
     public Long getSubstitution() {
         return substitution;
@@ -127,11 +122,11 @@ public class CTImage
 
     /**
      * 设置substitution属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Long }
-     *     
+     *
      */
     public void setSubstitution(Long value) {
         this.substitution = value;
@@ -139,11 +134,11 @@ public class CTImage
 
     /**
      * 获取imageMask属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Long }
-     *     
+     *
      */
     public Long getImageMask() {
         return imageMask;
@@ -151,11 +146,11 @@ public class CTImage
 
     /**
      * 设置imageMask属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Long }
-     *     
+     *
      */
     public void setImageMask(Long value) {
         this.imageMask = value;
@@ -164,9 +159,9 @@ public class CTImage
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -183,8 +178,8 @@ public class CTImage
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -207,11 +202,11 @@ public class CTImage
 
         /**
          * 获取borderColor属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTColor }
-         *     
+         *
          */
         public CTColor getBorderColor() {
             return borderColor;
@@ -219,11 +214,11 @@ public class CTImage
 
         /**
          * 设置borderColor属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTColor }
-         *     
+         *
          */
         public void setBorderColor(CTColor value) {
             this.borderColor = value;
@@ -231,11 +226,11 @@ public class CTImage
 
         /**
          * 获取lineWidth属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public double getLineWidth() {
             if (lineWidth == null) {
@@ -247,11 +242,11 @@ public class CTImage
 
         /**
          * 设置lineWidth属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setLineWidth(Double value) {
             this.lineWidth = value;
@@ -259,11 +254,11 @@ public class CTImage
 
         /**
          * 获取horizonalCornerRadius属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public double getHorizonalCornerRadius() {
             if (horizonalCornerRadius == null) {
@@ -275,11 +270,11 @@ public class CTImage
 
         /**
          * 设置horizonalCornerRadius属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setHorizonalCornerRadius(Double value) {
             this.horizonalCornerRadius = value;
@@ -287,11 +282,11 @@ public class CTImage
 
         /**
          * 获取verticalCornerRadius属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public double getVerticalCornerRadius() {
             if (verticalCornerRadius == null) {
@@ -303,11 +298,11 @@ public class CTImage
 
         /**
          * 设置verticalCornerRadius属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setVerticalCornerRadius(Double value) {
             this.verticalCornerRadius = value;
@@ -315,11 +310,11 @@ public class CTImage
 
         /**
          * 获取dashOffset属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Double }
-         *     
+         *
          */
         public double getDashOffset() {
             if (dashOffset == null) {
@@ -331,11 +326,11 @@ public class CTImage
 
         /**
          * 设置dashOffset属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Double }
-         *     
+         *
          */
         public void setDashOffset(Double value) {
             this.dashOffset = value;
@@ -343,11 +338,11 @@ public class CTImage
 
         /**
          * 获取dashPattern属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getDashPattern() {
             return dashPattern;
@@ -355,11 +350,11 @@ public class CTImage
 
         /**
          * 设置dashPattern属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setDashPattern(String value) {
             this.dashPattern = value;

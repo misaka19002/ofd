@@ -1,32 +1,25 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import java.util.ArrayList;
-import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlID;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  * <p>anonymous complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType>
  *   &lt;complexContent>
@@ -80,8 +73,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -99,25 +92,25 @@ public class OFD {
 
     /**
      * Gets the value of the docBody property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the docBody property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getDocBody().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link OFD.DocBody }
-     * 
-     * 
+     *
+     *
      */
     public List<OFD.DocBody> getDocBody() {
         if (docBody == null) {
@@ -128,11 +121,11 @@ public class OFD {
 
     /**
      * 获取version属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getVersion() {
         if (version == null) {
@@ -144,11 +137,11 @@ public class OFD {
 
     /**
      * 设置version属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setVersion(String value) {
         this.version = value;
@@ -156,11 +149,11 @@ public class OFD {
 
     /**
      * 获取docType属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDocType() {
         if (docType == null) {
@@ -172,11 +165,11 @@ public class OFD {
 
     /**
      * 设置docType属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDocType(String value) {
         this.docType = value;
@@ -185,9 +178,9 @@ public class OFD {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -223,8 +216,8 @@ public class OFD {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -248,11 +241,11 @@ public class OFD {
 
         /**
          * 获取docInfo属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link CTDocInfo }
-         *     
+         *
          */
         public CTDocInfo getDocInfo() {
             return docInfo;
@@ -260,11 +253,11 @@ public class OFD {
 
         /**
          * 设置docInfo属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link CTDocInfo }
-         *     
+         *
          */
         public void setDocInfo(CTDocInfo value) {
             this.docInfo = value;
@@ -272,11 +265,11 @@ public class OFD {
 
         /**
          * 获取docRoot属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getDocRoot() {
             return docRoot;
@@ -284,11 +277,11 @@ public class OFD {
 
         /**
          * 设置docRoot属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setDocRoot(String value) {
             this.docRoot = value;
@@ -296,11 +289,11 @@ public class OFD {
 
         /**
          * 获取versions属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link OFD.DocBody.Versions }
-         *     
+         *
          */
         public OFD.DocBody.Versions getVersions() {
             return versions;
@@ -308,11 +301,11 @@ public class OFD {
 
         /**
          * 设置versions属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link OFD.DocBody.Versions }
-         *     
+         *
          */
         public void setVersions(OFD.DocBody.Versions value) {
             this.versions = value;
@@ -320,11 +313,11 @@ public class OFD {
 
         /**
          * 获取signatures属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getSignatures() {
             return signatures;
@@ -332,11 +325,11 @@ public class OFD {
 
         /**
          * 设置signatures属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setSignatures(String value) {
             this.signatures = value;
@@ -345,9 +338,9 @@ public class OFD {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -370,8 +363,8 @@ public class OFD {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
@@ -384,25 +377,25 @@ public class OFD {
 
             /**
              * Gets the value of the version property.
-             * 
+             *
              * <p>
              * This accessor method returns a reference to the live list,
              * not a snapshot. Therefore any modification you make to the
              * returned list will be present inside the JAXB object.
              * This is why there is not a <CODE>set</CODE> method for the version property.
-             * 
+             *
              * <p>
              * For example, to add a new item, do as follows:
              * <pre>
              *    getVersion().add(newItem);
              * </pre>
-             * 
-             * 
+             *
+             *
              * <p>
              * Objects of the following type(s) are allowed in the list
              * {@link OFD.DocBody.Versions.Version }
-             * 
-             * 
+             *
+             *
              */
             public List<OFD.DocBody.Versions.Version> getVersion() {
                 if (version == null) {
@@ -414,9 +407,9 @@ public class OFD {
 
             /**
              * <p>anonymous complex type的 Java 类。
-             * 
+             *
              * <p>以下模式片段指定包含在此类中的预期内容。
-             * 
+             *
              * <pre>
              * &lt;complexType>
              *   &lt;complexContent>
@@ -429,8 +422,8 @@ public class OFD {
              *   &lt;/complexContent>
              * &lt;/complexType>
              * </pre>
-             * 
-             * 
+             *
+             *
              */
             @XmlAccessorType(XmlAccessType.FIELD)
             @XmlType(name = "")
@@ -450,11 +443,11 @@ public class OFD {
 
                 /**
                  * 获取id属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public String getID() {
                     return id;
@@ -462,11 +455,11 @@ public class OFD {
 
                 /**
                  * 设置id属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public void setID(String value) {
                     this.id = value;
@@ -474,7 +467,7 @@ public class OFD {
 
                 /**
                  * 获取index属性的值。
-                 * 
+                 *
                  */
                 public int getIndex() {
                     return index;
@@ -482,7 +475,7 @@ public class OFD {
 
                 /**
                  * 设置index属性的值。
-                 * 
+                 *
                  */
                 public void setIndex(int value) {
                     this.index = value;
@@ -490,11 +483,11 @@ public class OFD {
 
                 /**
                  * 获取current属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link Boolean }
-                 *     
+                 *
                  */
                 public boolean isCurrent() {
                     if (current == null) {
@@ -506,11 +499,11 @@ public class OFD {
 
                 /**
                  * 设置current属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link Boolean }
-                 *     
+                 *
                  */
                 public void setCurrent(Boolean value) {
                     this.current = value;
@@ -518,11 +511,11 @@ public class OFD {
 
                 /**
                  * 获取baseLoc属性的值。
-                 * 
+                 *
                  * @return
                  *     possible object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public String getBaseLoc() {
                     return baseLoc;
@@ -530,11 +523,11 @@ public class OFD {
 
                 /**
                  * 设置baseLoc属性的值。
-                 * 
+                 *
                  * @param value
                  *     allowed object is
                  *     {@link String }
-                 *     
+                 *
                  */
                 public void setBaseLoc(String value) {
                     this.baseLoc = value;

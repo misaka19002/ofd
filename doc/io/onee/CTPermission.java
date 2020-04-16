@@ -1,27 +1,22 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
  * <p>CT_Permission complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Permission">
  *   &lt;complexContent>
@@ -58,8 +53,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Permission", propOrder = {
@@ -93,11 +88,11 @@ public class CTPermission {
 
     /**
      * 获取edit属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isEdit() {
         return edit;
@@ -105,11 +100,11 @@ public class CTPermission {
 
     /**
      * 设置edit属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setEdit(Boolean value) {
         this.edit = value;
@@ -117,11 +112,11 @@ public class CTPermission {
 
     /**
      * 获取annot属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isAnnot() {
         return annot;
@@ -129,11 +124,11 @@ public class CTPermission {
 
     /**
      * 设置annot属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setAnnot(Boolean value) {
         this.annot = value;
@@ -141,11 +136,11 @@ public class CTPermission {
 
     /**
      * 获取export属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isExport() {
         return export;
@@ -153,11 +148,11 @@ public class CTPermission {
 
     /**
      * 设置export属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setExport(Boolean value) {
         this.export = value;
@@ -165,11 +160,11 @@ public class CTPermission {
 
     /**
      * 获取signature属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isSignature() {
         return signature;
@@ -177,11 +172,11 @@ public class CTPermission {
 
     /**
      * 设置signature属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setSignature(Boolean value) {
         this.signature = value;
@@ -189,11 +184,11 @@ public class CTPermission {
 
     /**
      * 获取watermark属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isWatermark() {
         return watermark;
@@ -201,11 +196,11 @@ public class CTPermission {
 
     /**
      * 设置watermark属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setWatermark(Boolean value) {
         this.watermark = value;
@@ -213,11 +208,11 @@ public class CTPermission {
 
     /**
      * 获取printScreen属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Boolean }
-     *     
+     *
      */
     public Boolean isPrintScreen() {
         return printScreen;
@@ -225,11 +220,11 @@ public class CTPermission {
 
     /**
      * 设置printScreen属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Boolean }
-     *     
+     *
      */
     public void setPrintScreen(Boolean value) {
         this.printScreen = value;
@@ -237,11 +232,11 @@ public class CTPermission {
 
     /**
      * 获取print属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTPermission.Print }
-     *     
+     *
      */
     public CTPermission.Print getPrint() {
         return print;
@@ -249,11 +244,11 @@ public class CTPermission {
 
     /**
      * 设置print属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTPermission.Print }
-     *     
+     *
      */
     public void setPrint(CTPermission.Print value) {
         this.print = value;
@@ -261,11 +256,11 @@ public class CTPermission {
 
     /**
      * 获取validPeriod属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTPermission.ValidPeriod }
-     *     
+     *
      */
     public CTPermission.ValidPeriod getValidPeriod() {
         return validPeriod;
@@ -273,11 +268,11 @@ public class CTPermission {
 
     /**
      * 设置validPeriod属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTPermission.ValidPeriod }
-     *     
+     *
      */
     public void setValidPeriod(CTPermission.ValidPeriod value) {
         this.validPeriod = value;
@@ -286,9 +281,9 @@ public class CTPermission {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -299,8 +294,8 @@ public class CTPermission {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -313,7 +308,7 @@ public class CTPermission {
 
         /**
          * 获取printable属性的值。
-         * 
+         *
          */
         public boolean isPrintable() {
             return printable;
@@ -321,7 +316,7 @@ public class CTPermission {
 
         /**
          * 设置printable属性的值。
-         * 
+         *
          */
         public void setPrintable(boolean value) {
             this.printable = value;
@@ -329,11 +324,11 @@ public class CTPermission {
 
         /**
          * 获取copies属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link Integer }
-         *     
+         *
          */
         public int getCopies() {
             if (copies == null) {
@@ -345,11 +340,11 @@ public class CTPermission {
 
         /**
          * 设置copies属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link Integer }
-         *     
+         *
          */
         public void setCopies(Integer value) {
             this.copies = value;
@@ -360,9 +355,9 @@ public class CTPermission {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -373,8 +368,8 @@ public class CTPermission {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
@@ -389,11 +384,11 @@ public class CTPermission {
 
         /**
          * 获取startDate属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public XMLGregorianCalendar getStartDate() {
             return startDate;
@@ -401,11 +396,11 @@ public class CTPermission {
 
         /**
          * 设置startDate属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public void setStartDate(XMLGregorianCalendar value) {
             this.startDate = value;
@@ -413,11 +408,11 @@ public class CTPermission {
 
         /**
          * 获取endDate属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public XMLGregorianCalendar getEndDate() {
             return endDate;
@@ -425,11 +420,11 @@ public class CTPermission {
 
         /**
          * 设置endDate属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link XMLGregorianCalendar }
-         *     
+         *
          */
         public void setEndDate(XMLGregorianCalendar value) {
             this.endDate = value;

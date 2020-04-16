@@ -1,28 +1,23 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElements;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
  * <p>CT_Region complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_Region">
  *   &lt;complexContent>
@@ -97,8 +92,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_Region", propOrder = {
@@ -111,25 +106,25 @@ public class CTRegion {
 
     /**
      * Gets the value of the area property.
-     * 
+     *
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the area property.
-     * 
+     *
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getArea().add(newItem);
      * </pre>
-     * 
-     * 
+     *
+     *
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link CTRegion.Area }
-     * 
-     * 
+     *
+     *
      */
     public List<CTRegion.Area> getArea() {
         if (area == null) {
@@ -141,9 +136,9 @@ public class CTRegion {
 
     /**
      * <p>anonymous complex type的 Java 类。
-     * 
+     *
      * <p>以下模式片段指定包含在此类中的预期内容。
-     * 
+     *
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -208,8 +203,8 @@ public class CTRegion {
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
-     * 
-     * 
+     *
+     *
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -231,20 +226,20 @@ public class CTRegion {
 
         /**
          * Gets the value of the moveOrLineOrQuadraticBezier property.
-         * 
+         *
          * <p>
          * This accessor method returns a reference to the live list,
          * not a snapshot. Therefore any modification you make to the
          * returned list will be present inside the JAXB object.
          * This is why there is not a <CODE>set</CODE> method for the moveOrLineOrQuadraticBezier property.
-         * 
+         *
          * <p>
          * For example, to add a new item, do as follows:
          * <pre>
          *    getMoveOrLineOrQuadraticBezier().add(newItem);
          * </pre>
-         * 
-         * 
+         *
+         *
          * <p>
          * Objects of the following type(s) are allowed in the list
          * {@link CTRegion.Area.Move }
@@ -253,8 +248,8 @@ public class CTRegion {
          * {@link CTRegion.Area.CubicBezier }
          * {@link CTRegion.Area.Arc }
          * {@link Object }
-         * 
-         * 
+         *
+         *
          */
         public List<Object> getMoveOrLineOrQuadraticBezier() {
             if (moveOrLineOrQuadraticBezier == null) {
@@ -265,11 +260,11 @@ public class CTRegion {
 
         /**
          * 获取start属性的值。
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getStart() {
             return start;
@@ -277,11 +272,11 @@ public class CTRegion {
 
         /**
          * 设置start属性的值。
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setStart(String value) {
             this.start = value;
@@ -290,9 +285,9 @@ public class CTRegion {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -306,8 +301,8 @@ public class CTRegion {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -326,7 +321,7 @@ public class CTRegion {
 
             /**
              * 获取sweepDirection属性的值。
-             * 
+             *
              */
             public boolean isSweepDirection() {
                 return sweepDirection;
@@ -334,7 +329,7 @@ public class CTRegion {
 
             /**
              * 设置sweepDirection属性的值。
-             * 
+             *
              */
             public void setSweepDirection(boolean value) {
                 this.sweepDirection = value;
@@ -342,7 +337,7 @@ public class CTRegion {
 
             /**
              * 获取largeArc属性的值。
-             * 
+             *
              */
             public boolean isLargeArc() {
                 return largeArc;
@@ -350,7 +345,7 @@ public class CTRegion {
 
             /**
              * 设置largeArc属性的值。
-             * 
+             *
              */
             public void setLargeArc(boolean value) {
                 this.largeArc = value;
@@ -358,7 +353,7 @@ public class CTRegion {
 
             /**
              * 获取rotationAngle属性的值。
-             * 
+             *
              */
             public double getRotationAngle() {
                 return rotationAngle;
@@ -366,7 +361,7 @@ public class CTRegion {
 
             /**
              * 设置rotationAngle属性的值。
-             * 
+             *
              */
             public void setRotationAngle(double value) {
                 this.rotationAngle = value;
@@ -374,11 +369,11 @@ public class CTRegion {
 
             /**
              * 获取ellipseSize属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getEllipseSize() {
                 return ellipseSize;
@@ -386,11 +381,11 @@ public class CTRegion {
 
             /**
              * 设置ellipseSize属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setEllipseSize(String value) {
                 this.ellipseSize = value;
@@ -398,11 +393,11 @@ public class CTRegion {
 
             /**
              * 获取endPoint属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getEndPoint() {
                 return endPoint;
@@ -410,11 +405,11 @@ public class CTRegion {
 
             /**
              * 设置endPoint属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setEndPoint(String value) {
                 this.endPoint = value;
@@ -425,9 +420,9 @@ public class CTRegion {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -439,8 +434,8 @@ public class CTRegion {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -455,11 +450,11 @@ public class CTRegion {
 
             /**
              * 获取point1属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint1() {
                 return point1;
@@ -467,11 +462,11 @@ public class CTRegion {
 
             /**
              * 设置point1属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint1(String value) {
                 this.point1 = value;
@@ -479,11 +474,11 @@ public class CTRegion {
 
             /**
              * 获取point2属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint2() {
                 return point2;
@@ -491,11 +486,11 @@ public class CTRegion {
 
             /**
              * 设置point2属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint2(String value) {
                 this.point2 = value;
@@ -503,11 +498,11 @@ public class CTRegion {
 
             /**
              * 获取point3属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint3() {
                 return point3;
@@ -515,11 +510,11 @@ public class CTRegion {
 
             /**
              * 设置point3属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint3(String value) {
                 this.point3 = value;
@@ -530,9 +525,9 @@ public class CTRegion {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -542,8 +537,8 @@ public class CTRegion {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -554,11 +549,11 @@ public class CTRegion {
 
             /**
              * 获取point1属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint1() {
                 return point1;
@@ -566,11 +561,11 @@ public class CTRegion {
 
             /**
              * 设置point1属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint1(String value) {
                 this.point1 = value;
@@ -581,9 +576,9 @@ public class CTRegion {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -593,8 +588,8 @@ public class CTRegion {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -605,11 +600,11 @@ public class CTRegion {
 
             /**
              * 获取point1属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint1() {
                 return point1;
@@ -617,11 +612,11 @@ public class CTRegion {
 
             /**
              * 设置point1属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint1(String value) {
                 this.point1 = value;
@@ -632,9 +627,9 @@ public class CTRegion {
 
         /**
          * <p>anonymous complex type的 Java 类。
-         * 
+         *
          * <p>以下模式片段指定包含在此类中的预期内容。
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;complexContent>
@@ -645,8 +640,8 @@ public class CTRegion {
          *   &lt;/complexContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "")
@@ -659,11 +654,11 @@ public class CTRegion {
 
             /**
              * 获取point1属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint1() {
                 return point1;
@@ -671,11 +666,11 @@ public class CTRegion {
 
             /**
              * 设置point1属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint1(String value) {
                 this.point1 = value;
@@ -683,11 +678,11 @@ public class CTRegion {
 
             /**
              * 获取point2属性的值。
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getPoint2() {
                 return point2;
@@ -695,11 +690,11 @@ public class CTRegion {
 
             /**
              * 设置point2属性的值。
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setPoint2(String value) {
                 this.point2 = value;

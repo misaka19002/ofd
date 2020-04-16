@@ -1,26 +1,21 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
 
 package io.onee;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSeeAlso;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
  * <p>CT_DrawParam complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_DrawParam">
  *   &lt;complexContent>
@@ -40,8 +35,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CT_DrawParam", propOrder = {
@@ -74,11 +69,11 @@ public class CTDrawParam {
 
     /**
      * 获取fillColor属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTColor }
-     *     
+     *
      */
     public CTColor getFillColor() {
         return fillColor;
@@ -86,11 +81,11 @@ public class CTDrawParam {
 
     /**
      * 设置fillColor属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTColor }
-     *     
+     *
      */
     public void setFillColor(CTColor value) {
         this.fillColor = value;
@@ -98,11 +93,11 @@ public class CTDrawParam {
 
     /**
      * 获取strokeColor属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link CTColor }
-     *     
+     *
      */
     public CTColor getStrokeColor() {
         return strokeColor;
@@ -110,11 +105,11 @@ public class CTDrawParam {
 
     /**
      * 设置strokeColor属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link CTColor }
-     *     
+     *
      */
     public void setStrokeColor(CTColor value) {
         this.strokeColor = value;
@@ -122,11 +117,11 @@ public class CTDrawParam {
 
     /**
      * 获取relative属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Long }
-     *     
+     *
      */
     public Long getRelative() {
         return relative;
@@ -134,11 +129,11 @@ public class CTDrawParam {
 
     /**
      * 设置relative属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Long }
-     *     
+     *
      */
     public void setRelative(Long value) {
         this.relative = value;
@@ -146,11 +141,11 @@ public class CTDrawParam {
 
     /**
      * 获取lineWidth属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getLineWidth() {
         if (lineWidth == null) {
@@ -162,11 +157,11 @@ public class CTDrawParam {
 
     /**
      * 设置lineWidth属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setLineWidth(Double value) {
         this.lineWidth = value;
@@ -174,11 +169,11 @@ public class CTDrawParam {
 
     /**
      * 获取join属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getJoin() {
         if (join == null) {
@@ -190,11 +185,11 @@ public class CTDrawParam {
 
     /**
      * 设置join属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setJoin(String value) {
         this.join = value;
@@ -202,11 +197,11 @@ public class CTDrawParam {
 
     /**
      * 获取cap属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getCap() {
         if (cap == null) {
@@ -218,11 +213,11 @@ public class CTDrawParam {
 
     /**
      * 设置cap属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setCap(String value) {
         this.cap = value;
@@ -230,11 +225,11 @@ public class CTDrawParam {
 
     /**
      * 获取dashOffset属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getDashOffset() {
         if (dashOffset == null) {
@@ -246,11 +241,11 @@ public class CTDrawParam {
 
     /**
      * 设置dashOffset属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setDashOffset(Double value) {
         this.dashOffset = value;
@@ -258,11 +253,11 @@ public class CTDrawParam {
 
     /**
      * 获取dashPattern属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     public String getDashPattern() {
         return dashPattern;
@@ -270,11 +265,11 @@ public class CTDrawParam {
 
     /**
      * 设置dashPattern属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setDashPattern(String value) {
         this.dashPattern = value;
@@ -282,11 +277,11 @@ public class CTDrawParam {
 
     /**
      * 获取miterLimit属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link Double }
-     *     
+     *
      */
     public double getMiterLimit() {
         if (miterLimit == null) {
@@ -298,11 +293,11 @@ public class CTDrawParam {
 
     /**
      * 设置miterLimit属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link Double }
-     *     
+     *
      */
     public void setMiterLimit(Double value) {
         this.miterLimit = value;
