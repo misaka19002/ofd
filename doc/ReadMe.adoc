@@ -1,0 +1,47 @@
+= 国标33190-2016 ofd
+
+. Copy `GB_T 33190-2016 电子文件存储与交换格式  版式文档.xdf` 文档内的xsd生成source.txt
+. 使用XsdTest内的 `generateFiles` 函数将source.txt格式化成为正常的xsd文件。
+. 使用xjc命令生成相应的javaBean.由于直接使用xjc命令生成的文件编码默认为ANSI，所以这里选择使用另一种方式调用；`java -Dfile.encoding=UTF-8 -cp "C:\Program Files\Java\jdk8u212-b04\lib\tools.jar" com.sun.tools.internal.xjc.Driver  -p io.onee -d d:\srv   C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd`
+.. -cp 指定tools.jar的路径（注意是jdk的tools.jar，不是jre）
+.. com.sun.tools.internal.xjc.Driver 为我们需要调用的函数，反编译后如下。
+[source,java]
+public class Driver
+{
+  public static void main(String[] args) throws Exception {
+    try {
+      System.setProperty("java.net.useSystemProxies", "true");
+    } catch (SecurityException securityException) {}
+    if (Util.getSystemProperty(Driver.class, "noThreadSwap") != null) {
+      _main(args);
+    }
+    Throwable[] ex = new Throwable[1];
+    Object object = new Object(args, ex);
+    object.start();
+    object.join();
+    if (ex[false] != null) {
+      if (ex[0] instanceof Exception) {
+        throw (Exception)ex[0];
+      }
+      throw (Error)ex[0];
+    }
+  }
+  private static void _main(String[] args) throws Exception {
+    try {
+      System.exit(run(args, System.out, System.out));
+    } catch (BadCommandLineException e) {
+      if (e.getMessage() != null) {
+        System.out.println(e.getMessage());
+        System.out.println();
+      }
+      usage(e.getOptions(), false);
+      System.exit(-1);
+    }
+  }
+}
+
+.. -p 指定生成的package路径。
+.. -d 指定生成的.java文件目标文件夹。
+.. C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd 表示使用所有的xsd进行生成。
+
+

@@ -1,0 +1,92 @@
+    <? xml version="1.0" encoding="UTF-8" ?>
+    < xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+    xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+    targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+    attributeFormDefault="unqualified" >
+    < xs : includeschemaLocation="Definitions.xsd" />
+    <! -- 主入口 定义。 -- >
+    < xs : elementname="OFD" >
+    < xs : complexType >
+    < xs : sequence >
+    < xs : elementname="DocBody" maxOccurs="unbounded" >
+    < xs : complexType >
+    < xs : sequence >
+    < xs : elementname="DocInfo" type="CT _ DocInfo" />
+    < xs : elementname="DocRoot" type="ST _ Loc" />
+    < xs : elementname="Versions" minOccurs="0" >
+    < xs : complexType >
+    < xs : sequence >
+    < xs : elementname="Version"
+    maxOccurs="unbounded" >
+    < xs : complexType >
+    < xs : attributename="ID"
+    type="xs : ID" use="required" />
+    < xs : attributename="Index"
+    type="xs : int" use="required" />
+    < xs : attributename="Current"
+    type="xs : boolean" default="false" />
+    < xs : attributename="BaseLoc"
+    type="ST _ Loc" use="required" />
+    </ xs : complexType >
+    </ xs : element >
+    </ xs : sequence >
+    </ xs : complexType >
+    </ xs : element >
+    < xs : elementname="Signatures" type="ST _ Loc" minOccurs="0" />
+    </ xs : sequence >
+    </ xs : complexType >
+    </ xs : element >
+    </ xs : sequence >
+    < xs : attributename="Version" type="xs : string" use="required"
+    fixed="1.0" />
+    < xs : attributename="DocType" use="required" fixed="OFD" >
+    < xs : simpleType >
+    < xs : restrictionbase="xs : string" >
+    < xs : enumerationvalue="OFD" />
+    </ xs : restriction >
+    </ xs : simpleType >
+    </ xs : attribute >
+    </ xs : complexType >
+    </ xs : element >
+    < ! -- 文档元数据定义 -- >
+    < xs : complexTypename="CT _ DocInfo" >
+    < xs : sequence >
+    < xs : elementname="DocID" type="xs : string" />
+    < xs : elementname="Title" type="xs : string" minOccurs="0" />
+    < xs : elementname="Author" type="xs : string" minOccurs="0" />
+    < xs : elementname="Subject" type="xs : string" minOccurs="0" />
+    < xs : elementname="Abstract" type="xs : string" minOccurs="0" />
+    < xs : elementname="CreationDate" type="xs : date" minOccurs="0" />
+    < xs : elementname="ModDate" type="xs : date" minOccurs="0" />
+    < xs : elementname="DocUsage" type="xs : string" minOccurs="0" />
+    < xs : elementname="Cover" type="ST _ Loc" minOccurs="0" />
+    < xs : elementname="Keywords" minOccurs="0" >
+    < xs : complexType >
+    < xs : sequence >
+    < xs : elementname="Keyword" type="xs : string"
+    maxOccurs="unbounded" />
+    </ xs : sequence >
+    </ xs : complexType >
+    </ xs : element >
+    < xs : elementname="Creator" type="xs : string" minOccurs="0" />
+    < xs : elementname="CreatorVersion" type="xs : string" minOccurs="0" />
+    < xs : elementname="CustomDatas" minOccurs="0" >
+    < xs : complexType >
+    < xs : sequence >
+    < xs : elementname="CustomData" maxOccurs="unbounded" >
+    < xs : complexType >
+
+    < xs : simpleContent >
+    < xs : extensionbase="xs : string" >
+    < xs : attributename="Name"
+    type="xs : string" use="required" />
+    </ xs : extension >
+    </ xs : simpleContent >
+    </ xs : complexType >
+    </ xs : element >
+    </ xs : sequence >
+    </ xs : complexType >
+    </ xs : element >
+    </ xs : sequence >
+    </ xs : complexType >
+    </ xs : schema >

@@ -1,0 +1,30 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+3 1 1
+GB / T 33190 — 2016
+< xs : elementname="Attachments" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Attachment" type="CT _ Attachment" minOccurs="0"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : complexTypename="CT _ Attachment" >
+< xs : sequence >
+< xs : elementname="FileLoc" type="ST _ Loc" />
+</ xs : sequence >
+< xs : attributename="ID" type="xs : ID" use="required" />
+< xs : attributename="Name" type="xs : string" use="required" />
+< xs : attributename="Format" type="xs : string" />
+< xs : attributename="CreationDate" type="xs : dateTime" />
+< xs : attributename="ModDate" type="xs : dateTime" />
+< xs : attributename="Size" type="xs : double" />
+< xs : attributename="Visible" type="xs : boolean" default="true" />
+< xs : attributename="Usage" type="xs : string" default="none" />
+</ xs : complexType >
+</ xs : schema >

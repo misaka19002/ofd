@@ -1,0 +1,37 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+< ! -- 版本控制信息定义。 -- >
+< xs : elementname="DocVersion" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="FileList" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="File" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : simpleContent >
+< xs : extensionbase="ST _ Loc" >
+< xs : attributename="ID" type="xs : ID"
+4 1 1
+GB / T 33190 — 2016
+use="required" />
+</ xs : extension >
+</ xs : simpleContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="DocRoot" type="ST _ Loc" />
+</ xs : sequence >
+< xs : attributename="ID" type="xs : ID" use="required" />
+< xs : attributename="Version" type="xs : string" />
+< xs : attributename="Name" type="xs : string" />
+< xs : attributename="CreationDate" type="xs : date" />
+</ xs : complexType >
+</ xs : element >
+</ xs : schema >

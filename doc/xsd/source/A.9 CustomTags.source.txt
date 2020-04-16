@@ -1,0 +1,27 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+< ! -- 标引 索引 文件, 标引 文件中通过 ID 引 用与被标引 对象发生“非接触式(分离式)”关联。 标引
+内容可任意扩展, 但建议给出 扩展内容的规范约束文件( schema )或命名 空间。 -- >
+< xs : elementname="CustomTags" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="CustomTag" minOccurs="0"
+maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="SchemaLoc" type="ST _ Loc"
+minOccurs="0" />
+< xs : elementname="FileLoc" type="ST _ Loc" />
+</ xs : sequence >
+< xs : attributename="NameSpace" type="xs : string"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : schema >

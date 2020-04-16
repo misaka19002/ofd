@@ -1,0 +1,89 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+< xs : includeschemaLocation="Page.xsd" />
+< ! -- 数字签名 或电子签章描述文件 -- >
+< xs : elementname="Signature" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="SignedInfo" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Provider" >
+< xs : complexType >
+< xs : attributename="ProviderName"
+type="xs : string" use="required" />
+< xs : attributename="Version"
+type="xs : string" />
+< xs : attributename="Company"
+type="xs : string" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="SignatureMethod" type="xs : string"
+minOccurs="0" />
+< xs : elementname="SignatureDateTime"
+type="xs : string" minOccurs="0" />
+< xs : elementname="References" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Reference"
+maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : element
+0 1 1
+GB / T 33190 — 2016
+name="CheckValue" type="xs : base64Binary" />
+</ xs : sequence >
+< xs : attributename="FileRef"
+type="ST _ Loc" use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="CheckMethod"
+default="MD5" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="MD5" />
+< xs : enumerationvalue="SHA1" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+</ xs : complexType >
+</ xs : element >
+< xs : sequence >
+< xs : elementname="StampAnnot" minOccurs="0"
+maxOccurs="unbounded" >
+< xs : complexType >
+< xs : attributename="ID" type="xs : ID"
+use="required" />
+< xs : attributename="PageRef"
+type="ST _ RefID" use="required" />
+< xs : attributename="Boundary"
+type="ST _ Box" use="required" />
+< xs : attributename="Clip"
+type="ST _ Box" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Seal" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="BaseLoc"
+type="ST _ Loc" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : sequence >
+</ xs : complexType >
+1 1 1
+GB / T 33190 — 2016
+</ xs : element >
+< xs : elementname="SignedValue" type="ST _ Loc" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : schema >

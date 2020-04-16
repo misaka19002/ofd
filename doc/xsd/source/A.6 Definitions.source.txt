@@ -1,0 +1,186 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+<! -- 公用的简单类型定义。 -- >
+< xs : simpleTypename="ST _ ID" >
+< xs : restrictionbase="xs : unsignedInt" />
+</ xs : simpleType >
+< xs : simpleTypename="ST _ RefID" >
+< xs : restrictionbase="xs : unsignedInt" />
+</ xs : simpleType >
+< xs : simpleTypename="ST _ Loc" >
+< xs : restrictionbase="xs : anyURI" />
+</ xs : simpleType >
+< xs : simpleTypename="ST _ Array" >
+< xs : restrictionbase="xs : string" />
+</ xs : simpleType >
+< xs : simpleTypename="ST _ Pos" >
+< xs : restrictionbase="xs : string" />
+</ xs : simpleType >
+< xs : simpleTypename="ST _ Box" >
+< xs : restrictionbase="xs : string" />
+</ xs : simpleType >
+<! -- 公用的复杂类型定义。 -- >
+< xs : complexTypename="CT _ Dest" >
+< xs : attributename="Type" use="required" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="XYZ" />
+< xs : enumerationvalue="Fit" />
+< xs : enumerationvalue="FitH" />
+< xs : enumerationvalue="FitV" />
+< xs : enumerationvalue="FitR" />
+</ xs : restriction >
+</ xs : simpleType >
+5 0 1
+GB / T 33190 — 2016
+</ xs : attribute >
+< xs : attributename="PageID" type="ST _ RefID" use="required" />
+< xs : attributename="Left" type="xs : double" />
+< xs : attributename="Top" type="xs : double" />
+< xs : attributename="Right" type="xs : double" />
+< xs : attributename="Bottom" type="xs : double" />
+< xs : attributename="Zoom" type="xs : double" />
+</ xs : complexType >
+< xs : complexTypename="CT _ PageArea" >
+< xs : sequence >
+< xs : elementname="PhysicalBox" type="ST _ Box" />
+< xs : elementname="ApplicationBox" type="ST _ Box" minOccurs="0" />
+< xs : elementname="ContentBox" type="ST _ Box" minOccurs="0" />
+< xs : elementname="BleedBox" type="ST _ Box" minOccurs="0" />
+</ xs : sequence >
+</ xs : complexType >
+< ! -- 动作及动作集定义。 -- >
+< xs : complexTypename="CT _ Action" >
+< xs : sequence >
+< xs : elementname="Region" type="CT _ Region" minOccurs="0" />
+< xs : choice >
+< xs : elementname="Goto" >
+< xs : complexType >
+< xs : choice >
+< xs : elementname="Dest" type="CT _ Dest" />
+< xs : elementname="Bookmark" >
+< xs : complexType >
+< xs : attributename="Name" type="xs : string"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : choice >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="URI" >
+< xs : complexType >
+< xs : attributename="URI" type="xs : string"
+use="required" />
+< xs : attributename="Base" type="xs : string" />
+< xs : attributename="Target" type="xs : string" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="GotoA" >
+6 0 1
+GB / T 33190 — 2016
+< xs : complexType >
+< xs : attributename="AttachID" type="xs : IDREF"
+use="required" />
+< xs : attributename="NewWindow" type="xs : boolean"
+default="true" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Sound" >
+< xs : complexType >
+< xs : attributename="ResourceID" type="ST _ RefID"
+use="required" />
+< xs : attributename="Volume" type="xs : int" />
+< xs : attributename="Repeat" type="xs : boolean" />
+< xs : attributename="Synchronous" type="xs : boolean" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Movie" >
+< xs : complexType >
+< xs : attributename="ResourceID" type="ST _ RefID"
+use="required" />
+< xs : attributename="Operator" default="Play" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Play" />
+< xs : enumerationvalue="Stop" />
+< xs : enumerationvalue="Pause" />
+< xs : enumerationvalue="Resume" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+</ xs : complexType >
+</ xs : element >
+</ xs : choice >
+</ xs : sequence >
+< xs : attributename="Event" use="required" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="DO" />
+< xs : enumerationvalue="PO" />
+< xs : enumerationvalue="CLICK" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+7 0 1
+GB / T 33190 — 2016
+</ xs : complexType >
+< xs : complexTypename="CT _ Region" >
+< xs : sequence >
+< xs : elementname="Area" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : choicemaxOccurs="unbounded" >
+< xs : elementname="Move" >
+< xs : complexType >
+< xs : attributename="Point1" type="ST _ Pos"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Line" >
+< xs : complexType >
+< xs : attributename="Point1" type="ST _ Pos"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="QuadraticBezier" >
+< xs : complexType >
+< xs : attributename="Point1" type="ST _ Pos"
+use="required" />
+< xs : attributename="Point2" type="ST _ Pos"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="CubicBezier" >
+< xs : complexType >
+< xs : attributename="Point1" type="ST _ Pos" />
+< xs : attributename="Point2" type="ST _ Pos" />
+< xs : attributename="Point3" type="ST _ Pos"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Arc" >
+< xs : complexType >
+< xs : attributename="SweepDirection"
+type="xs : boolean" use="required" />
+< xs : attributename="LargeArc" type="xs : boolean"
+use="required" />
+< xs : attributename="RotationAngle"
+type="xs : double" use="required" />
+< xs : attributename="EllipseSize" type="ST _ Array"
+8 0 1
+GB / T 33190 — 2016
+use="required" />
+< xs : attributename="EndPoint" type="ST _ Pos"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Close" />
+</ xs : choice >
+< xs : attributename="Start" type="ST _ Pos" use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : schema >

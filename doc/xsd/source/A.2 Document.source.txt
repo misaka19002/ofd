@@ -1,0 +1,215 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+<! -- 文档结构定义。 -- >
+< xs : elementname="Document" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="CommonData" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="MaxUnitID" type="ST _ ID" />
+< xs : elementname="PageArea" type="CT _ PageArea" />
+< xs : elementname="PublicRes" type="ST _ Loc"
+minOccurs="0" maxOccurs="unbounded" />
+< xs : elementname="DocumentRes" type="ST _ Loc"
+minOccurs="0" maxOccurs="unbounded" />
+< xs : elementname="TemplatePage" minOccurs="0"
+maxOccurs="unbounded" >
+< xs : complexType >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+< xs : attributename="Name" type="xs : string" />
+< xs : attributename="ZOrder" >
+3 9
+GB / T 33190 — 2016
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumeration
+value="Background" />
+< xs : enumeration
+value="Foreground" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="BaseLoc" type="ST _ Loc"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="DefaultCS" type="ST _ RefID"
+minOccurs="0" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Pages" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Page" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+< xs : attributename="BaseLoc" type="ST _ Loc"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Outlines" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="OutlineElem" type="CT _ OutlineElem"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Permissions" type="CT _ Permission"
+minOccurs="0" />
+< xs : elementname="Actions" minOccurs="0" >
+4 9
+GB / T 33190 — 2016
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Action" type="CT _ Action"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="VPreferences" type="CT _ VPreferences"
+minOccurs="0" />
+< xs : elementname="Bookmarks" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Bookmark" type="CT _ Bookmark"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Annotations" type="ST _ Loc" minOccurs="0" />
+< xs : elementname="CustomTags" type="ST _ Loc" minOccurs="0" />
+< xs : elementname="Attachments" type="ST _ Loc" minOccurs="0" />
+< xs : elementname="Extensions" type="ST _ Loc" minOccurs="0" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+<! -- 文档全局设置 -- >
+< xs : complexTypename="CT _ Permission" >
+< xs : sequence >
+< xs : elementname="Edit" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="Annot" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="Export" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="Signature" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="Watermark" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="PrintScreen" type="xs : boolean" default="true"
+minOccurs="0" />
+< xs : elementname="Print" minOccurs="0" >
+< xs : complexType >
+< xs : attributename="Printable" type="xs : boolean"
+use="required" />
+5 9
+GB / T 33190 — 2016
+< xs : attributename="Copies" type="xs : int" default="-1" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="ValidPeriod" minOccurs="0" >
+< xs : complexType >
+< xs : attributename="StartDate" type="xs : dateTime" />
+< xs : attributename="EndDate" type="xs : dateTime" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+< xs : complexTypename="CT _ VPreferences" >
+< xs : sequence >
+< xs : elementname="PageMode" default="None" minOccurs="0" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="None" />
+< xs : enumerationvalue="FullScreen" />
+< xs : enumerationvalue="UseOutlines" />
+< xs : enumerationvalue="UseThumbs" />
+< xs : enumerationvalue="UseCustomTags" />
+< xs : enumerationvalue="UseLayers" />
+< xs : enumerationvalue="UseAttatchs" />
+< xs : enumerationvalue="UseBookmarks" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : element >
+< xs : elementname="PageLayout" default="OneColumn" minOccurs="0" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="OnePage" />
+< xs : enumerationvalue="OneColumn" />
+< xs : enumerationvalue="TwoPageL" />
+< xs : enumerationvalue="TwoColumnL" />
+< xs : enumerationvalue="TwoPageR" />
+< xs : enumerationvalue="TwoColumnR" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : element >
+< xs : elementname="TabDisplay" default="DocTitle" minOccurs="0" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="DocTitle" />
+6 9
+GB / T 33190 — 2016
+< xs : enumerationvalue="FileName" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : element >
+< xs : elementname="HideToolbar" type="xs : boolean" default="false"
+minOccurs="0" />
+< xs : elementname="HideMenubar" type="xs : boolean" default="false"
+minOccurs="0" />
+< xs : elementname="HideWindowUI" type="xs : boolean" default="false"
+minOccurs="0" />
+< xs : choiceminOccurs="0" >
+< xs : elementname="ZoomMode" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Default" />
+< xs : enumerationvalue="FitHeight" />
+< xs : enumerationvalue="FitWidth" />
+< xs : enumerationvalue="FitRect" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : element >
+< xs : elementname="Zoom" type="xs : double" />
+</ xs : choice >
+</ xs : sequence >
+</ xs : complexType >
+<! -- 大纲相关结构类型 -- >
+< xs : complexTypename="CT _ OutlineElem" >
+< xs : sequence >
+< xs : elementname="Actions" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Action" type="CT _ Action"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="OutlineElem" type="CT _ OutlineElem" minOccurs="0"
+maxOccurs="unbounded" />
+</ xs : sequence >
+< xs : attributename="Title" type="xs : string" use="required" />
+< xs : attributename="Count" type="xs : int" />
+< xs : attributename="Expanded" type="xs : boolean" default="true" />
+</ xs : complexType >
+7 9
+GB / T 33190 — 2016
+< xs : complexTypename="CT _ Bookmark" >
+< xs : sequence >
+< xs : elementname="Dest" type="CT _ Dest" />
+</ xs : sequence >
+< xs : attributename="Name" type="xs : string" use="required" />
+</ xs : complexType >
+</ xs : schema >

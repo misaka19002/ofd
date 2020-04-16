@@ -1,0 +1,40 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+2 1 1
+GB / T 33190 — 2016
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+<! -- 注释文件单独存放, 通过 ID 引 用与被扩展对象发生“非接触式”关联。 -- >
+< xs : elementname="Extensions" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Extension" type="CT _ Extension"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : complexTypename="CT _ Extension" >
+< xs : choicemaxOccurs="unbounded" >
+< xs : elementname="Property" >
+< xs : complexType >
+< xs : simpleContent >
+< xs : extensionbase="xs : string" >
+< xs : attributename="Name" type="xs : string"
+use="required" />
+< xs : attributename="Type" type="xs : string" />
+</ xs : extension >
+</ xs : simpleContent >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Data" type="xs : anyType" />
+< xs : elementname="ExtendData" type="ST _ Loc" />
+</ xs : choice >
+< xs : attributename="AppName" type="xs : string" use="required" />
+< xs : attributename="Company" type="xs : string" />
+< xs : attributename="AppVersion" type="xs : string" />
+< xs : attributename="Date" type="xs : dateTime" />
+< xs : attributename="RefId" type="ST _ RefID" use="required" />
+</ xs : complexType >
+</ xs : schema >

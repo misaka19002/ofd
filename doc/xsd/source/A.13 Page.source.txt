@@ -1,0 +1,496 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Definitions.xsd" />
+<! -- 页面描述定义, 分为页面 - 图层(块) - 图元三个层次。 -- >
+< xs : elementname="Page" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Template" minOccurs="0" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : attributename="TemplateID" type="ST _ RefID"
+use="required" />
+< xs : attributename="ZOrder" use="optional"
+default="Background" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Background" />
+< xs : enumerationvalue="Foreground" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+5 1 1
+GB / T 33190 — 2016
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="PageRes" type="ST _ Loc" minOccurs="0"
+maxOccurs="unbounded" />
+< xs : elementname="Area" type="CT _ PageArea" minOccurs="0" />
+< xs : elementname="Content" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Layer" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ Layer" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Actions" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Action" type="CT _ Action"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+<! -- 页对象定义 -- >
+< xs : complexTypename="CT _ Clip" >
+< xs : sequence >
+< xs : elementname="Area" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : choice >
+< xs : elementname="Path" type="CT _ Path" />
+< xs : elementname="Text" type="CT _ Text" />
+</ xs : choice >
+< xs : attributename="DrawParam" type="ST _ RefID" />
+< xs : attributename="CTM" type="ST _ Array" />
+6 1 1
+GB / T 33190 — 2016
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+< xs : complexTypename="CT _ PageBlock" >
+< xs : choiceminOccurs="0" maxOccurs="unbounded" >
+< xs : elementname="TextObject" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ Text" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="PathObject" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ Path" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="ImageObject" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ Image" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="CompositeObject" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ Composite" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+7 1 1
+GB / T 33190 — 2016
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="PageBlock" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ PageBlock" >
+< xs : attributename="ID" type="ST _ ID"
+use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : choice >
+</ xs : complexType >
+< xs : complexTypename="CT _ Layer" >
+< xs : complexContent >
+< xs : extensionbase="CT _ PageBlock" >
+< xs : attributename="Type" default="Body" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Body" />
+< xs : enumerationvalue="Background" />
+< xs : enumerationvalue="Foreground" />
+< xs : enumerationvalue="Custom" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="DrawParam" type="ST _ RefID" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+< ! -- 图元的基础定义 -- >
+< xs : complexTypename="CT _ GraphicUnit" abstract="true" >
+< xs : sequence >
+< xs : elementname="Actions" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Action" type="CT _ Action"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+8 1 1
+GB / T 33190 — 2016
+< xs : elementname="Clips" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Clip" type="CT _ Clip"
+maxOccurs="unbounded" />
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="Boundary" type="ST _ Box" use="required" />
+< xs : attributename="Name" type="xs : string" />
+< xs : attributename="Visible" type="xs : boolean" default="true" />
+< xs : attributename="CTM" type="ST _ Array" />
+< xs : attributename="DrawParam" type="ST _ RefID" />
+< xs : attributename="LineWidth" type="xs : double" default="0.353" />
+< xs : attributename="Cap" default="Butt" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Butt" />
+< xs : enumerationvalue="Round" />
+< xs : enumerationvalue="Square" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="Join" default="Miter" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Miter" />
+< xs : enumerationvalue="Round" />
+< xs : enumerationvalue="Bevel" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="MiterLimit" type="xs : double" default="4.234" />
+< xs : attributename="DashOffset" type="xs : double" default="0" />
+< xs : attributename="DashPattern" type="ST _ Array" />
+< xs : attributename="Alpha" type="xs : int" default="255" />
+</ xs : complexType >
+<! -- 文本对象及其定义 -- >
+< xs : complexTypename="CT _ Text" >
+< xs : complexContent >
+< xs : extensionbase="CT _ GraphicUnit" >
+< xs : sequence >
+9 1 1
+GB / T 33190 — 2016
+< xs : elementname="FillColor" type="CT _ Color" minOccurs="0" />
+< xs : elementname="StrokeColor" type="CT _ Color"
+minOccurs="0" />
+< xs : sequencemaxOccurs="unbounded" >
+< xs : elementname="CGTransform" type="CT _ CGTransform"
+minOccurs="0" maxOccurs="unbounded" />
+< xs : elementname="TextCode" >
+< xs : complexType >
+< xs : simpleContent >
+< xs : extensionbase="xs : string" >
+< xs : attributename="X"
+type="xs : double" />
+< xs : attributename="Y"
+type="xs : double" />
+< xs : attributename="DeltaX"
+type="ST _ Array" />
+< xs : attributename="DeltaY"
+type="ST _ Array" />
+</ xs : extension >
+</ xs : simpleContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : sequence >
+< xs : attributename="Font" type="ST _ RefID" use="required" />
+< xs : attributename="Size" type="xs : double" use="required" />
+< xs : attributename="Stroke" type="xs : boolean" default="false" />
+< xs : attributename="Fill" type="xs : boolean" default="true" />
+< xs : attributename="HScale" type="xs : double" default="1.0" />
+< xs : attributename="ReadDirection" type="xs : int" default="0" />
+< xs : attributename="CharDirection" type="xs : int" default="0" />
+< xs : attributename="Weight" default="400" >
+< xs : simpleType >
+< xs : restrictionbase="xs : int" >
+< xs : enumerationvalue="0" />
+< xs : enumerationvalue="100" />
+< xs : enumerationvalue="200" />
+< xs : enumerationvalue="300" />
+< xs : enumerationvalue="400" />
+< xs : enumerationvalue="500" />
+< xs : enumerationvalue="600" />
+< xs : enumerationvalue="700" />
+< xs : enumerationvalue="800" />
+0 2 1
+GB / T 33190 — 2016
+< xs : enumerationvalue="900" />
+< xs : enumerationvalue="1000" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="Italic" type="xs : boolean" default="false" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+< xs : complexTypename="CT _ CGTransform" >
+< xs : sequence >
+< xs : elementname="Glyphs" type="ST _ Array" minOccurs="0" />
+</ xs : sequence >
+< xs : attributename="CodePosition" type="xs : int" use="required" />
+< xs : attributename="CodeCount" type="xs : int" default="1" />
+< xs : attributename="GlyphCount" type="xs : int" default="1" />
+</ xs : complexType >
+<! -- 位图图像对象定义 -- >
+< xs : complexTypename="CT _ Image" >
+< xs : complexContent >
+< xs : extensionbase="CT _ GraphicUnit" >
+< xs : sequence >
+< xs : elementname="Border" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="BorderColor" type="CT _ Color"
+minOccurs="0" />
+</ xs : sequence >
+< xs : attributename="LineWidth" type="xs : double"
+default="0.353" />
+< xs : attributename="HorizonalCornerRadius"
+type="xs : double" default="0" />
+< xs : attributename="VerticalCornerRadius"
+type="xs : double" default="0" />
+< xs : attributename="DashOffset" type="xs : double"
+default="0" />
+< xs : attributename="DashPattern" type="ST _ Array" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="ResourceID" type="ST _ RefID" use="required" />
+< xs : attributename="Substitution" type="ST _ RefID" />
+< xs : attributename="ImageMask" type="ST _ RefID" />
+1 2 1
+GB / T 33190 — 2016
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+<! -- 矢量图像对象定义 -- >
+< xs : complexTypename="CT _ Composite" >
+< xs : complexContent >
+< xs : extensionbase="CT _ GraphicUnit" >
+< xs : attributename="ResourceID" type="ST _ RefID" use="required" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+< ! -- 图形对象及其定义 -- >
+< xs : complexTypename="CT _ Path" >
+< xs : complexContent >
+< xs : extensionbase="CT _ GraphicUnit" >
+< xs : sequence >
+< xs : elementname="StrokeColor" type="CT _ Color"
+minOccurs="0" />
+< xs : elementname="FillColor" type="CT _ Color" minOccurs="0" />
+< xs : elementname="AbbreviatedData" type="xs : string" />
+</ xs : sequence >
+< xs : attributename="Stroke" type="xs : boolean" default="true" />
+< xs : attributename="Fill" type="xs : boolean" default="false" />
+< xs : attributename="Rule" default="NonZero" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="NonZero" />
+< xs : enumerationvalue="Even-Odd" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+< ! -- 底纹定义 -- >
+< xs : complexTypename="CT _ Pattern" >
+< xs : sequence >
+< xs : elementname="CellContent" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ PageBlock" >
+< xs : attributename="Thumbnail" type="ST _ RefID" />
+</ xs : extension >
+2 2 1
+GB / T 33190 — 2016
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="Width" type="xs : double" use="required" />
+< xs : attributename="Height" type="xs : double" use="required" />
+< xs : attributename="XStep" type="xs : double" />
+< xs : attributename="YStep" type="xs : double" />
+< xs : attributename="ReflectMethod" default="Normal" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Normal" />
+< xs : enumerationvalue="Row" />
+< xs : enumerationvalue="Column" />
+< xs : enumerationvalue="RowAndColumn" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="RelativeTo" default="Object" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Page" />
+< xs : enumerationvalue="Object" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="CTM" type="ST _ Array" />
+</ xs : complexType >
+<! -- 渐变定义 -- >
+< xs : complexTypename="CT _ AxialShd" >
+< xs : sequence >
+< xs : elementname="Segment" minOccurs="2" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Color" type="CT _ Color" />
+</ xs : sequence >
+< xs : attributename="Position" type="xs : double" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="MapType" default="Direct" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+3 2 1
+GB / T 33190 — 2016
+< xs : enumerationvalue="Direct" />
+< xs : enumerationvalue="Repeat" />
+< xs : enumerationvalue="Reflect" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="MapUnit" type="xs : double" />
+< xs : attributename="Extend" default="0" >
+< xs : simpleType >
+< xs : restrictionbase="xs : int" >
+< xs : enumerationvalue="0" />
+< xs : enumerationvalue="1" />
+< xs : enumerationvalue="2" />
+< xs : enumerationvalue="3" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="StartPoint" type="ST _ Pos" use="required" />
+< xs : attributename="EndPoint" type="ST _ Pos" use="required" />
+</ xs : complexType >
+< xs : complexTypename="CT _ RadialShd" >
+< xs : sequence >
+< xs : elementname="Segment" minOccurs="2" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Color" type="CT _ Color" />
+</ xs : sequence >
+< xs : attributename="Position" type="xs : double" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="MapType" default="Direct" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+< xs : enumerationvalue="Direct" />
+< xs : enumerationvalue="Repeat" />
+< xs : enumerationvalue="Reflect" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="MapUnit" type="xs : double" />
+< xs : attributename="Eccentricity" type="xs : double" default="0" />
+< xs : attributename="Angle" type="xs : double" default="0" />
+4 2 1
+GB / T 33190 — 2016
+< xs : attributename="StartPoint" type="ST _ Pos" use="required" />
+< xs : attributename="StartRadius" type="xs : double" default="0" />
+< xs : attributename="EndPoint" type="ST _ Pos" use="required" />
+< xs : attributename="EndRadius" type="xs : double" use="required" />
+< xs : attributename="Extend" type="xs : int" default="0" />
+</ xs : complexType >
+< xs : complexTypename="CT _ GouraudShd" >
+< xs : sequence >
+< xs : elementname="Point" minOccurs="3" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Color" type="CT _ Color" />
+</ xs : sequence >
+< xs : attributename="X" type="xs : double" use="required" />
+< xs : attributename="Y" type="xs : double" use="required" />
+< xs : attributename="EdgeFlag" >
+< xs : simpleType >
+< xs : restrictionbase="xs : int" >
+< xs : enumerationvalue="0" />
+< xs : enumerationvalue="1" />
+< xs : enumerationvalue="2" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="BackColor" type="CT _ Color" minOccurs="0" />
+</ xs : sequence >
+< xs : attributename="Extend" type="xs : int" />
+</ xs : complexType >
+< xs : complexTypename="CT _ LaGouraudShd" >
+< xs : sequence >
+< xs : elementname="Point" minOccurs="4" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Color" type="CT _ Color" />
+</ xs : sequence >
+< xs : attributename="X" type="xs : double" />
+< xs : attributename="Y" type="xs : double" />
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="BackColor" type="CT _ Color" minOccurs="0" />
+</ xs : sequence >
+5 2 1
+GB / T 33190 — 2016
+< xs : attributename="VerticesPerRow" type="xs : int" use="required" />
+< xs : attributename="Extend" type="xs : int" />
+</ xs : complexType >
+<! -- 颜色定义, 渐变和填充被看作颜色的一种。 -- >
+< xs : complexTypename="CT _ Color" >
+< xs : choiceminOccurs="0" >
+< xs : elementname="Pattern" type="CT _ Pattern" />
+< xs : elementname="AxialShd" type="CT _ AxialShd" />
+< xs : elementname="RadialShd" type="CT _ RadialShd" />
+< xs : elementname="GouraudShd" type="CT _ GouraudShd" />
+< xs : elementname="LaGourandShd" type="CT _ LaGouraudShd" />
+</ xs : choice >
+< xs : attributename="Value" type="ST _ Array" />
+< xs : attributename="Index" type="xs : int" />
+< xs : attributename="ColorSpace" type="ST _ RefID" />
+< xs : attributename="Alpha" type="xs : int" default="255" />
+</ xs : complexType >
+</ xs : schema >
+6 2 1
+GB / T 33190 — 2016
+

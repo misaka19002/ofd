@@ -1,0 +1,82 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Page.xsd" />
+8 9
+GB / T 33190 — 2016
+< xs : includeschemaLocation="Definitions.xsd" />
+<! -- 注释文件单独存放, 与被注释对象相分离。 -- >
+< xs : elementname="PageAnnot" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Annot" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Remark" type="xs : string"
+minOccurs="0" />
+< xs : elementname="Parameters" minOccurs="0" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Parameter"
+maxOccurs="unbounded" >
+< xs : complexType >
+< xs : simpleContent >
+< xs : extension
+base="xs : string" >
+< xs : attribute
+name="Name" type="xs : string" use="required" />
+</ xs : extension >
+</ xs : simpleContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+< xs : elementname="Appearance" >
+< xs : complexType >
+< xs : complexContent >
+< xs : extensionbase="CT _ PageBlock" >
+< xs : attributename="Boundary"
+type="ST _ Box" />
+</ xs : extension >
+</ xs : complexContent >
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+< xs : attributename="ID" type="ST _ ID" use="required" />
+< xs : attributename="Type" use="required" >
+< xs : simpleType >
+< xs : restrictionbase="xs : string" >
+9 9
+GB / T 33190 — 2016
+< xs : enumerationvalue="Link" />
+< xs : enumerationvalue="Path" />
+< xs : enumerationvalue="Highlight" />
+< xs : enumerationvalue="Stamp" />
+< xs : enumerationvalue="Watermark" />
+</ xs : restriction >
+</ xs : simpleType >
+</ xs : attribute >
+< xs : attributename="Creator" type="xs : string"
+use="required" />
+< xs : attributename="LastModDate" type="xs : date"
+use="required" />
+< xs : attributename="Visible" type="xs : boolean"
+default="true" />
+< xs : attributename="Subtype" type="xs : string" />
+< xs : attributename="Print" type="xs : boolean"
+default="true" />
+< xs : attributename="NoZoom" type="xs : boolean"
+default="false" />
+< xs : attributename="NoRotate" type="xs : boolean"
+default="false" />
+< xs : attributename="ReadOnly" type="xs : boolean"
+default="true" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : schema >

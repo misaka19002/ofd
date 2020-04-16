@@ -1,0 +1,24 @@
+<? xml version="1.0" encoding="UTF-8" ?>
+< xs : schemaxmlns="http :// www.ofdspec.org / 2016"
+xmlns : xs="http :// www.w3.org / 2001 / XMLSchema"
+targetNamespace="http :// www.ofdspec.org / 2016" elementFormDefault="qualified"
+attributeFormDefault="unqualified" >
+< xs : includeschemaLocation="Page.xsd" />
+< xs : includeschemaLocation="Definitions.xsd" />
+< ! -- 注释索引 文件, 按页组织指向注释内容文件。 注释内容与版式内容是分开描述的 -- >
+< xs : elementname="Annotations" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="Page" minOccurs="0" maxOccurs="unbounded" >
+< xs : complexType >
+< xs : sequence >
+< xs : elementname="FileLoc" type="ST _ Loc" />
+</ xs : sequence >
+< xs : attributename="PageID" type="ST _ RefID"
+use="required" />
+</ xs : complexType >
+</ xs : element >
+</ xs : sequence >
+</ xs : complexType >
+</ xs : element >
+</ xs : schema >
