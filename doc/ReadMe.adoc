@@ -2,7 +2,7 @@
 
 . Copy `GB_T 33190-2016 电子文件存储与交换格式  版式文档.xdf` 文档内的xsd生成source.txt
 . 使用XsdTest内的 `generateFiles` 函数将source.txt格式化成为正常的xsd文件。
-. 使用xjc命令生成相应的javaBean.由于直接使用xjc命令生成的文件编码默认为ANSI，所以这里选择使用另一种方式调用；`java -Dfile.encoding=UTF-8 -cp "C:\Program Files\Java\jdk8u212-b04\lib\tools.jar" com.sun.tools.internal.xjc.Driver  -p io.onee -d d:\srv   C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd`
+. 使用xjc命令生成相应的javaBean.由于直接使用xjc命令生成的文件编码默认为ANSI，所以这里选择使用另一种方式调用；`java -Dfile.encoding=UTF-8 -cp "C:\Program Files\Java\jdk8u212-b04\lib\tools.jar" com.sun.tools.internal.xjc.Driver  -p io.onee -d d:\srv   C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd` （#java1.8 已经有-encoding可以配置编码：-encoding utf-8#）
 .. -cp 指定tools.jar的路径（注意是jdk的tools.jar，不是jre）
 .. com.sun.tools.internal.xjc.Driver 为我们需要调用的函数，反编译后如下。
 +
