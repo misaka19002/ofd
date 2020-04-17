@@ -1,40 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.ofdspec.org/2016"
-xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.ofdspec.org/2016" elementFormDefault="qualified"
-
-
-attributeFormDefault="unqualified">
-<xs:include schemaLocation="Definitions.xsd"/>
-<!-- 注释文件单独存放, 通过 ID 引 用与被扩展对象发生“非接触式”关联。 -->
-<xs:element name="Extensions">
-<xs:complexType>
-<xs:sequence>
-<xs:element name="Extension" type="CT_Extension"
-maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
-<xs:complexType name="CT_Extension">
-<xs:choice maxOccurs="unbounded">
-<xs:element name="Property">
-<xs:complexType>
-<xs:simpleContent>
-<xs:extension base="xs:string">
-<xs:attribute name="Name" type="xs:string"
-use="required"/>
-<xs:attribute name="Type" type="xs:string"/>
-</xs:extension>
-</xs:simpleContent>
-</xs:complexType>
-</xs:element>
-<xs:element name="Data" type="xs:anyType"/>
-<xs:element name="ExtendData" type="ST_Loc"/>
-</xs:choice>
-<xs:attribute name="AppName" type="xs:string" use="required"/>
-<xs:attribute name="Company" type="xs:string"/>
-<xs:attribute name="AppVersion" type="xs:string"/>
-<xs:attribute name="Date" type="xs:dateTime"/>
-<xs:attribute name="RefId" type="ST_RefID" use="required"/>
-</xs:complexType>
+<xs:schema attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://www.ofdspec.org/2016"
+  xmlns="http://www.ofdspec.org/2016" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Definitions.xsd"/>
+  <!-- 注释文件单独存放, 通过 ID 引 用与被扩展对象发生“非接触式”关联。 -->
+  <xs:element name="Extensions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="Extension" type="CT_Extension"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:complexType name="CT_Extension">
+    <xs:choice maxOccurs="unbounded">
+      <xs:element name="Property">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="Name" type="xs:string" use="required"/>
+              <xs:attribute name="Type" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Data" type="xs:anyType"/>
+      <xs:element name="ExtendData" type="ST_Loc"/>
+    </xs:choice>
+    <xs:attribute name="AppName" type="xs:string" use="required"/>
+    <xs:attribute name="Company" type="xs:string"/>
+    <xs:attribute name="AppVersion" type="xs:string"/>
+    <xs:attribute name="Date" type="xs:dateTime"/>
+    <xs:attribute name="RefId" type="ST_RefID" use="required"/>
+  </xs:complexType>
 </xs:schema>

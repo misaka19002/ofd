@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns="http://www.ofdspec.org/2016"
-xmlns:xs="http://www.w3.org/2001/XMLSchema"
-targetNamespace="http://www.ofdspec.org/2016" elementFormDefault="qualified"
-attributeFormDefault="unqualified">
-<xs:include schemaLocation="Definitions.xsd"/>
-<!-- 标引 索引 文件, 标引 文件中通过 ID 引 用与被标引 对象发生“非接触式(分离式)”关联。 标引
+<xs:schema attributeFormDefault="unqualified"
+  elementFormDefault="qualified"
+  targetNamespace="http://www.ofdspec.org/2016"
+  xmlns="http://www.ofdspec.org/2016" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:include schemaLocation="Definitions.xsd"/>
+  <!-- 标引 索引 文件, 标引 文件中通过 ID 引 用与被标引 对象发生“非接触式(分离式)”关联。 标引
 内容可任意扩展, 但建议给出 扩展内容的规范约束文件( schema )或命名 空间。 -->
-<xs:element name="CustomTags">
-<xs:complexType>
-<xs:sequence>
-<xs:element name="CustomTag" minOccurs="0"
-maxOccurs="unbounded">
-<xs:complexType>
-<xs:sequence>
-<xs:element name="SchemaLoc" type="ST_Loc"
-minOccurs="0"/>
-<xs:element name="FileLoc" type="ST_Loc"/>
-</xs:sequence>
-<xs:attribute name="NameSpace" type="xs:string"
-use="required"/>
-</xs:complexType>
-</xs:element>
-</xs:sequence>
-</xs:complexType>
-</xs:element>
+  <xs:element name="CustomTags">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" minOccurs="0" name="CustomTag">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="0" name="SchemaLoc" type="ST_Loc"/>
+              <xs:element name="FileLoc" type="ST_Loc"/>
+            </xs:sequence>
+            <xs:attribute name="NameSpace" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
