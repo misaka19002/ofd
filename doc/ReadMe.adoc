@@ -5,7 +5,9 @@
 . 使用xjc命令生成相应的javaBean.由于直接使用xjc命令生成的文件编码默认为ANSI，所以这里选择使用另一种方式调用；`java -Dfile.encoding=UTF-8 -cp "C:\Program Files\Java\jdk8u212-b04\lib\tools.jar" com.sun.tools.internal.xjc.Driver  -p io.onee -d d:\srv   C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd`
 .. -cp 指定tools.jar的路径（注意是jdk的tools.jar，不是jre）
 .. com.sun.tools.internal.xjc.Driver 为我们需要调用的函数，反编译后如下。
++
 [source,java]
+----
 public class Driver
 {
   public static void main(String[] args) throws Exception {
@@ -39,9 +41,69 @@ public class Driver
     }
   }
 }
+----
 
 .. -p 指定生成的package路径。
 .. -d 指定生成的.java文件目标文件夹。
 .. C:\Users\admin\Desktop\ofd_reader\xsd\*.xsd 表示使用所有的xsd进行生成。
+. 默认情况下生成的 `package-info.java` 如下：使用这个配置生成的xml如下：是没有前缀的。
++
+[source,java]
+----
+@javax.xml.bind.annotation.XmlSchema(
+    namespace = "http://www.ofdspec.org/2016",
+    elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED
+    )
+package io.onee;
+----
++
+无前缀，生成的示例:
++
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OFD xmlns="http://www.ofdspec.org/2016"/>
+----
 
+. 如果需要前缀我们需要对 `package-info.java` 做一些改造。
++
+[source,java]
+----
+@XmlSchema(
+        namespace = "http://www.ofdspec.org/2016",
+        elementFormDefault = XmlNsForm.QUALIFIED,
+        xmlns = {
+                @XmlNs(
+                        namespaceURI = "http://www.ofdspec.org/2016",
+                        prefix = "ofd"
+                )}
+    )
+package io.onee.ofd.definition;
 
+import javax.xml.bind.annotation.XmlNs;
+import javax.xml.bind.annotation.XmlNsForm;
+import javax.xml.bind.annotation.XmlSchema;
+----
++
+有前缀，生成的示例:
++
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ofd:OFD xmlns:ofd="http://www.ofdspec.org/2016"/>
+----
+
+[TIP]
+====
+#*虽然经实验前缀带不带都可以被ofd阅读器正确解释，但是最好还是遵循标准带上前缀。*#
+====
+
+[NOTE]
+====
+关于格式化时是否带上前缀相关资料。
+
+- jaxb2教程 https://www.w3cschool.cn/jaxb2/
+- 序列化后不带namespace问题。
+.. http://www.cocoachina.com/articles/116019
+.. http://blog.bdoughan.com/2010/08/jaxb-namespaces.html
+====

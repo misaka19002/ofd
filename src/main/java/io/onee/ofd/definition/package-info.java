@@ -5,5 +5,17 @@
 // 生成时间: 2020.04.16 时间 04:51:38 PM CST
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://www.ofdspec.org/2016", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+@XmlSchema(
+        namespace = "http://www.ofdspec.org/2016",
+        elementFormDefault = XmlNsForm.QUALIFIED,
+        xmlns = {
+                @XmlNs(
+                        namespaceURI = "http://www.ofdspec.org/2016",
+                        prefix = "ofd"
+                )}
+)
 package io.onee.ofd.definition;
+
+import javax.xml.bind.annotation.XmlNs;
+import javax.xml.bind.annotation.XmlNsForm;
+import javax.xml.bind.annotation.XmlSchema;
