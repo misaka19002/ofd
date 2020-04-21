@@ -8,9 +8,6 @@
 
 package io.onee;
 
-import javax.xml.bind.annotation.*;
-
-
 /**
  * <p>CT_CGTransform complex type的 Java 类。
  *

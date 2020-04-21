@@ -8,9 +8,6 @@
 
 package io.onee;
 
-import javax.xml.bind.annotation.*;
-
-
 /**
  * <p>CT_MultiMedia complex type的 Java 类。
  *
