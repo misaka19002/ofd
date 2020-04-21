@@ -1,14 +1,20 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlIDREF;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -17,126 +23,119 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Action">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Region" type="{http://www.ofdspec.org/2016}CT_Region" minOccurs="0"/>
- *         &lt;choice>
- *           &lt;element name="Goto">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;choice>
- *                     &lt;element name="Dest" type="{http://www.ofdspec.org/2016}CT_Dest"/>
- *                     &lt;element name="Bookmark">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/choice>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="URI">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;attribute name="URI" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                   &lt;attribute name="Base" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                   &lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="GotoA">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;attribute name="AttachID" use="required" type="{http://www.w3.org/2001/XMLSchema}IDREF" />
- *                   &lt;attribute name="NewWindow" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="Sound">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *                   &lt;attribute name="Volume" type="{http://www.w3.org/2001/XMLSchema}int" />
- *                   &lt;attribute name="Repeat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                   &lt;attribute name="Synchronous" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="Movie">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *                   &lt;attribute name="Operator" default="Play">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;enumeration value="Play"/>
- *                         &lt;enumeration value="Stop"/>
- *                         &lt;enumeration value="Pause"/>
- *                         &lt;enumeration value="Resume"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/attribute>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/choice>
- *       &lt;/sequence>
- *       &lt;attribute name="Event" use="required">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="DO"/>
- *             &lt;enumeration value="PO"/>
- *             &lt;enumeration value="CLICK"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Action"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Region" type="{http://www.ofdspec.org/2016}CT_Region" minOccurs="0"/&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="Goto"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;choice&gt;
+ *                     &lt;element name="Dest" type="{http://www.ofdspec.org/2016}CT_Dest"/&gt;
+ *                     &lt;element name="Bookmark"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/choice&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="URI"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;attribute name="URI" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                   &lt;attribute name="Base" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                   &lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="GotoA"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;attribute name="AttachID" use="required" type="{http://www.w3.org/2001/XMLSchema}IDREF" /&gt;
+ *                   &lt;attribute name="NewWindow" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="Sound"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *                   &lt;attribute name="Volume" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *                   &lt;attribute name="Repeat" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                   &lt;attribute name="Synchronous" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="Movie"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *                   &lt;attribute name="Operator" default="Play"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;enumeration value="Play"/&gt;
+ *                         &lt;enumeration value="Stop"/&gt;
+ *                         &lt;enumeration value="Pause"/&gt;
+ *                         &lt;enumeration value="Resume"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/attribute&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/choice&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Event" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="DO"/&gt;
+ *             &lt;enumeration value="PO"/&gt;
+ *             &lt;enumeration value="CLICK"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Action", propOrder = {
     "region",
-    "_goto",
-    "uri",
+    "goto",
+    "URI",
     "gotoA",
     "sound",
     "movie"
 })
 public class CTAction {
 
-    @XmlElement(name = "Region")
     protected CTRegion region;
-    @XmlElement(name = "Goto")
     protected Goto _goto;
-    @XmlElement(name = "URI")
     protected URI uri;
-    @XmlElement(name = "GotoA")
     protected GotoA gotoA;
-    @XmlElement(name = "Sound")
     protected Sound sound;
-    @XmlElement(name = "Movie")
     protected Movie movie;
-    @XmlAttribute(name = "Event", required = true)
     protected String event;
 
     /**
@@ -147,6 +146,7 @@ public class CTAction {
      *     {@link CTRegion }
      *
      */
+    @XmlElement(name = "Region")
     public CTRegion getRegion() {
         return region;
     }
@@ -171,6 +171,7 @@ public class CTAction {
      *     {@link Goto }
      *
      */
+    @XmlElement(name = "Goto")
     public Goto getGoto() {
         return _goto;
     }
@@ -195,6 +196,7 @@ public class CTAction {
      *     {@link URI }
      *
      */
+    @XmlElement(name = "URI")
     public URI getURI() {
         return uri;
     }
@@ -219,6 +221,7 @@ public class CTAction {
      *     {@link GotoA }
      *
      */
+    @XmlElement(name = "GotoA")
     public GotoA getGotoA() {
         return gotoA;
     }
@@ -243,6 +246,7 @@ public class CTAction {
      *     {@link Sound }
      *
      */
+    @XmlElement(name = "Sound")
     public Sound getSound() {
         return sound;
     }
@@ -267,6 +271,7 @@ public class CTAction {
      *     {@link Movie }
      *
      */
+    @XmlElement(name = "Movie")
     public Movie getMovie() {
         return movie;
     }
@@ -291,6 +296,7 @@ public class CTAction {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Event", required = true)
     public String getEvent() {
         return event;
     }
@@ -314,38 +320,36 @@ public class CTAction {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice>
-     *         &lt;element name="Dest" type="{http://www.ofdspec.org/2016}CT_Dest"/>
-     *         &lt;element name="Bookmark">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/choice>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice&gt;
+     *         &lt;element name="Dest" type="{http://www.ofdspec.org/2016}CT_Dest"/&gt;
+     *         &lt;element name="Bookmark"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/choice&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "dest",
         "bookmark"
     })
     public static class Goto {
 
-        @XmlElement(name = "Dest")
         protected CTDest dest;
-        @XmlElement(name = "Bookmark")
         protected Bookmark bookmark;
 
         /**
@@ -356,6 +360,7 @@ public class CTAction {
          *     {@link CTDest }
          *
          */
+        @XmlElement(name = "Dest")
         public CTDest getDest() {
             return dest;
         }
@@ -380,6 +385,7 @@ public class CTAction {
          *     {@link Bookmark }
          *
          */
+        @XmlElement(name = "Bookmark")
         public Bookmark getBookmark() {
             return bookmark;
         }
@@ -403,22 +409,21 @@ public class CTAction {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Bookmark {
 
-            @XmlAttribute(name = "Name", required = true)
             protected String name;
 
             /**
@@ -429,6 +434,7 @@ public class CTAction {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Name", required = true)
             public String getName() {
                 return name;
             }
@@ -456,27 +462,23 @@ public class CTAction {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="AttachID" use="required" type="{http://www.w3.org/2001/XMLSchema}IDREF" />
-     *       &lt;attribute name="NewWindow" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="AttachID" use="required" type="{http://www.w3.org/2001/XMLSchema}IDREF" /&gt;
+     *       &lt;attribute name="NewWindow" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class GotoA {
 
-        @XmlAttribute(name = "AttachID", required = true)
-        @XmlIDREF
-        @XmlSchemaType(name = "IDREF")
         protected Object attachID;
-        @XmlAttribute(name = "NewWindow")
         protected Boolean newWindow;
 
         /**
@@ -487,6 +489,9 @@ public class CTAction {
          *     {@link Object }
          *
          */
+        @XmlAttribute(name = "AttachID", required = true)
+        @XmlIDREF
+        @XmlSchemaType(name = "IDREF")
         public Object getAttachID() {
             return attachID;
         }
@@ -511,6 +516,7 @@ public class CTAction {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "NewWindow")
         public boolean isNewWindow() {
             if (newWindow == null) {
                 return true;
@@ -540,40 +546,39 @@ public class CTAction {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *       &lt;attribute name="Operator" default="Play">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="Play"/>
-     *             &lt;enumeration value="Stop"/>
-     *             &lt;enumeration value="Pause"/>
-     *             &lt;enumeration value="Resume"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *       &lt;attribute name="Operator" default="Play"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="Play"/&gt;
+     *             &lt;enumeration value="Stop"/&gt;
+     *             &lt;enumeration value="Pause"/&gt;
+     *             &lt;enumeration value="Resume"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class Movie {
 
-        @XmlAttribute(name = "ResourceID", required = true)
         protected long resourceID;
-        @XmlAttribute(name = "Operator")
         protected String operator;
 
         /**
          * 获取resourceID属性的值。
          *
          */
+        @XmlAttribute(name = "ResourceID", required = true)
         public long getResourceID() {
             return resourceID;
         }
@@ -594,6 +599,7 @@ public class CTAction {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Operator")
         public String getOperator() {
             if (operator == null) {
                 return "Play";
@@ -623,37 +629,34 @@ public class CTAction {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *       &lt;attribute name="Volume" type="{http://www.w3.org/2001/XMLSchema}int" />
-     *       &lt;attribute name="Repeat" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="Synchronous" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *       &lt;attribute name="Volume" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+     *       &lt;attribute name="Repeat" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="Synchronous" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class Sound {
 
-        @XmlAttribute(name = "ResourceID", required = true)
         protected long resourceID;
-        @XmlAttribute(name = "Volume")
         protected Integer volume;
-        @XmlAttribute(name = "Repeat")
         protected Boolean repeat;
-        @XmlAttribute(name = "Synchronous")
         protected Boolean synchronous;
 
         /**
          * 获取resourceID属性的值。
          *
          */
+        @XmlAttribute(name = "ResourceID", required = true)
         public long getResourceID() {
             return resourceID;
         }
@@ -674,6 +677,7 @@ public class CTAction {
          *     {@link Integer }
          *
          */
+        @XmlAttribute(name = "Volume")
         public Integer getVolume() {
             return volume;
         }
@@ -698,6 +702,7 @@ public class CTAction {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "Repeat")
         public Boolean isRepeat() {
             return repeat;
         }
@@ -722,6 +727,7 @@ public class CTAction {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "Synchronous")
         public Boolean isSynchronous() {
             return synchronous;
         }
@@ -747,28 +753,25 @@ public class CTAction {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="URI" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="Base" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="URI" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="Base" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="Target" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class URI {
 
-        @XmlAttribute(name = "URI", required = true)
         protected String uri;
-        @XmlAttribute(name = "Base")
         protected String base;
-        @XmlAttribute(name = "Target")
         protected String target;
 
         /**
@@ -779,6 +782,7 @@ public class CTAction {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "URI", required = true)
         public String getURI() {
             return uri;
         }
@@ -803,6 +807,7 @@ public class CTAction {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Base")
         public String getBase() {
             return base;
         }
@@ -827,6 +832,7 @@ public class CTAction {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Target")
         public String getTarget() {
             return target;
         }

@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -17,39 +17,39 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Font">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="FontFile" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="FontName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="FamilyName" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="Charset" default="unicode">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="symbol"/>
- *             &lt;enumeration value="prc"/>
- *             &lt;enumeration value="big5"/>
- *             &lt;enumeration value="shift-jis"/>
- *             &lt;enumeration value="wansung"/>
- *             &lt;enumeration value="johab"/>
- *             &lt;enumeration value="unicode"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="Italic" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *       &lt;attribute name="Bold" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *       &lt;attribute name="Serif" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *       &lt;attribute name="FixedWidth" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Font"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="FontFile" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="FontName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="FamilyName" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="Charset" default="unicode"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="symbol"/&gt;
+ *             &lt;enumeration value="prc"/&gt;
+ *             &lt;enumeration value="big5"/&gt;
+ *             &lt;enumeration value="shift-jis"/&gt;
+ *             &lt;enumeration value="wansung"/&gt;
+ *             &lt;enumeration value="johab"/&gt;
+ *             &lt;enumeration value="unicode"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="Italic" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="Bold" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="Serif" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="FixedWidth" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Font", propOrder = {
     "fontFile"
 })
@@ -58,22 +58,13 @@ import javax.xml.bind.annotation.*;
 })
 public class CTFont {
 
-    @XmlElement(name = "FontFile")
-    @XmlSchemaType(name = "anyURI")
     protected String fontFile;
-    @XmlAttribute(name = "FontName", required = true)
     protected String fontName;
-    @XmlAttribute(name = "FamilyName")
     protected String familyName;
-    @XmlAttribute(name = "Charset")
     protected String charset;
-    @XmlAttribute(name = "Italic")
     protected Boolean italic;
-    @XmlAttribute(name = "Bold")
     protected Boolean bold;
-    @XmlAttribute(name = "Serif")
     protected Boolean serif;
-    @XmlAttribute(name = "FixedWidth")
     protected Boolean fixedWidth;
 
     /**
@@ -84,6 +75,8 @@ public class CTFont {
      *     {@link String }
      *
      */
+    @XmlElement(name = "FontFile")
+    @XmlSchemaType(name = "anyURI")
     public String getFontFile() {
         return fontFile;
     }
@@ -108,6 +101,7 @@ public class CTFont {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "FontName", required = true)
     public String getFontName() {
         return fontName;
     }
@@ -132,6 +126,7 @@ public class CTFont {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "FamilyName")
     public String getFamilyName() {
         return familyName;
     }
@@ -156,6 +151,7 @@ public class CTFont {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Charset")
     public String getCharset() {
         if (charset == null) {
             return "unicode";
@@ -184,6 +180,7 @@ public class CTFont {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Italic")
     public boolean isItalic() {
         if (italic == null) {
             return false;
@@ -212,6 +209,7 @@ public class CTFont {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Bold")
     public boolean isBold() {
         if (bold == null) {
             return false;
@@ -240,6 +238,7 @@ public class CTFont {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Serif")
     public boolean isSerif() {
         if (serif == null) {
             return false;
@@ -268,6 +267,7 @@ public class CTFont {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "FixedWidth")
     public boolean isFixedWidth() {
         if (fixedWidth == null) {
             return false;

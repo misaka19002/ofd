@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,89 +19,88 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Region">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Area" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;choice maxOccurs="unbounded">
- *                   &lt;element name="Move">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Line">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="QuadraticBezier">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                           &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="CubicBezier">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                           &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                           &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Arc">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                           &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                           &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                           &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" />
- *                           &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Close" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
- *                 &lt;/choice>
- *                 &lt;attribute name="Start" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Region"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Area" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;choice maxOccurs="unbounded"&gt;
+ *                   &lt;element name="Move"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Line"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="QuadraticBezier"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                           &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="CubicBezier"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                           &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                           &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Arc"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                           &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                           &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                           &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *                           &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Close" type="{http://www.w3.org/2001/XMLSchema}anyType"/&gt;
+ *                 &lt;/choice&gt;
+ *                 &lt;attribute name="Start" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Region", propOrder = {
     "area"
 })
 public class CTRegion {
 
-    @XmlElement(name = "Area", required = true)
     protected List<CTRegion.Area> area;
 
     /**
@@ -126,6 +125,7 @@ public class CTRegion {
      *
      *
      */
+    @XmlElement(name = "Area", required = true, type = CTRegion.Area.class)
     public List<CTRegion.Area> getArea() {
         if (area == null) {
             area = new ArrayList<CTRegion.Area>();
@@ -140,88 +140,79 @@ public class CTRegion {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice maxOccurs="unbounded">
-     *         &lt;element name="Move">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Line">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="QuadraticBezier">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *                 &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="CubicBezier">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *                 &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *                 &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Arc">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *                 &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *                 &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *                 &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" />
-     *                 &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Close" type="{http://www.w3.org/2001/XMLSchema}anyType"/>
-     *       &lt;/choice>
-     *       &lt;attribute name="Start" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice maxOccurs="unbounded"&gt;
+     *         &lt;element name="Move"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Line"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="QuadraticBezier"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *                 &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="CubicBezier"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *                 &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *                 &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Arc"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *                 &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *                 &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *                 &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+     *                 &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Close" type="{http://www.w3.org/2001/XMLSchema}anyType"/&gt;
+     *       &lt;/choice&gt;
+     *       &lt;attribute name="Start" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "moveOrLineOrQuadraticBezier"
     })
     public static class Area {
 
-        @XmlElements({
-            @XmlElement(name = "Move", type = CTRegion.Area.Move.class),
-            @XmlElement(name = "Line", type = CTRegion.Area.Line.class),
-            @XmlElement(name = "QuadraticBezier", type = CTRegion.Area.QuadraticBezier.class),
-            @XmlElement(name = "CubicBezier", type = CTRegion.Area.CubicBezier.class),
-            @XmlElement(name = "Arc", type = CTRegion.Area.Arc.class),
-            @XmlElement(name = "Close")
-        })
         protected List<Object> moveOrLineOrQuadraticBezier;
-        @XmlAttribute(name = "Start", required = true)
         protected String start;
 
         /**
@@ -251,6 +242,14 @@ public class CTRegion {
          *
          *
          */
+        @XmlElements({
+            @XmlElement(name = "Move", type = CTRegion.Area.Move.class),
+            @XmlElement(name = "Line", type = CTRegion.Area.Line.class),
+            @XmlElement(name = "QuadraticBezier", type = CTRegion.Area.QuadraticBezier.class),
+            @XmlElement(name = "CubicBezier", type = CTRegion.Area.CubicBezier.class),
+            @XmlElement(name = "Arc", type = CTRegion.Area.Arc.class),
+            @XmlElement(name = "Close", type = Object.class)
+        })
         public List<Object> getMoveOrLineOrQuadraticBezier() {
             if (moveOrLineOrQuadraticBezier == null) {
                 moveOrLineOrQuadraticBezier = new ArrayList<Object>();
@@ -266,6 +265,7 @@ public class CTRegion {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Start", required = true)
         public String getStart() {
             return start;
         }
@@ -289,40 +289,36 @@ public class CTRegion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *       &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *       &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
-         *       &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" />
-         *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="SweepDirection" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *       &lt;attribute name="LargeArc" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *       &lt;attribute name="RotationAngle" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+         *       &lt;attribute name="EllipseSize" use="required" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+         *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Arc {
 
-            @XmlAttribute(name = "SweepDirection", required = true)
             protected boolean sweepDirection;
-            @XmlAttribute(name = "LargeArc", required = true)
             protected boolean largeArc;
-            @XmlAttribute(name = "RotationAngle", required = true)
             protected double rotationAngle;
-            @XmlAttribute(name = "EllipseSize", required = true)
             protected String ellipseSize;
-            @XmlAttribute(name = "EndPoint", required = true)
             protected String endPoint;
 
             /**
              * 获取sweepDirection属性的值。
              *
              */
+            @XmlAttribute(name = "SweepDirection", required = true)
             public boolean isSweepDirection() {
                 return sweepDirection;
             }
@@ -339,6 +335,7 @@ public class CTRegion {
              * 获取largeArc属性的值。
              *
              */
+            @XmlAttribute(name = "LargeArc", required = true)
             public boolean isLargeArc() {
                 return largeArc;
             }
@@ -355,6 +352,7 @@ public class CTRegion {
              * 获取rotationAngle属性的值。
              *
              */
+            @XmlAttribute(name = "RotationAngle", required = true)
             public double getRotationAngle() {
                 return rotationAngle;
             }
@@ -375,6 +373,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "EllipseSize", required = true)
             public String getEllipseSize() {
                 return ellipseSize;
             }
@@ -399,6 +398,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "EndPoint", required = true)
             public String getEndPoint() {
                 return endPoint;
             }
@@ -424,28 +424,25 @@ public class CTRegion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *       &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *       &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Point1" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *       &lt;attribute name="Point2" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *       &lt;attribute name="Point3" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class CubicBezier {
 
-            @XmlAttribute(name = "Point1")
             protected String point1;
-            @XmlAttribute(name = "Point2")
             protected String point2;
-            @XmlAttribute(name = "Point3", required = true)
             protected String point3;
 
             /**
@@ -456,6 +453,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point1")
             public String getPoint1() {
                 return point1;
             }
@@ -480,6 +478,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point2")
             public String getPoint2() {
                 return point2;
             }
@@ -504,6 +503,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point3", required = true)
             public String getPoint3() {
                 return point3;
             }
@@ -529,22 +529,21 @@ public class CTRegion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Line {
 
-            @XmlAttribute(name = "Point1", required = true)
             protected String point1;
 
             /**
@@ -555,6 +554,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point1", required = true)
             public String getPoint1() {
                 return point1;
             }
@@ -580,22 +580,21 @@ public class CTRegion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Move {
 
-            @XmlAttribute(name = "Point1", required = true)
             protected String point1;
 
             /**
@@ -606,6 +605,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point1", required = true)
             public String getPoint1() {
                 return point1;
             }
@@ -631,25 +631,23 @@ public class CTRegion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *       &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Point1" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *       &lt;attribute name="Point2" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class QuadraticBezier {
 
-            @XmlAttribute(name = "Point1", required = true)
             protected String point1;
-            @XmlAttribute(name = "Point2", required = true)
             protected String point2;
 
             /**
@@ -660,6 +658,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point1", required = true)
             public String getPoint1() {
                 return point1;
             }
@@ -684,6 +683,7 @@ public class CTRegion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Point2", required = true)
             public String getPoint2() {
                 return point2;
             }

@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -20,60 +20,60 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_DocInfo">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="DocID" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Author" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Abstract" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="ModDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/>
- *         &lt;element name="DocUsage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="Cover" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *         &lt;element name="Keywords" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Keyword" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Creator" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="CreatorVersion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="CustomDatas" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CustomData" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                           &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_DocInfo"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="DocID" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="Title" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="Author" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="Subject" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="Abstract" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/&gt;
+ *         &lt;element name="ModDate" type="{http://www.w3.org/2001/XMLSchema}date" minOccurs="0"/&gt;
+ *         &lt;element name="DocUsage" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="Cover" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *         &lt;element name="Keywords" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Keyword" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Creator" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="CreatorVersion" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="CustomDatas" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="CustomData" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;simpleContent&gt;
+ *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                           &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/simpleContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_DocInfo", propOrder = {
     "docID",
     "title",
@@ -91,34 +91,18 @@ import java.util.List;
 })
 public class CTDocInfo {
 
-    @XmlElement(name = "DocID", required = true)
     protected String docID;
-    @XmlElement(name = "Title")
     protected String title;
-    @XmlElement(name = "Author")
     protected String author;
-    @XmlElement(name = "Subject")
     protected String subject;
-    @XmlElement(name = "Abstract")
     protected String _abstract;
-    @XmlElement(name = "CreationDate")
-    @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
-    @XmlElement(name = "ModDate")
-    @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar modDate;
-    @XmlElement(name = "DocUsage")
     protected String docUsage;
-    @XmlElement(name = "Cover")
-    @XmlSchemaType(name = "anyURI")
     protected String cover;
-    @XmlElement(name = "Keywords")
     protected CTDocInfo.Keywords keywords;
-    @XmlElement(name = "Creator")
     protected String creator;
-    @XmlElement(name = "CreatorVersion")
     protected String creatorVersion;
-    @XmlElement(name = "CustomDatas")
     protected CTDocInfo.CustomDatas customDatas;
 
     /**
@@ -129,6 +113,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "DocID", required = true)
     public String getDocID() {
         return docID;
     }
@@ -153,6 +138,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Title")
     public String getTitle() {
         return title;
     }
@@ -177,6 +163,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Author")
     public String getAuthor() {
         return author;
     }
@@ -201,6 +188,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Subject")
     public String getSubject() {
         return subject;
     }
@@ -225,6 +213,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Abstract")
     public String getAbstract() {
         return _abstract;
     }
@@ -249,6 +238,8 @@ public class CTDocInfo {
      *     {@link XMLGregorianCalendar }
      *
      */
+    @XmlElement(name = "CreationDate")
+    @XmlSchemaType(name = "date")
     public XMLGregorianCalendar getCreationDate() {
         return creationDate;
     }
@@ -273,6 +264,8 @@ public class CTDocInfo {
      *     {@link XMLGregorianCalendar }
      *
      */
+    @XmlElement(name = "ModDate")
+    @XmlSchemaType(name = "date")
     public XMLGregorianCalendar getModDate() {
         return modDate;
     }
@@ -297,6 +290,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "DocUsage")
     public String getDocUsage() {
         return docUsage;
     }
@@ -321,6 +315,8 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Cover")
+    @XmlSchemaType(name = "anyURI")
     public String getCover() {
         return cover;
     }
@@ -345,6 +341,7 @@ public class CTDocInfo {
      *     {@link CTDocInfo.Keywords }
      *
      */
+    @XmlElement(name = "Keywords")
     public CTDocInfo.Keywords getKeywords() {
         return keywords;
     }
@@ -369,6 +366,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Creator")
     public String getCreator() {
         return creator;
     }
@@ -393,6 +391,7 @@ public class CTDocInfo {
      *     {@link String }
      *
      */
+    @XmlElement(name = "CreatorVersion")
     public String getCreatorVersion() {
         return creatorVersion;
     }
@@ -417,6 +416,7 @@ public class CTDocInfo {
      *     {@link CTDocInfo.CustomDatas }
      *
      */
+    @XmlElement(name = "CustomDatas")
     public CTDocInfo.CustomDatas getCustomDatas() {
         return customDatas;
     }
@@ -440,34 +440,33 @@ public class CTDocInfo {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CustomData" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="CustomData" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;simpleContent&gt;
+     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/simpleContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "customData"
     })
     public static class CustomDatas {
 
-        @XmlElement(name = "CustomData", required = true)
         protected List<CTDocInfo.CustomDatas.CustomData> customData;
 
         /**
@@ -492,6 +491,7 @@ public class CTDocInfo {
          *
          *
          */
+        @XmlElement(name = "CustomData", required = true, type = CTDocInfo.CustomDatas.CustomData.class)
         public List<CTDocInfo.CustomDatas.CustomData> getCustomData() {
             if (customData == null) {
                 customData = new ArrayList<CTDocInfo.CustomDatas.CustomData>();
@@ -506,26 +506,24 @@ public class CTDocInfo {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;simpleContent&gt;
+         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+         *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/simpleContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "value"
         })
         public static class CustomData {
 
-            @XmlValue
             protected String value;
-            @XmlAttribute(name = "Name", required = true)
             protected String name;
 
             /**
@@ -536,6 +534,7 @@ public class CTDocInfo {
              *     {@link String }
              *
              */
+            @XmlValue
             public String getValue() {
                 return value;
             }
@@ -560,6 +559,7 @@ public class CTDocInfo {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Name", required = true)
             public String getName() {
                 return name;
             }
@@ -587,26 +587,25 @@ public class CTDocInfo {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Keyword" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Keyword" type="{http://www.w3.org/2001/XMLSchema}string" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "keyword"
     })
     public static class Keywords {
 
-        @XmlElement(name = "Keyword", required = true)
         protected List<String> keyword;
 
         /**
@@ -631,6 +630,7 @@ public class CTDocInfo {
          *
          *
          */
+        @XmlElement(name = "Keyword", required = true, type = String.class)
         public List<String> getKeyword() {
             if (keyword == null) {
                 keyword = new ArrayList<String>();

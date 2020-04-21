@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,54 +19,51 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_GouraudShd">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Point" maxOccurs="unbounded" minOccurs="3">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="X" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                 &lt;attribute name="Y" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                 &lt;attribute name="EdgeFlag">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int">
- *                       &lt;enumeration value="0"/>
- *                       &lt;enumeration value="1"/>
- *                       &lt;enumeration value="2"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="BackColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_GouraudShd"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Point" maxOccurs="unbounded" minOccurs="3"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="X" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                 &lt;attribute name="Y" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                 &lt;attribute name="EdgeFlag"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int"&gt;
+ *                       &lt;enumeration value="0"/&gt;
+ *                       &lt;enumeration value="1"/&gt;
+ *                       &lt;enumeration value="2"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="BackColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_GouraudShd", propOrder = {
     "point",
     "backColor"
 })
 public class CTGouraudShd {
 
-    @XmlElement(name = "Point", required = true)
     protected List<CTGouraudShd.Point> point;
-    @XmlElement(name = "BackColor")
     protected CTColor backColor;
-    @XmlAttribute(name = "Extend")
     protected Integer extend;
 
     /**
@@ -91,6 +88,7 @@ public class CTGouraudShd {
      *
      *
      */
+    @XmlElement(name = "Point", required = true, type = CTGouraudShd.Point.class)
     public List<CTGouraudShd.Point> getPoint() {
         if (point == null) {
             point = new ArrayList<CTGouraudShd.Point>();
@@ -106,6 +104,7 @@ public class CTGouraudShd {
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "BackColor")
     public CTColor getBackColor() {
         return backColor;
     }
@@ -130,6 +129,7 @@ public class CTGouraudShd {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Extend")
     public Integer getExtend() {
         return extend;
     }
@@ -153,43 +153,39 @@ public class CTGouraudShd {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="X" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *       &lt;attribute name="Y" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *       &lt;attribute name="EdgeFlag">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int">
-     *             &lt;enumeration value="0"/>
-     *             &lt;enumeration value="1"/>
-     *             &lt;enumeration value="2"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="X" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *       &lt;attribute name="Y" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *       &lt;attribute name="EdgeFlag"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int"&gt;
+     *             &lt;enumeration value="0"/&gt;
+     *             &lt;enumeration value="1"/&gt;
+     *             &lt;enumeration value="2"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "color"
     })
     public static class Point {
 
-        @XmlElement(name = "Color", required = true)
         protected CTColor color;
-        @XmlAttribute(name = "X", required = true)
         protected double x;
-        @XmlAttribute(name = "Y", required = true)
         protected double y;
-        @XmlAttribute(name = "EdgeFlag")
         protected Integer edgeFlag;
 
         /**
@@ -200,6 +196,7 @@ public class CTGouraudShd {
          *     {@link CTColor }
          *
          */
+        @XmlElement(name = "Color", required = true)
         public CTColor getColor() {
             return color;
         }
@@ -220,6 +217,7 @@ public class CTGouraudShd {
          * 获取x属性的值。
          *
          */
+        @XmlAttribute(name = "X", required = true)
         public double getX() {
             return x;
         }
@@ -236,6 +234,7 @@ public class CTGouraudShd {
          * 获取y属性的值。
          *
          */
+        @XmlAttribute(name = "Y", required = true)
         public double getY() {
             return y;
         }
@@ -256,6 +255,7 @@ public class CTGouraudShd {
          *     {@link Integer }
          *
          */
+        @XmlAttribute(name = "EdgeFlag")
         public Integer getEdgeFlag() {
             return edgeFlag;
         }

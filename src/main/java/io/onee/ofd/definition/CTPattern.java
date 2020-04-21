@@ -1,14 +1,18 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -17,71 +21,63 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Pattern">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="CellContent">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock">
- *                 &lt;attribute name="Thumbnail" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="Width" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="Height" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="XStep" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="YStep" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="ReflectMethod" default="Normal">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Normal"/>
- *             &lt;enumeration value="Row"/>
- *             &lt;enumeration value="Column"/>
- *             &lt;enumeration value="RowAndColumn"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="RelativeTo" default="Object">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Page"/>
- *             &lt;enumeration value="Object"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Pattern"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="CellContent"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock"&gt;
+ *                 &lt;attribute name="Thumbnail" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Width" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="Height" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="XStep" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="YStep" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="ReflectMethod" default="Normal"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Normal"/&gt;
+ *             &lt;enumeration value="Row"/&gt;
+ *             &lt;enumeration value="Column"/&gt;
+ *             &lt;enumeration value="RowAndColumn"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="RelativeTo" default="Object"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Page"/&gt;
+ *             &lt;enumeration value="Object"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Pattern", propOrder = {
     "cellContent"
 })
 public class CTPattern {
 
-    @XmlElement(name = "CellContent", required = true)
     protected CellContent cellContent;
-    @XmlAttribute(name = "Width", required = true)
     protected double width;
-    @XmlAttribute(name = "Height", required = true)
     protected double height;
-    @XmlAttribute(name = "XStep")
     protected Double xStep;
-    @XmlAttribute(name = "YStep")
     protected Double yStep;
-    @XmlAttribute(name = "ReflectMethod")
     protected String reflectMethod;
-    @XmlAttribute(name = "RelativeTo")
     protected String relativeTo;
-    @XmlAttribute(name = "CTM")
     protected String ctm;
 
     /**
@@ -92,6 +88,7 @@ public class CTPattern {
      *     {@link CellContent }
      *
      */
+    @XmlElement(name = "CellContent", required = true)
     public CellContent getCellContent() {
         return cellContent;
     }
@@ -112,6 +109,7 @@ public class CTPattern {
      * 获取width属性的值。
      *
      */
+    @XmlAttribute(name = "Width", required = true)
     public double getWidth() {
         return width;
     }
@@ -128,6 +126,7 @@ public class CTPattern {
      * 获取height属性的值。
      *
      */
+    @XmlAttribute(name = "Height", required = true)
     public double getHeight() {
         return height;
     }
@@ -148,6 +147,7 @@ public class CTPattern {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "XStep")
     public Double getXStep() {
         return xStep;
     }
@@ -172,6 +172,7 @@ public class CTPattern {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "YStep")
     public Double getYStep() {
         return yStep;
     }
@@ -196,6 +197,7 @@ public class CTPattern {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "ReflectMethod")
     public String getReflectMethod() {
         if (reflectMethod == null) {
             return "Normal";
@@ -224,6 +226,7 @@ public class CTPattern {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "RelativeTo")
     public String getRelativeTo() {
         if (relativeTo == null) {
             return "Object";
@@ -252,6 +255,7 @@ public class CTPattern {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "CTM")
     public String getCTM() {
         return ctm;
     }
@@ -275,24 +279,23 @@ public class CTPattern {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock">
-     *       &lt;attribute name="Thumbnail" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock"&gt;
+     *       &lt;attribute name="Thumbnail" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class CellContent
         extends CTPageBlock
     {
 
-        @XmlAttribute(name = "Thumbnail")
         protected Long thumbnail;
 
         /**
@@ -303,6 +306,7 @@ public class CTPattern {
          *     {@link Long }
          *
          */
+        @XmlAttribute(name = "Thumbnail")
         public Long getThumbnail() {
             return thumbnail;
         }

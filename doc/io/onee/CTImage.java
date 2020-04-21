@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -17,38 +17,38 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Image">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit">
- *       &lt;sequence>
- *         &lt;element name="Border" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="BorderColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" />
- *                 &lt;attribute name="HorizonalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *                 &lt;attribute name="VerticalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *                 &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *                 &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="Substitution" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="ImageMask" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Image"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Border" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="BorderColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" /&gt;
+ *                 &lt;attribute name="HorizonalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *                 &lt;attribute name="VerticalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *                 &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *                 &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="ResourceID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="Substitution" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="ImageMask" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Image", propOrder = {
     "border"
 })
@@ -59,13 +59,9 @@ public class CTImage
     extends CTGraphicUnit
 {
 
-    @XmlElement(name = "Border")
     protected CTImage.Border border;
-    @XmlAttribute(name = "ResourceID", required = true)
     protected long resourceID;
-    @XmlAttribute(name = "Substitution")
     protected Long substitution;
-    @XmlAttribute(name = "ImageMask")
     protected Long imageMask;
 
     /**
@@ -76,6 +72,7 @@ public class CTImage
      *     {@link CTImage.Border }
      *
      */
+    @XmlElement(name = "Border")
     public CTImage.Border getBorder() {
         return border;
     }
@@ -96,6 +93,7 @@ public class CTImage
      * 获取resourceID属性的值。
      *
      */
+    @XmlAttribute(name = "ResourceID", required = true)
     public long getResourceID() {
         return resourceID;
     }
@@ -116,6 +114,7 @@ public class CTImage
      *     {@link Long }
      *
      */
+    @XmlAttribute(name = "Substitution")
     public Long getSubstitution() {
         return substitution;
     }
@@ -140,6 +139,7 @@ public class CTImage
      *     {@link Long }
      *
      */
+    @XmlAttribute(name = "ImageMask")
     public Long getImageMask() {
         return imageMask;
     }
@@ -163,41 +163,35 @@ public class CTImage
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="BorderColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" />
-     *       &lt;attribute name="HorizonalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
-     *       &lt;attribute name="VerticalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
-     *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
-     *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="BorderColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" /&gt;
+     *       &lt;attribute name="HorizonalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+     *       &lt;attribute name="VerticalCornerRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+     *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+     *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "borderColor"
     })
     public static class Border {
 
-        @XmlElement(name = "BorderColor")
         protected CTColor borderColor;
-        @XmlAttribute(name = "LineWidth")
         protected Double lineWidth;
-        @XmlAttribute(name = "HorizonalCornerRadius")
         protected Double horizonalCornerRadius;
-        @XmlAttribute(name = "VerticalCornerRadius")
         protected Double verticalCornerRadius;
-        @XmlAttribute(name = "DashOffset")
         protected Double dashOffset;
-        @XmlAttribute(name = "DashPattern")
         protected String dashPattern;
 
         /**
@@ -208,6 +202,7 @@ public class CTImage
          *     {@link CTColor }
          *
          */
+        @XmlElement(name = "BorderColor")
         public CTColor getBorderColor() {
             return borderColor;
         }
@@ -232,6 +227,7 @@ public class CTImage
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "LineWidth")
         public double getLineWidth() {
             if (lineWidth == null) {
                 return  0.353D;
@@ -260,6 +256,7 @@ public class CTImage
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "HorizonalCornerRadius")
         public double getHorizonalCornerRadius() {
             if (horizonalCornerRadius == null) {
                 return  0.0D;
@@ -288,6 +285,7 @@ public class CTImage
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "VerticalCornerRadius")
         public double getVerticalCornerRadius() {
             if (verticalCornerRadius == null) {
                 return  0.0D;
@@ -316,6 +314,7 @@ public class CTImage
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "DashOffset")
         public double getDashOffset() {
             if (dashOffset == null) {
                 return  0.0D;
@@ -344,6 +343,7 @@ public class CTImage
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "DashPattern")
         public String getDashPattern() {
             return dashPattern;
         }

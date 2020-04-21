@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -22,43 +22,43 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="FileList">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="File" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.ofdspec.org/2016>ST_Loc">
- *                           &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/>
- *       &lt;/sequence>
- *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="FileList"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="File" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;simpleContent&gt;
+ *                         &lt;extension base="&lt;http://www.ofdspec.org/2016&gt;ST_Loc"&gt;
+ *                           &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/simpleContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "fileList",
     "docRoot"
@@ -66,22 +66,11 @@ import java.util.List;
 @XmlRootElement(name = "DocVersion")
 public class DocVersion {
 
-    @XmlElement(name = "FileList", required = true)
     protected DocVersion.FileList fileList;
-    @XmlElement(name = "DocRoot", required = true)
-    @XmlSchemaType(name = "anyURI")
     protected String docRoot;
-    @XmlAttribute(name = "ID", required = true)
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlID
-    @XmlSchemaType(name = "ID")
     protected String id;
-    @XmlAttribute(name = "Version")
     protected String version;
-    @XmlAttribute(name = "Name")
     protected String name;
-    @XmlAttribute(name = "CreationDate")
-    @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar creationDate;
 
     /**
@@ -92,6 +81,7 @@ public class DocVersion {
      *     {@link DocVersion.FileList }
      *
      */
+    @XmlElement(name = "FileList", required = true)
     public DocVersion.FileList getFileList() {
         return fileList;
     }
@@ -116,6 +106,8 @@ public class DocVersion {
      *     {@link String }
      *
      */
+    @XmlElement(name = "DocRoot", required = true)
+    @XmlSchemaType(name = "anyURI")
     public String getDocRoot() {
         return docRoot;
     }
@@ -140,6 +132,10 @@ public class DocVersion {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "ID", required = true)
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlID
+    @XmlSchemaType(name = "ID")
     public String getID() {
         return id;
     }
@@ -164,6 +160,7 @@ public class DocVersion {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Version")
     public String getVersion() {
         return version;
     }
@@ -188,6 +185,7 @@ public class DocVersion {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Name")
     public String getName() {
         return name;
     }
@@ -212,6 +210,8 @@ public class DocVersion {
      *     {@link XMLGregorianCalendar }
      *
      */
+    @XmlAttribute(name = "CreationDate")
+    @XmlSchemaType(name = "date")
     public XMLGregorianCalendar getCreationDate() {
         return creationDate;
     }
@@ -235,34 +235,33 @@ public class DocVersion {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="File" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.ofdspec.org/2016>ST_Loc">
-     *                 &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="File" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;simpleContent&gt;
+     *               &lt;extension base="&lt;http://www.ofdspec.org/2016&gt;ST_Loc"&gt;
+     *                 &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/simpleContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "file"
     })
     public static class FileList {
 
-        @XmlElement(name = "File", required = true)
         protected List<DocVersion.FileList.File> file;
 
         /**
@@ -287,6 +286,7 @@ public class DocVersion {
          *
          *
          */
+        @XmlElement(name = "File", required = true, type = DocVersion.FileList.File.class)
         public List<DocVersion.FileList.File> getFile() {
             if (file == null) {
                 file = new ArrayList<DocVersion.FileList.File>();
@@ -301,29 +301,24 @@ public class DocVersion {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.ofdspec.org/2016>ST_Loc">
-         *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;simpleContent&gt;
+         *     &lt;extension base="&lt;http://www.ofdspec.org/2016&gt;ST_Loc"&gt;
+         *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/simpleContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "value"
         })
         public static class File {
 
-            @XmlValue
             protected String value;
-            @XmlAttribute(name = "ID", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            @XmlID
-            @XmlSchemaType(name = "ID")
             protected String id;
 
             /**
@@ -334,6 +329,7 @@ public class DocVersion {
              *     {@link String }
              *
              */
+            @XmlValue
             public String getValue() {
                 return value;
             }
@@ -358,6 +354,10 @@ public class DocVersion {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "ID", required = true)
+            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+            @XmlID
+            @XmlSchemaType(name = "ID")
             public String getID() {
                 return id;
             }

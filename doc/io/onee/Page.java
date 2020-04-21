@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,68 +19,68 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Template" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="TemplateID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *                 &lt;attribute name="ZOrder" default="Background">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="Background"/>
- *                       &lt;enumeration value="Foreground"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PageRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="Area" type="{http://www.ofdspec.org/2016}CT_PageArea" minOccurs="0"/>
- *         &lt;element name="Content" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Layer" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer">
- *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Actions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Template" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="TemplateID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *                 &lt;attribute name="ZOrder" default="Background"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="Background"/&gt;
+ *                       &lt;enumeration value="Foreground"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PageRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="Area" type="{http://www.ofdspec.org/2016}CT_PageArea" minOccurs="0"/&gt;
+ *         &lt;element name="Content" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Layer" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer"&gt;
+ *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Actions" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "template",
     "pageRes",
@@ -91,16 +91,10 @@ import java.util.List;
 @XmlRootElement(name = "Page")
 public class Page {
 
-    @XmlElement(name = "Template")
     protected List<Page.Template> template;
-    @XmlElement(name = "PageRes")
-    @XmlSchemaType(name = "anyURI")
     protected List<String> pageRes;
-    @XmlElement(name = "Area")
     protected CTPageArea area;
-    @XmlElement(name = "Content")
     protected Page.Content content;
-    @XmlElement(name = "Actions")
     protected Page.Actions actions;
 
     /**
@@ -125,6 +119,7 @@ public class Page {
      *
      *
      */
+    @XmlElement(name = "Template", type = Page.Template.class)
     public List<Page.Template> getTemplate() {
         if (template == null) {
             template = new ArrayList<Page.Template>();
@@ -154,6 +149,8 @@ public class Page {
      *
      *
      */
+    @XmlElement(name = "PageRes", type = String.class)
+    @XmlSchemaType(name = "anyURI")
     public List<String> getPageRes() {
         if (pageRes == null) {
             pageRes = new ArrayList<String>();
@@ -169,6 +166,7 @@ public class Page {
      *     {@link CTPageArea }
      *
      */
+    @XmlElement(name = "Area")
     public CTPageArea getArea() {
         return area;
     }
@@ -193,6 +191,7 @@ public class Page {
      *     {@link Page.Content }
      *
      */
+    @XmlElement(name = "Content")
     public Page.Content getContent() {
         return content;
     }
@@ -217,6 +216,7 @@ public class Page {
      *     {@link Page.Actions }
      *
      */
+    @XmlElement(name = "Actions")
     public Page.Actions getActions() {
         return actions;
     }
@@ -240,26 +240,25 @@ public class Page {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "action"
     })
     public static class Actions {
 
-        @XmlElement(name = "Action", required = true)
         protected List<CTAction> action;
 
         /**
@@ -284,6 +283,7 @@ public class Page {
          *
          *
          */
+        @XmlElement(name = "Action", required = true, type = CTAction.class)
         public List<CTAction> getAction() {
             if (action == null) {
                 action = new ArrayList<CTAction>();
@@ -300,34 +300,33 @@ public class Page {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Layer" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer">
-     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Layer" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer"&gt;
+     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "layer"
     })
     public static class Content {
 
-        @XmlElement(name = "Layer", required = true)
         protected List<Page.Content.Layer> layer;
 
         /**
@@ -352,6 +351,7 @@ public class Page {
          *
          *
          */
+        @XmlElement(name = "Layer", required = true, type = Page.Content.Layer.class)
         public List<Page.Content.Layer> getLayer() {
             if (layer == null) {
                 layer = new ArrayList<Page.Content.Layer>();
@@ -366,30 +366,30 @@ public class Page {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer">
-         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.ofdspec.org/2016}CT_Layer"&gt;
+         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Layer
             extends CTLayer
         {
 
-            @XmlAttribute(name = "ID", required = true)
             protected long id;
 
             /**
              * 获取id属性的值。
              *
              */
+            @XmlAttribute(name = "ID", required = true)
             public long getID() {
                 return id;
             }
@@ -413,38 +413,37 @@ public class Page {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="TemplateID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *       &lt;attribute name="ZOrder" default="Background">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="Background"/>
-     *             &lt;enumeration value="Foreground"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="TemplateID" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *       &lt;attribute name="ZOrder" default="Background"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="Background"/&gt;
+     *             &lt;enumeration value="Foreground"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class Template {
 
-        @XmlAttribute(name = "TemplateID", required = true)
         protected long templateID;
-        @XmlAttribute(name = "ZOrder")
         protected String zOrder;
 
         /**
          * 获取templateID属性的值。
          *
          */
+        @XmlAttribute(name = "TemplateID", required = true)
         public long getTemplateID() {
             return templateID;
         }
@@ -465,6 +464,7 @@ public class Page {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "ZOrder")
         public String getZOrder() {
             if (zOrder == null) {
                 return "Background";

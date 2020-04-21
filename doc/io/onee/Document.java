@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,112 +19,112 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="CommonData">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="MaxUnitID" type="{http://www.ofdspec.org/2016}ST_ID"/>
- *                   &lt;element name="PageArea" type="{http://www.ofdspec.org/2016}CT_PageArea"/>
- *                   &lt;element name="PublicRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="DocumentRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/>
- *                   &lt;element name="TemplatePage" maxOccurs="unbounded" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
- *                           &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                           &lt;attribute name="ZOrder">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;enumeration value="Background"/>
- *                                 &lt;enumeration value="Foreground"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="DefaultCS" type="{http://www.ofdspec.org/2016}ST_RefID" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Pages">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Page" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
- *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Outlines" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Permissions" type="{http://www.ofdspec.org/2016}CT_Permission" minOccurs="0"/>
- *         &lt;element name="Actions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="VPreferences" type="{http://www.ofdspec.org/2016}CT_VPreferences" minOccurs="0"/>
- *         &lt;element name="Bookmarks" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Bookmark" type="{http://www.ofdspec.org/2016}CT_Bookmark" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Annotations" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *         &lt;element name="CustomTags" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *         &lt;element name="Attachments" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *         &lt;element name="Extensions" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="CommonData"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="MaxUnitID" type="{http://www.ofdspec.org/2016}ST_ID"/&gt;
+ *                   &lt;element name="PageArea" type="{http://www.ofdspec.org/2016}CT_PageArea"/&gt;
+ *                   &lt;element name="PublicRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="DocumentRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *                   &lt;element name="TemplatePage" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+ *                           &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                           &lt;attribute name="ZOrder"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                 &lt;enumeration value="Background"/&gt;
+ *                                 &lt;enumeration value="Foreground"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="DefaultCS" type="{http://www.ofdspec.org/2016}ST_RefID" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Pages"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Page" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+ *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Outlines" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Permissions" type="{http://www.ofdspec.org/2016}CT_Permission" minOccurs="0"/&gt;
+ *         &lt;element name="Actions" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="VPreferences" type="{http://www.ofdspec.org/2016}CT_VPreferences" minOccurs="0"/&gt;
+ *         &lt;element name="Bookmarks" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Bookmark" type="{http://www.ofdspec.org/2016}CT_Bookmark" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Annotations" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *         &lt;element name="CustomTags" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *         &lt;element name="Attachments" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *         &lt;element name="Extensions" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "commonData",
     "pages",
@@ -141,31 +141,16 @@ import java.util.List;
 @XmlRootElement(name = "Document")
 public class Document {
 
-    @XmlElement(name = "CommonData", required = true)
     protected Document.CommonData commonData;
-    @XmlElement(name = "Pages", required = true)
     protected Document.Pages pages;
-    @XmlElement(name = "Outlines")
     protected Document.Outlines outlines;
-    @XmlElement(name = "Permissions")
     protected CTPermission permissions;
-    @XmlElement(name = "Actions")
     protected Document.Actions actions;
-    @XmlElement(name = "VPreferences")
     protected CTVPreferences vPreferences;
-    @XmlElement(name = "Bookmarks")
     protected Document.Bookmarks bookmarks;
-    @XmlElement(name = "Annotations")
-    @XmlSchemaType(name = "anyURI")
     protected String annotations;
-    @XmlElement(name = "CustomTags")
-    @XmlSchemaType(name = "anyURI")
     protected String customTags;
-    @XmlElement(name = "Attachments")
-    @XmlSchemaType(name = "anyURI")
     protected String attachments;
-    @XmlElement(name = "Extensions")
-    @XmlSchemaType(name = "anyURI")
     protected String extensions;
 
     /**
@@ -176,6 +161,7 @@ public class Document {
      *     {@link Document.CommonData }
      *
      */
+    @XmlElement(name = "CommonData", required = true)
     public Document.CommonData getCommonData() {
         return commonData;
     }
@@ -200,6 +186,7 @@ public class Document {
      *     {@link Document.Pages }
      *
      */
+    @XmlElement(name = "Pages", required = true)
     public Document.Pages getPages() {
         return pages;
     }
@@ -224,6 +211,7 @@ public class Document {
      *     {@link Document.Outlines }
      *
      */
+    @XmlElement(name = "Outlines")
     public Document.Outlines getOutlines() {
         return outlines;
     }
@@ -248,6 +236,7 @@ public class Document {
      *     {@link CTPermission }
      *
      */
+    @XmlElement(name = "Permissions")
     public CTPermission getPermissions() {
         return permissions;
     }
@@ -272,6 +261,7 @@ public class Document {
      *     {@link Document.Actions }
      *
      */
+    @XmlElement(name = "Actions")
     public Document.Actions getActions() {
         return actions;
     }
@@ -296,6 +286,7 @@ public class Document {
      *     {@link CTVPreferences }
      *
      */
+    @XmlElement(name = "VPreferences")
     public CTVPreferences getVPreferences() {
         return vPreferences;
     }
@@ -320,6 +311,7 @@ public class Document {
      *     {@link Document.Bookmarks }
      *
      */
+    @XmlElement(name = "Bookmarks")
     public Document.Bookmarks getBookmarks() {
         return bookmarks;
     }
@@ -344,6 +336,8 @@ public class Document {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Annotations")
+    @XmlSchemaType(name = "anyURI")
     public String getAnnotations() {
         return annotations;
     }
@@ -368,6 +362,8 @@ public class Document {
      *     {@link String }
      *
      */
+    @XmlElement(name = "CustomTags")
+    @XmlSchemaType(name = "anyURI")
     public String getCustomTags() {
         return customTags;
     }
@@ -392,6 +388,8 @@ public class Document {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Attachments")
+    @XmlSchemaType(name = "anyURI")
     public String getAttachments() {
         return attachments;
     }
@@ -416,6 +414,8 @@ public class Document {
      *     {@link String }
      *
      */
+    @XmlElement(name = "Extensions")
+    @XmlSchemaType(name = "anyURI")
     public String getExtensions() {
         return extensions;
     }
@@ -439,26 +439,25 @@ public class Document {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "action"
     })
     public static class Actions {
 
-        @XmlElement(name = "Action", required = true)
         protected List<CTAction> action;
 
         /**
@@ -483,6 +482,7 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "Action", required = true, type = CTAction.class)
         public List<CTAction> getAction() {
             if (action == null) {
                 action = new ArrayList<CTAction>();
@@ -499,26 +499,25 @@ public class Document {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Bookmark" type="{http://www.ofdspec.org/2016}CT_Bookmark" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Bookmark" type="{http://www.ofdspec.org/2016}CT_Bookmark" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "bookmark"
     })
     public static class Bookmarks {
 
-        @XmlElement(name = "Bookmark", required = true)
         protected List<CTBookmark> bookmark;
 
         /**
@@ -543,6 +542,7 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "Bookmark", required = true, type = CTBookmark.class)
         public List<CTBookmark> getBookmark() {
             if (bookmark == null) {
                 bookmark = new ArrayList<CTBookmark>();
@@ -559,43 +559,43 @@ public class Document {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="MaxUnitID" type="{http://www.ofdspec.org/2016}ST_ID"/>
-     *         &lt;element name="PageArea" type="{http://www.ofdspec.org/2016}CT_PageArea"/>
-     *         &lt;element name="PublicRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="DocumentRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/>
-     *         &lt;element name="TemplatePage" maxOccurs="unbounded" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-     *                 &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *                 &lt;attribute name="ZOrder">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;enumeration value="Background"/>
-     *                       &lt;enumeration value="Foreground"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="DefaultCS" type="{http://www.ofdspec.org/2016}ST_RefID" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="MaxUnitID" type="{http://www.ofdspec.org/2016}ST_ID"/&gt;
+     *         &lt;element name="PageArea" type="{http://www.ofdspec.org/2016}CT_PageArea"/&gt;
+     *         &lt;element name="PublicRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="DocumentRes" type="{http://www.ofdspec.org/2016}ST_Loc" maxOccurs="unbounded" minOccurs="0"/&gt;
+     *         &lt;element name="TemplatePage" maxOccurs="unbounded" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+     *                 &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *                 &lt;attribute name="ZOrder"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                       &lt;enumeration value="Background"/&gt;
+     *                       &lt;enumeration value="Foreground"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="DefaultCS" type="{http://www.ofdspec.org/2016}ST_RefID" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "maxUnitID",
         "pageArea",
@@ -606,27 +606,19 @@ public class Document {
     })
     public static class CommonData {
 
-        @XmlElement(name = "MaxUnitID")
-        @XmlSchemaType(name = "unsignedInt")
         protected long maxUnitID;
-        @XmlElement(name = "PageArea", required = true)
         protected CTPageArea pageArea;
-        @XmlElement(name = "PublicRes")
-        @XmlSchemaType(name = "anyURI")
         protected List<String> publicRes;
-        @XmlElement(name = "DocumentRes")
-        @XmlSchemaType(name = "anyURI")
         protected List<String> documentRes;
-        @XmlElement(name = "TemplatePage")
         protected List<Document.CommonData.TemplatePage> templatePage;
-        @XmlElement(name = "DefaultCS")
-        @XmlSchemaType(name = "unsignedInt")
         protected Long defaultCS;
 
         /**
          * 获取maxUnitID属性的值。
          *
          */
+        @XmlElement(name = "MaxUnitID")
+        @XmlSchemaType(name = "unsignedInt")
         public long getMaxUnitID() {
             return maxUnitID;
         }
@@ -647,6 +639,7 @@ public class Document {
          *     {@link CTPageArea }
          *
          */
+        @XmlElement(name = "PageArea", required = true)
         public CTPageArea getPageArea() {
             return pageArea;
         }
@@ -685,6 +678,8 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "PublicRes", type = String.class)
+        @XmlSchemaType(name = "anyURI")
         public List<String> getPublicRes() {
             if (publicRes == null) {
                 publicRes = new ArrayList<String>();
@@ -714,6 +709,8 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "DocumentRes", type = String.class)
+        @XmlSchemaType(name = "anyURI")
         public List<String> getDocumentRes() {
             if (documentRes == null) {
                 documentRes = new ArrayList<String>();
@@ -743,6 +740,7 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "TemplatePage", type = Document.CommonData.TemplatePage.class)
         public List<Document.CommonData.TemplatePage> getTemplatePage() {
             if (templatePage == null) {
                 templatePage = new ArrayList<Document.CommonData.TemplatePage>();
@@ -758,6 +756,8 @@ public class Document {
          *     {@link Long }
          *
          */
+        @XmlElement(name = "DefaultCS")
+        @XmlSchemaType(name = "unsignedInt")
         public Long getDefaultCS() {
             return defaultCS;
         }
@@ -781,44 +781,41 @@ public class Document {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-         *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *       &lt;attribute name="ZOrder">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;enumeration value="Background"/>
-         *             &lt;enumeration value="Foreground"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+         *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *       &lt;attribute name="ZOrder"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *             &lt;enumeration value="Background"/&gt;
+         *             &lt;enumeration value="Foreground"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class TemplatePage {
 
-            @XmlAttribute(name = "ID", required = true)
             protected long id;
-            @XmlAttribute(name = "Name")
             protected String name;
-            @XmlAttribute(name = "ZOrder")
             protected String zOrder;
-            @XmlAttribute(name = "BaseLoc", required = true)
             protected String baseLoc;
 
             /**
              * 获取id属性的值。
              *
              */
+            @XmlAttribute(name = "ID", required = true)
             public long getID() {
                 return id;
             }
@@ -839,6 +836,7 @@ public class Document {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Name")
             public String getName() {
                 return name;
             }
@@ -863,6 +861,7 @@ public class Document {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "ZOrder")
             public String getZOrder() {
                 return zOrder;
             }
@@ -887,6 +886,7 @@ public class Document {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "BaseLoc", required = true)
             public String getBaseLoc() {
                 return baseLoc;
             }
@@ -914,26 +914,25 @@ public class Document {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "outlineElem"
     })
     public static class Outlines {
 
-        @XmlElement(name = "OutlineElem", required = true)
         protected List<CTOutlineElem> outlineElem;
 
         /**
@@ -958,6 +957,7 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "OutlineElem", required = true, type = CTOutlineElem.class)
         public List<CTOutlineElem> getOutlineElem() {
             if (outlineElem == null) {
                 outlineElem = new ArrayList<CTOutlineElem>();
@@ -974,35 +974,34 @@ public class Document {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Page" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-     *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Page" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+     *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "page"
     })
     public static class Pages {
 
-        @XmlElement(name = "Page", required = true)
         protected List<Document.Pages.Page> page;
 
         /**
@@ -1027,6 +1026,7 @@ public class Document {
          *
          *
          */
+        @XmlElement(name = "Page", required = true, type = Document.Pages.Page.class)
         public List<Document.Pages.Page> getPage() {
             if (page == null) {
                 page = new ArrayList<Document.Pages.Page>();
@@ -1041,31 +1041,30 @@ public class Document {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-         *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+         *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Page {
 
-            @XmlAttribute(name = "ID", required = true)
             protected long id;
-            @XmlAttribute(name = "BaseLoc", required = true)
             protected String baseLoc;
 
             /**
              * 获取id属性的值。
              *
              */
+            @XmlAttribute(name = "ID", required = true)
             public long getID() {
                 return id;
             }
@@ -1086,6 +1085,7 @@ public class Document {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "BaseLoc", required = true)
             public String getBaseLoc() {
                 return baseLoc;
             }

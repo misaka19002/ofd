@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -20,85 +20,84 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Annot" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Remark" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                   &lt;element name="Parameters" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="Parameter" maxOccurs="unbounded">
- *                               &lt;complexType>
- *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                                     &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                                   &lt;/extension>
- *                                 &lt;/simpleContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Appearance">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock">
- *                           &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
- *                 &lt;attribute name="Type" use="required">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="Link"/>
- *                       &lt;enumeration value="Path"/>
- *                       &lt;enumeration value="Highlight"/>
- *                       &lt;enumeration value="Stamp"/>
- *                       &lt;enumeration value="Watermark"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="Creator" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="LastModDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
- *                 &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *                 &lt;attribute name="Subtype" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="Print" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *                 &lt;attribute name="NoZoom" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *                 &lt;attribute name="NoRotate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *                 &lt;attribute name="ReadOnly" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Annot" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Remark" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                   &lt;element name="Parameters" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="Parameter" maxOccurs="unbounded"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;simpleContent&gt;
+ *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                                     &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/simpleContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Appearance"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock"&gt;
+ *                           &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+ *                 &lt;attribute name="Type" use="required"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="Link"/&gt;
+ *                       &lt;enumeration value="Path"/&gt;
+ *                       &lt;enumeration value="Highlight"/&gt;
+ *                       &lt;enumeration value="Stamp"/&gt;
+ *                       &lt;enumeration value="Watermark"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="Creator" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="LastModDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
+ *                 &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *                 &lt;attribute name="Subtype" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="Print" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *                 &lt;attribute name="NoZoom" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *                 &lt;attribute name="NoRotate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *                 &lt;attribute name="ReadOnly" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "annot"
 })
 @XmlRootElement(name = "PageAnnot")
 public class PageAnnot {
 
-    @XmlElement(name = "Annot", required = true)
     protected List<PageAnnot.Annot> annot;
 
     /**
@@ -123,6 +122,7 @@ public class PageAnnot {
      *
      *
      */
+    @XmlElement(name = "Annot", required = true, type = PageAnnot.Annot.class)
     public List<PageAnnot.Annot> getAnnot() {
         if (annot == null) {
             annot = new ArrayList<PageAnnot.Annot>();
@@ -137,68 +137,68 @@ public class PageAnnot {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Remark" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="Parameters" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="Parameter" maxOccurs="unbounded">
-     *                     &lt;complexType>
-     *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                           &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *                         &lt;/extension>
-     *                       &lt;/simpleContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Appearance">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock">
-     *                 &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" />
-     *       &lt;attribute name="Type" use="required">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="Link"/>
-     *             &lt;enumeration value="Path"/>
-     *             &lt;enumeration value="Highlight"/>
-     *             &lt;enumeration value="Stamp"/>
-     *             &lt;enumeration value="Watermark"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="Creator" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="LastModDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" />
-     *       &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-     *       &lt;attribute name="Subtype" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="Print" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-     *       &lt;attribute name="NoZoom" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-     *       &lt;attribute name="NoRotate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-     *       &lt;attribute name="ReadOnly" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Remark" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *         &lt;element name="Parameters" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="Parameter" maxOccurs="unbounded"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;simpleContent&gt;
+     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *                           &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/simpleContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Appearance"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock"&gt;
+     *                 &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="ID" use="required" type="{http://www.ofdspec.org/2016}ST_ID" /&gt;
+     *       &lt;attribute name="Type" use="required"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="Link"/&gt;
+     *             &lt;enumeration value="Path"/&gt;
+     *             &lt;enumeration value="Highlight"/&gt;
+     *             &lt;enumeration value="Stamp"/&gt;
+     *             &lt;enumeration value="Watermark"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="Creator" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="LastModDate" use="required" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
+     *       &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+     *       &lt;attribute name="Subtype" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="Print" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+     *       &lt;attribute name="NoZoom" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+     *       &lt;attribute name="NoRotate" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+     *       &lt;attribute name="ReadOnly" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "remark",
         "parameters",
@@ -206,32 +206,18 @@ public class PageAnnot {
     })
     public static class Annot {
 
-        @XmlElement(name = "Remark")
         protected String remark;
-        @XmlElement(name = "Parameters")
         protected PageAnnot.Annot.Parameters parameters;
-        @XmlElement(name = "Appearance", required = true)
         protected PageAnnot.Annot.Appearance appearance;
-        @XmlAttribute(name = "ID", required = true)
         protected long id;
-        @XmlAttribute(name = "Type", required = true)
         protected String type;
-        @XmlAttribute(name = "Creator", required = true)
         protected String creator;
-        @XmlAttribute(name = "LastModDate", required = true)
-        @XmlSchemaType(name = "date")
         protected XMLGregorianCalendar lastModDate;
-        @XmlAttribute(name = "Visible")
         protected Boolean visible;
-        @XmlAttribute(name = "Subtype")
         protected String subtype;
-        @XmlAttribute(name = "Print")
         protected Boolean print;
-        @XmlAttribute(name = "NoZoom")
         protected Boolean noZoom;
-        @XmlAttribute(name = "NoRotate")
         protected Boolean noRotate;
-        @XmlAttribute(name = "ReadOnly")
         protected Boolean readOnly;
 
         /**
@@ -242,6 +228,7 @@ public class PageAnnot {
          *     {@link String }
          *
          */
+        @XmlElement(name = "Remark")
         public String getRemark() {
             return remark;
         }
@@ -266,6 +253,7 @@ public class PageAnnot {
          *     {@link PageAnnot.Annot.Parameters }
          *
          */
+        @XmlElement(name = "Parameters")
         public PageAnnot.Annot.Parameters getParameters() {
             return parameters;
         }
@@ -290,6 +278,7 @@ public class PageAnnot {
          *     {@link PageAnnot.Annot.Appearance }
          *
          */
+        @XmlElement(name = "Appearance", required = true)
         public PageAnnot.Annot.Appearance getAppearance() {
             return appearance;
         }
@@ -310,6 +299,7 @@ public class PageAnnot {
          * 获取id属性的值。
          *
          */
+        @XmlAttribute(name = "ID", required = true)
         public long getID() {
             return id;
         }
@@ -330,6 +320,7 @@ public class PageAnnot {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Type", required = true)
         public String getType() {
             return type;
         }
@@ -354,6 +345,7 @@ public class PageAnnot {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Creator", required = true)
         public String getCreator() {
             return creator;
         }
@@ -378,6 +370,8 @@ public class PageAnnot {
          *     {@link XMLGregorianCalendar }
          *
          */
+        @XmlAttribute(name = "LastModDate", required = true)
+        @XmlSchemaType(name = "date")
         public XMLGregorianCalendar getLastModDate() {
             return lastModDate;
         }
@@ -402,6 +396,7 @@ public class PageAnnot {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "Visible")
         public boolean isVisible() {
             if (visible == null) {
                 return true;
@@ -430,6 +425,7 @@ public class PageAnnot {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "Subtype")
         public String getSubtype() {
             return subtype;
         }
@@ -454,6 +450,7 @@ public class PageAnnot {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "Print")
         public boolean isPrint() {
             if (print == null) {
                 return true;
@@ -482,6 +479,7 @@ public class PageAnnot {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "NoZoom")
         public boolean isNoZoom() {
             if (noZoom == null) {
                 return false;
@@ -510,6 +508,7 @@ public class PageAnnot {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "NoRotate")
         public boolean isNoRotate() {
             if (noRotate == null) {
                 return false;
@@ -538,6 +537,7 @@ public class PageAnnot {
          *     {@link Boolean }
          *
          */
+        @XmlAttribute(name = "ReadOnly")
         public boolean isReadOnly() {
             if (readOnly == null) {
                 return true;
@@ -565,24 +565,23 @@ public class PageAnnot {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock">
-         *       &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.ofdspec.org/2016}CT_PageBlock"&gt;
+         *       &lt;attribute name="Boundary" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Appearance
             extends CTPageBlock
         {
 
-            @XmlAttribute(name = "Boundary")
             protected String boundary;
 
             /**
@@ -593,6 +592,7 @@ public class PageAnnot {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Boundary")
             public String getBoundary() {
                 return boundary;
             }
@@ -618,34 +618,33 @@ public class PageAnnot {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="Parameter" maxOccurs="unbounded">
-         *           &lt;complexType>
-         *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *               &lt;/extension>
-         *             &lt;/simpleContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="Parameter" maxOccurs="unbounded"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;simpleContent&gt;
+         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+         *                 &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/simpleContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "parameter"
         })
         public static class Parameters {
 
-            @XmlElement(name = "Parameter", required = true)
             protected List<PageAnnot.Annot.Parameters.Parameter> parameter;
 
             /**
@@ -670,6 +669,7 @@ public class PageAnnot {
              *
              *
              */
+            @XmlElement(name = "Parameter", required = true, type = PageAnnot.Annot.Parameters.Parameter.class)
             public List<PageAnnot.Annot.Parameters.Parameter> getParameter() {
                 if (parameter == null) {
                     parameter = new ArrayList<PageAnnot.Annot.Parameters.Parameter>();
@@ -684,26 +684,24 @@ public class PageAnnot {
              * <p>以下模式片段指定包含在此类中的预期内容。
              *
              * <pre>
-             * &lt;complexType>
-             *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-             *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-             *     &lt;/extension>
-             *   &lt;/simpleContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;simpleContent&gt;
+             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+             *       &lt;attribute name="Name" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/simpleContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              *
              *
              */
-            @XmlAccessorType(XmlAccessType.FIELD)
+            @XmlAccessorType(XmlAccessType.PROPERTY)
             @XmlType(name = "", propOrder = {
                 "value"
             })
             public static class Parameter {
 
-                @XmlValue
                 protected String value;
-                @XmlAttribute(name = "Name", required = true)
                 protected String name;
 
                 /**
@@ -714,6 +712,7 @@ public class PageAnnot {
                  *     {@link String }
                  *
                  */
+                @XmlValue
                 public String getValue() {
                     return value;
                 }
@@ -738,6 +737,7 @@ public class PageAnnot {
                  *     {@link String }
                  *
                  */
+                @XmlAttribute(name = "Name", required = true)
                 public String getName() {
                     return name;
                 }

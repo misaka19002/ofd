@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,72 +19,62 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_RadialShd">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Segment" maxOccurs="unbounded" minOccurs="2">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="MapType" default="Direct">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Direct"/>
- *             &lt;enumeration value="Repeat"/>
- *             &lt;enumeration value="Reflect"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="MapUnit" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="Eccentricity" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *       &lt;attribute name="Angle" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *       &lt;attribute name="StartPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *       &lt;attribute name="StartRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *       &lt;attribute name="EndRadius" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_RadialShd"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Segment" maxOccurs="unbounded" minOccurs="2"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="MapType" default="Direct"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Direct"/&gt;
+ *             &lt;enumeration value="Repeat"/&gt;
+ *             &lt;enumeration value="Reflect"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="MapUnit" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="Eccentricity" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *       &lt;attribute name="Angle" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *       &lt;attribute name="StartPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *       &lt;attribute name="StartRadius" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *       &lt;attribute name="EndRadius" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" default="0" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_RadialShd", propOrder = {
     "segment"
 })
 public class CTRadialShd {
 
-    @XmlElement(name = "Segment", required = true)
     protected List<CTRadialShd.Segment> segment;
-    @XmlAttribute(name = "MapType")
     protected String mapType;
-    @XmlAttribute(name = "MapUnit")
     protected Double mapUnit;
-    @XmlAttribute(name = "Eccentricity")
     protected Double eccentricity;
-    @XmlAttribute(name = "Angle")
     protected Double angle;
-    @XmlAttribute(name = "StartPoint", required = true)
     protected String startPoint;
-    @XmlAttribute(name = "StartRadius")
     protected Double startRadius;
-    @XmlAttribute(name = "EndPoint", required = true)
     protected String endPoint;
-    @XmlAttribute(name = "EndRadius", required = true)
     protected double endRadius;
-    @XmlAttribute(name = "Extend")
     protected Integer extend;
 
     /**
@@ -109,6 +99,7 @@ public class CTRadialShd {
      *
      *
      */
+    @XmlElement(name = "Segment", required = true, type = CTRadialShd.Segment.class)
     public List<CTRadialShd.Segment> getSegment() {
         if (segment == null) {
             segment = new ArrayList<CTRadialShd.Segment>();
@@ -124,6 +115,7 @@ public class CTRadialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "MapType")
     public String getMapType() {
         if (mapType == null) {
             return "Direct";
@@ -152,6 +144,7 @@ public class CTRadialShd {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "MapUnit")
     public Double getMapUnit() {
         return mapUnit;
     }
@@ -176,6 +169,7 @@ public class CTRadialShd {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "Eccentricity")
     public double getEccentricity() {
         if (eccentricity == null) {
             return  0.0D;
@@ -204,6 +198,7 @@ public class CTRadialShd {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "Angle")
     public double getAngle() {
         if (angle == null) {
             return  0.0D;
@@ -232,6 +227,7 @@ public class CTRadialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "StartPoint", required = true)
     public String getStartPoint() {
         return startPoint;
     }
@@ -256,6 +252,7 @@ public class CTRadialShd {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "StartRadius")
     public double getStartRadius() {
         if (startRadius == null) {
             return  0.0D;
@@ -284,6 +281,7 @@ public class CTRadialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "EndPoint", required = true)
     public String getEndPoint() {
         return endPoint;
     }
@@ -304,6 +302,7 @@ public class CTRadialShd {
      * 获取endRadius属性的值。
      *
      */
+    @XmlAttribute(name = "EndRadius", required = true)
     public double getEndRadius() {
         return endRadius;
     }
@@ -324,6 +323,7 @@ public class CTRadialShd {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Extend")
     public int getExtend() {
         if (extend == null) {
             return  0;
@@ -351,29 +351,27 @@ public class CTRadialShd {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "color"
     })
     public static class Segment {
 
-        @XmlElement(name = "Color", required = true)
         protected CTColor color;
-        @XmlAttribute(name = "Position")
         protected Double position;
 
         /**
@@ -384,6 +382,7 @@ public class CTRadialShd {
          *     {@link CTColor }
          *
          */
+        @XmlElement(name = "Color", required = true)
         public CTColor getColor() {
             return color;
         }
@@ -408,6 +407,7 @@ public class CTRadialShd {
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "Position")
         public Double getPosition() {
             return position;
         }

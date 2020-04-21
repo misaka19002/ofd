@@ -1,16 +1,21 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -19,41 +24,41 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_ColorSpace">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Palette" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="CV" type="{http://www.ofdspec.org/2016}ST_Array" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="Type" use="required">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="GRAY"/>
- *             &lt;enumeration value="RGB"/>
- *             &lt;enumeration value="CMYK"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="BitsPerComponent" type="{http://www.w3.org/2001/XMLSchema}int" default="8" />
- *       &lt;attribute name="Profile" type="{http://www.ofdspec.org/2016}ST_Loc" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_ColorSpace"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Palette" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="CV" type="{http://www.ofdspec.org/2016}ST_Array" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Type" use="required"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="GRAY"/&gt;
+ *             &lt;enumeration value="RGB"/&gt;
+ *             &lt;enumeration value="CMYK"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="BitsPerComponent" type="{http://www.w3.org/2001/XMLSchema}int" default="8" /&gt;
+ *       &lt;attribute name="Profile" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_ColorSpace", propOrder = {
     "palette"
 })
@@ -62,13 +67,9 @@ import java.util.List;
 })
 public class CTColorSpace {
 
-    @XmlElement(name = "Palette")
     protected Palette palette;
-    @XmlAttribute(name = "Type", required = true)
     protected String type;
-    @XmlAttribute(name = "BitsPerComponent")
     protected Integer bitsPerComponent;
-    @XmlAttribute(name = "Profile")
     protected String profile;
 
     /**
@@ -79,6 +80,7 @@ public class CTColorSpace {
      *     {@link Palette }
      *
      */
+    @XmlElement(name = "Palette")
     public Palette getPalette() {
         return palette;
     }
@@ -103,6 +105,7 @@ public class CTColorSpace {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Type", required = true)
     public String getType() {
         return type;
     }
@@ -127,6 +130,7 @@ public class CTColorSpace {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "BitsPerComponent")
     public int getBitsPerComponent() {
         if (bitsPerComponent == null) {
             return  8;
@@ -155,6 +159,7 @@ public class CTColorSpace {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Profile")
     public String getProfile() {
         return profile;
     }
@@ -178,26 +183,25 @@ public class CTColorSpace {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CV" type="{http://www.ofdspec.org/2016}ST_Array" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="CV" type="{http://www.ofdspec.org/2016}ST_Array" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "cv"
     })
     public static class Palette {
 
-        @XmlElement(name = "CV", required = true)
         protected List<String> cv;
 
         /**
@@ -222,6 +226,7 @@ public class CTColorSpace {
          *
          *
          */
+        @XmlElement(name = "CV", required = true, type = String.class)
         public List<String> getCV() {
             if (cv == null) {
                 cv = new ArrayList<String>();

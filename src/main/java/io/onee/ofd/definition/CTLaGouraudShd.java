@@ -1,16 +1,20 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -19,48 +23,44 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_LaGouraudShd">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Point" maxOccurs="unbounded" minOccurs="4">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                 &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="BackColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="VerticesPerRow" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_LaGouraudShd"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Point" maxOccurs="unbounded" minOccurs="4"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                 &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="BackColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="VerticesPerRow" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="Extend" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_LaGouraudShd", propOrder = {
     "point",
     "backColor"
 })
 public class CTLaGouraudShd {
 
-    @XmlElement(name = "Point", required = true)
     protected List<Point> point;
-    @XmlElement(name = "BackColor")
     protected CTColor     backColor;
-    @XmlAttribute(name = "VerticesPerRow", required = true)
     protected int verticesPerRow;
-    @XmlAttribute(name = "Extend")
     protected Integer extend;
 
     /**
@@ -85,6 +85,7 @@ public class CTLaGouraudShd {
      *
      *
      */
+    @XmlElement(name = "Point", required = true, type = Point.class)
     public List<Point> getPoint() {
         if (point == null) {
             point = new ArrayList<Point>();
@@ -100,6 +101,7 @@ public class CTLaGouraudShd {
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "BackColor")
     public CTColor getBackColor() {
         return backColor;
     }
@@ -120,6 +122,7 @@ public class CTLaGouraudShd {
      * 获取verticesPerRow属性的值。
      *
      */
+    @XmlAttribute(name = "VerticesPerRow", required = true)
     public int getVerticesPerRow() {
         return verticesPerRow;
     }
@@ -140,6 +143,7 @@ public class CTLaGouraudShd {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Extend")
     public Integer getExtend() {
         return extend;
     }
@@ -163,32 +167,29 @@ public class CTLaGouraudShd {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *       &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *       &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "color"
     })
     public static class Point {
 
-        @XmlElement(name = "Color", required = true)
         protected CTColor color;
-        @XmlAttribute(name = "X")
         protected Double x;
-        @XmlAttribute(name = "Y")
         protected Double y;
 
         /**
@@ -199,6 +200,7 @@ public class CTLaGouraudShd {
          *     {@link CTColor }
          *
          */
+        @XmlElement(name = "Color", required = true)
         public CTColor getColor() {
             return color;
         }
@@ -223,6 +225,7 @@ public class CTLaGouraudShd {
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "X")
         public Double getX() {
             return x;
         }
@@ -247,6 +250,7 @@ public class CTLaGouraudShd {
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "Y")
         public Double getY() {
             return y;
         }

@@ -1,16 +1,21 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -19,69 +24,69 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_GraphicUnit">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Actions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Clips" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Clip" type="{http://www.ofdspec.org/2016}CT_Clip" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" />
- *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" />
- *       &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" />
- *       &lt;attribute name="Cap" default="Butt">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Butt"/>
- *             &lt;enumeration value="Round"/>
- *             &lt;enumeration value="Square"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="Join" default="Miter">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Miter"/>
- *             &lt;enumeration value="Round"/>
- *             &lt;enumeration value="Bevel"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="MiterLimit" type="{http://www.w3.org/2001/XMLSchema}double" default="4.234" />
- *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" />
- *       &lt;attribute name="Alpha" type="{http://www.w3.org/2001/XMLSchema}int" default="255" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_GraphicUnit"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Actions" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Clips" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Clip" type="{http://www.ofdspec.org/2016}CT_Clip" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+ *       &lt;attribute name="Name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="Visible" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *       &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" /&gt;
+ *       &lt;attribute name="Cap" default="Butt"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Butt"/&gt;
+ *             &lt;enumeration value="Round"/&gt;
+ *             &lt;enumeration value="Square"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="Join" default="Miter"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Miter"/&gt;
+ *             &lt;enumeration value="Round"/&gt;
+ *             &lt;enumeration value="Bevel"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="MiterLimit" type="{http://www.w3.org/2001/XMLSchema}double" default="4.234" /&gt;
+ *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *       &lt;attribute name="Alpha" type="{http://www.w3.org/2001/XMLSchema}int" default="255" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_GraphicUnit", propOrder = {
     "actions",
     "clips"
@@ -94,33 +99,19 @@ import java.util.List;
 })
 public abstract class CTGraphicUnit {
 
-    @XmlElement(name = "Actions")
     protected Actions actions;
-    @XmlElement(name = "Clips")
     protected Clips clips;
-    @XmlAttribute(name = "Boundary", required = true)
     protected String boundary;
-    @XmlAttribute(name = "Name")
     protected String name;
-    @XmlAttribute(name = "Visible")
     protected Boolean visible;
-    @XmlAttribute(name = "CTM")
     protected String ctm;
-    @XmlAttribute(name = "DrawParam")
     protected Long drawParam;
-    @XmlAttribute(name = "LineWidth")
     protected Double lineWidth;
-    @XmlAttribute(name = "Cap")
     protected String cap;
-    @XmlAttribute(name = "Join")
     protected String join;
-    @XmlAttribute(name = "MiterLimit")
     protected Double miterLimit;
-    @XmlAttribute(name = "DashOffset")
     protected Double dashOffset;
-    @XmlAttribute(name = "DashPattern")
     protected String dashPattern;
-    @XmlAttribute(name = "Alpha")
     protected Integer alpha;
 
     /**
@@ -131,6 +122,7 @@ public abstract class CTGraphicUnit {
      *     {@link Actions }
      *
      */
+    @XmlElement(name = "Actions")
     public Actions getActions() {
         return actions;
     }
@@ -155,6 +147,7 @@ public abstract class CTGraphicUnit {
      *     {@link Clips }
      *
      */
+    @XmlElement(name = "Clips")
     public Clips getClips() {
         return clips;
     }
@@ -179,6 +172,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Boundary", required = true)
     public String getBoundary() {
         return boundary;
     }
@@ -203,6 +197,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Name")
     public String getName() {
         return name;
     }
@@ -227,6 +222,7 @@ public abstract class CTGraphicUnit {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Visible")
     public boolean isVisible() {
         if (visible == null) {
             return true;
@@ -255,6 +251,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "CTM")
     public String getCTM() {
         return ctm;
     }
@@ -279,6 +276,7 @@ public abstract class CTGraphicUnit {
      *     {@link Long }
      *
      */
+    @XmlAttribute(name = "DrawParam")
     public Long getDrawParam() {
         return drawParam;
     }
@@ -303,6 +301,7 @@ public abstract class CTGraphicUnit {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "LineWidth")
     public double getLineWidth() {
         if (lineWidth == null) {
             return  0.353D;
@@ -331,6 +330,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Cap")
     public String getCap() {
         if (cap == null) {
             return "Butt";
@@ -359,6 +359,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Join")
     public String getJoin() {
         if (join == null) {
             return "Miter";
@@ -387,6 +388,7 @@ public abstract class CTGraphicUnit {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "MiterLimit")
     public double getMiterLimit() {
         if (miterLimit == null) {
             return  4.234D;
@@ -415,6 +417,7 @@ public abstract class CTGraphicUnit {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "DashOffset")
     public double getDashOffset() {
         if (dashOffset == null) {
             return  0.0D;
@@ -443,6 +446,7 @@ public abstract class CTGraphicUnit {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "DashPattern")
     public String getDashPattern() {
         return dashPattern;
     }
@@ -467,6 +471,7 @@ public abstract class CTGraphicUnit {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Alpha")
     public int getAlpha() {
         if (alpha == null) {
             return  255;
@@ -494,26 +499,25 @@ public abstract class CTGraphicUnit {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "action"
     })
     public static class Actions {
 
-        @XmlElement(name = "Action", required = true)
         protected List<CTAction> action;
 
         /**
@@ -538,6 +542,7 @@ public abstract class CTGraphicUnit {
          *
          *
          */
+        @XmlElement(name = "Action", required = true, type = CTAction.class)
         public List<CTAction> getAction() {
             if (action == null) {
                 action = new ArrayList<CTAction>();
@@ -554,26 +559,25 @@ public abstract class CTGraphicUnit {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Clip" type="{http://www.ofdspec.org/2016}CT_Clip" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Clip" type="{http://www.ofdspec.org/2016}CT_Clip" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "clip"
     })
     public static class Clips {
 
-        @XmlElement(name = "Clip", required = true)
         protected List<CTClip> clip;
 
         /**
@@ -598,6 +602,7 @@ public abstract class CTGraphicUnit {
          *
          *
          */
+        @XmlElement(name = "Clip", required = true, type = CTClip.class)
         public List<CTClip> getClip() {
             if (clip == null) {
                 clip = new ArrayList<CTClip>();

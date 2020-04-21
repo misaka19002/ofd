@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
@@ -19,49 +19,44 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_OutlineElem">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Actions" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="Title" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="Count" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="Expanded" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_OutlineElem"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Actions" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="OutlineElem" type="{http://www.ofdspec.org/2016}CT_OutlineElem" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Title" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="Count" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="Expanded" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_OutlineElem", propOrder = {
     "actions",
     "outlineElem"
 })
 public class CTOutlineElem {
 
-    @XmlElement(name = "Actions")
     protected Actions actions;
-    @XmlElement(name = "OutlineElem")
     protected List<CTOutlineElem> outlineElem;
-    @XmlAttribute(name = "Title", required = true)
     protected String title;
-    @XmlAttribute(name = "Count")
     protected Integer count;
-    @XmlAttribute(name = "Expanded")
     protected Boolean expanded;
 
     /**
@@ -72,6 +67,7 @@ public class CTOutlineElem {
      *     {@link Actions }
      *
      */
+    @XmlElement(name = "Actions")
     public Actions getActions() {
         return actions;
     }
@@ -110,6 +106,7 @@ public class CTOutlineElem {
      *
      *
      */
+    @XmlElement(name = "OutlineElem", type = CTOutlineElem.class)
     public List<CTOutlineElem> getOutlineElem() {
         if (outlineElem == null) {
             outlineElem = new ArrayList<CTOutlineElem>();
@@ -125,6 +122,7 @@ public class CTOutlineElem {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Title", required = true)
     public String getTitle() {
         return title;
     }
@@ -149,6 +147,7 @@ public class CTOutlineElem {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Count")
     public Integer getCount() {
         return count;
     }
@@ -173,6 +172,7 @@ public class CTOutlineElem {
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Expanded")
     public boolean isExpanded() {
         if (expanded == null) {
             return true;
@@ -200,26 +200,25 @@ public class CTOutlineElem {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Action" type="{http://www.ofdspec.org/2016}CT_Action" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "action"
     })
     public static class Actions {
 
-        @XmlElement(name = "Action", required = true)
         protected List<CTAction> action;
 
         /**
@@ -244,6 +243,7 @@ public class CTOutlineElem {
          *
          *
          */
+        @XmlElement(name = "Action", required = true, type = CTAction.class)
         public List<CTAction> getAction() {
             if (action == null) {
                 action = new ArrayList<CTAction>();

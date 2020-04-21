@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -18,45 +18,45 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Permission">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Edit" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="Annot" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="Export" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="Signature" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="Watermark" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="PrintScreen" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
- *         &lt;element name="Print" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="Printable" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="Copies" type="{http://www.w3.org/2001/XMLSchema}int" default="-1" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="ValidPeriod" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="StartDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *                 &lt;attribute name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Permission"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Edit" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Annot" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Export" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Signature" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Watermark" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="PrintScreen" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/&gt;
+ *         &lt;element name="Print" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="Printable" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="Copies" type="{http://www.w3.org/2001/XMLSchema}int" default="-1" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="ValidPeriod" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="StartDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *                 &lt;attribute name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Permission", propOrder = {
     "edit",
     "annot",
@@ -69,21 +69,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class CTPermission {
 
-    @XmlElement(name = "Edit", defaultValue = "true")
     protected Boolean edit;
-    @XmlElement(name = "Annot", defaultValue = "true")
     protected Boolean annot;
-    @XmlElement(name = "Export", defaultValue = "true")
     protected Boolean export;
-    @XmlElement(name = "Signature", defaultValue = "true")
     protected Boolean signature;
-    @XmlElement(name = "Watermark", defaultValue = "true")
     protected Boolean watermark;
-    @XmlElement(name = "PrintScreen", defaultValue = "true")
     protected Boolean printScreen;
-    @XmlElement(name = "Print")
     protected CTPermission.Print print;
-    @XmlElement(name = "ValidPeriod")
     protected CTPermission.ValidPeriod validPeriod;
 
     /**
@@ -94,6 +86,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "Edit", defaultValue = "true")
     public Boolean isEdit() {
         return edit;
     }
@@ -118,6 +111,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "Annot", defaultValue = "true")
     public Boolean isAnnot() {
         return annot;
     }
@@ -142,6 +136,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "Export", defaultValue = "true")
     public Boolean isExport() {
         return export;
     }
@@ -166,6 +161,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "Signature", defaultValue = "true")
     public Boolean isSignature() {
         return signature;
     }
@@ -190,6 +186,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "Watermark", defaultValue = "true")
     public Boolean isWatermark() {
         return watermark;
     }
@@ -214,6 +211,7 @@ public class CTPermission {
      *     {@link Boolean }
      *
      */
+    @XmlElement(name = "PrintScreen", defaultValue = "true")
     public Boolean isPrintScreen() {
         return printScreen;
     }
@@ -238,6 +236,7 @@ public class CTPermission {
      *     {@link CTPermission.Print }
      *
      */
+    @XmlElement(name = "Print")
     public CTPermission.Print getPrint() {
         return print;
     }
@@ -262,6 +261,7 @@ public class CTPermission {
      *     {@link CTPermission.ValidPeriod }
      *
      */
+    @XmlElement(name = "ValidPeriod")
     public CTPermission.ValidPeriod getValidPeriod() {
         return validPeriod;
     }
@@ -285,31 +285,30 @@ public class CTPermission {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="Printable" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="Copies" type="{http://www.w3.org/2001/XMLSchema}int" default="-1" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="Printable" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="Copies" type="{http://www.w3.org/2001/XMLSchema}int" default="-1" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class Print {
 
-        @XmlAttribute(name = "Printable", required = true)
         protected boolean printable;
-        @XmlAttribute(name = "Copies")
         protected Integer copies;
 
         /**
          * 获取printable属性的值。
          *
          */
+        @XmlAttribute(name = "Printable", required = true)
         public boolean isPrintable() {
             return printable;
         }
@@ -330,6 +329,7 @@ public class CTPermission {
          *     {@link Integer }
          *
          */
+        @XmlAttribute(name = "Copies")
         public int getCopies() {
             if (copies == null) {
                 return -1;
@@ -359,27 +359,23 @@ public class CTPermission {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="StartDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
-     *       &lt;attribute name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="StartDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+     *       &lt;attribute name="EndDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "")
     public static class ValidPeriod {
 
-        @XmlAttribute(name = "StartDate")
-        @XmlSchemaType(name = "dateTime")
         protected XMLGregorianCalendar startDate;
-        @XmlAttribute(name = "EndDate")
-        @XmlSchemaType(name = "dateTime")
         protected XMLGregorianCalendar endDate;
 
         /**
@@ -390,6 +386,8 @@ public class CTPermission {
          *     {@link XMLGregorianCalendar }
          *
          */
+        @XmlAttribute(name = "StartDate")
+        @XmlSchemaType(name = "dateTime")
         public XMLGregorianCalendar getStartDate() {
             return startDate;
         }
@@ -414,6 +412,8 @@ public class CTPermission {
          *     {@link XMLGregorianCalendar }
          *
          */
+        @XmlAttribute(name = "EndDate")
+        @XmlSchemaType(name = "dateTime")
         public XMLGregorianCalendar getEndDate() {
             return endDate;
         }

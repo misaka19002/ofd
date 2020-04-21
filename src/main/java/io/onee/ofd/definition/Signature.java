@@ -1,18 +1,25 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
-import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlID;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.adapters.CollapsedStringAdapter;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 
 /**
@@ -21,98 +28,98 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="SignedInfo">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Provider">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                           &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                           &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="SignatureMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                   &lt;element name="SignatureDateTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *                   &lt;element name="References">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="Reference" maxOccurs="unbounded">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
- *                                     &lt;/sequence>
- *                                     &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attribute name="CheckMethod" default="MD5">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;enumeration value="MD5"/>
- *                                 &lt;enumeration value="SHA1"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;sequence>
- *                     &lt;element name="StampAnnot" maxOccurs="unbounded" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *                             &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *                             &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" />
- *                             &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                     &lt;element name="Seal" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SignedValue" type="{http://www.ofdspec.org/2016}ST_Loc"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="SignedInfo"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Provider"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                           &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                           &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="SignatureMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                   &lt;element name="SignatureDateTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *                   &lt;element name="References"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="Reference" maxOccurs="unbounded"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+ *                                     &lt;/sequence&gt;
+ *                                     &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="CheckMethod" default="MD5"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                 &lt;enumeration value="MD5"/&gt;
+ *                                 &lt;enumeration value="SHA1"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="StampAnnot" maxOccurs="unbounded" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *                             &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *                             &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+ *                             &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                     &lt;element name="Seal" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="SignedValue" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "signedInfo",
     "signedValue"
@@ -120,10 +127,7 @@ import java.util.List;
 @XmlRootElement(name = "Signature")
 public class Signature {
 
-    @XmlElement(name = "SignedInfo", required = true)
     protected SignedInfo signedInfo;
-    @XmlElement(name = "SignedValue", required = true)
-    @XmlSchemaType(name = "anyURI")
     protected String signedValue;
 
     /**
@@ -134,6 +138,7 @@ public class Signature {
      *     {@link SignedInfo }
      *
      */
+    @XmlElement(name = "SignedInfo", required = true)
     public SignedInfo getSignedInfo() {
         return signedInfo;
     }
@@ -158,6 +163,8 @@ public class Signature {
      *     {@link String }
      *
      */
+    @XmlElement(name = "SignedValue", required = true)
+    @XmlSchemaType(name = "anyURI")
     public String getSignedValue() {
         return signedValue;
     }
@@ -181,87 +188,87 @@ public class Signature {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Provider">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *                 &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="SignatureMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="SignatureDateTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="References">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="Reference" maxOccurs="unbounded">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
-     *                           &lt;/sequence>
-     *                           &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="CheckMethod" default="MD5">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;enumeration value="MD5"/>
-     *                       &lt;enumeration value="SHA1"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;sequence>
-     *           &lt;element name="StampAnnot" maxOccurs="unbounded" minOccurs="0">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-     *                   &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *                   &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" />
-     *                   &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" />
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *           &lt;element name="Seal" minOccurs="0">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *         &lt;/sequence>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Provider"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *                 &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="SignatureMethod" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *         &lt;element name="SignatureDateTime" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+     *         &lt;element name="References"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="Reference" maxOccurs="unbounded"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+     *                           &lt;/sequence&gt;
+     *                           &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="CheckMethod" default="MD5"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                       &lt;enumeration value="MD5"/&gt;
+     *                       &lt;enumeration value="SHA1"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;sequence&gt;
+     *           &lt;element name="StampAnnot" maxOccurs="unbounded" minOccurs="0"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+     *                   &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *                   &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+     *                   &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *           &lt;element name="Seal" minOccurs="0"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *         &lt;/sequence&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "provider",
         "signatureMethod",
@@ -272,17 +279,11 @@ public class Signature {
     })
     public static class SignedInfo {
 
-        @XmlElement(name = "Provider", required = true)
         protected Provider provider;
-        @XmlElement(name = "SignatureMethod")
         protected String signatureMethod;
-        @XmlElement(name = "SignatureDateTime")
         protected String signatureDateTime;
-        @XmlElement(name = "References", required = true)
         protected References       references;
-        @XmlElement(name = "StampAnnot")
         protected List<StampAnnot> stampAnnot;
-        @XmlElement(name = "Seal")
         protected Seal             seal;
 
         /**
@@ -293,6 +294,7 @@ public class Signature {
          *     {@link Provider }
          *
          */
+        @XmlElement(name = "Provider", required = true)
         public Provider getProvider() {
             return provider;
         }
@@ -317,6 +319,7 @@ public class Signature {
          *     {@link String }
          *
          */
+        @XmlElement(name = "SignatureMethod")
         public String getSignatureMethod() {
             return signatureMethod;
         }
@@ -341,6 +344,7 @@ public class Signature {
          *     {@link String }
          *
          */
+        @XmlElement(name = "SignatureDateTime")
         public String getSignatureDateTime() {
             return signatureDateTime;
         }
@@ -365,6 +369,7 @@ public class Signature {
          *     {@link References }
          *
          */
+        @XmlElement(name = "References", required = true)
         public References getReferences() {
             return references;
         }
@@ -403,6 +408,7 @@ public class Signature {
          *
          *
          */
+        @XmlElement(name = "StampAnnot", type = StampAnnot.class)
         public List<StampAnnot> getStampAnnot() {
             if (stampAnnot == null) {
                 stampAnnot = new ArrayList<StampAnnot>();
@@ -418,6 +424,7 @@ public class Signature {
          *     {@link Seal }
          *
          */
+        @XmlElement(name = "Seal")
         public Seal getSeal() {
             return seal;
         }
@@ -441,28 +448,25 @@ public class Signature {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *       &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="ProviderName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *       &lt;attribute name="Company" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class Provider {
 
-            @XmlAttribute(name = "ProviderName", required = true)
             protected String providerName;
-            @XmlAttribute(name = "Version")
             protected String version;
-            @XmlAttribute(name = "Company")
             protected String company;
 
             /**
@@ -473,6 +477,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "ProviderName", required = true)
             public String getProviderName() {
                 return providerName;
             }
@@ -497,6 +502,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Version")
             public String getVersion() {
                 return version;
             }
@@ -521,6 +527,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Company")
             public String getCompany() {
                 return company;
             }
@@ -546,47 +553,45 @@ public class Signature {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="Reference" maxOccurs="unbounded">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
-         *                 &lt;/sequence>
-         *                 &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attribute name="CheckMethod" default="MD5">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;enumeration value="MD5"/>
-         *             &lt;enumeration value="SHA1"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="Reference" maxOccurs="unbounded"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+         *                 &lt;/sequence&gt;
+         *                 &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="CheckMethod" default="MD5"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *             &lt;enumeration value="MD5"/&gt;
+         *             &lt;enumeration value="SHA1"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "reference"
         })
         public static class References {
 
-            @XmlElement(name = "Reference", required = true)
             protected List<Reference> reference;
-            @XmlAttribute(name = "CheckMethod")
             protected String          checkMethod;
 
             /**
@@ -611,6 +616,7 @@ public class Signature {
              *
              *
              */
+            @XmlElement(name = "Reference", required = true, type = Reference.class)
             public List<Reference> getReference() {
                 if (reference == null) {
                     reference = new ArrayList<Reference>();
@@ -626,6 +632,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "CheckMethod")
             public String getCheckMethod() {
                 if (checkMethod == null) {
                     return "MD5";
@@ -653,29 +660,27 @@ public class Signature {
              * <p>以下模式片段指定包含在此类中的预期内容。
              *
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>
-             *       &lt;/sequence>
-             *       &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="CheckValue" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/&gt;
+             *       &lt;/sequence&gt;
+             *       &lt;attribute name="FileRef" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              *
              *
              */
-            @XmlAccessorType(XmlAccessType.FIELD)
+            @XmlAccessorType(XmlAccessType.PROPERTY)
             @XmlType(name = "", propOrder = {
                 "checkValue"
             })
             public static class Reference {
 
-                @XmlElement(name = "CheckValue", required = true)
                 protected byte[] checkValue;
-                @XmlAttribute(name = "FileRef", required = true)
                 protected String fileRef;
 
                 /**
@@ -685,6 +690,7 @@ public class Signature {
                  *     possible object is
                  *     byte[]
                  */
+                @XmlElement(name = "CheckValue", required = true)
                 public byte[] getCheckValue() {
                     return checkValue;
                 }
@@ -708,6 +714,7 @@ public class Signature {
                  *     {@link String }
                  *
                  */
+                @XmlAttribute(name = "FileRef", required = true)
                 public String getFileRef() {
                     return fileRef;
                 }
@@ -735,27 +742,25 @@ public class Signature {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="BaseLoc" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "baseLoc"
         })
         public static class Seal {
 
-            @XmlElement(name = "BaseLoc", required = true)
-            @XmlSchemaType(name = "anyURI")
             protected String baseLoc;
 
             /**
@@ -766,6 +771,8 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlElement(name = "BaseLoc", required = true)
+            @XmlSchemaType(name = "anyURI")
             public String getBaseLoc() {
                 return baseLoc;
             }
@@ -791,34 +798,27 @@ public class Signature {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-         *       &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
-         *       &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" />
-         *       &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+         *       &lt;attribute name="PageRef" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+         *       &lt;attribute name="Boundary" use="required" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+         *       &lt;attribute name="Clip" type="{http://www.ofdspec.org/2016}ST_Box" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "")
         public static class StampAnnot {
 
-            @XmlAttribute(name = "ID", required = true)
-            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-            @XmlID
-            @XmlSchemaType(name = "ID")
             protected String id;
-            @XmlAttribute(name = "PageRef", required = true)
             protected long pageRef;
-            @XmlAttribute(name = "Boundary", required = true)
             protected String boundary;
-            @XmlAttribute(name = "Clip")
             protected String clip;
 
             /**
@@ -829,6 +829,10 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "ID", required = true)
+            @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+            @XmlID
+            @XmlSchemaType(name = "ID")
             public String getID() {
                 return id;
             }
@@ -849,6 +853,7 @@ public class Signature {
              * 获取pageRef属性的值。
              *
              */
+            @XmlAttribute(name = "PageRef", required = true)
             public long getPageRef() {
                 return pageRef;
             }
@@ -869,6 +874,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Boundary", required = true)
             public String getBoundary() {
                 return boundary;
             }
@@ -893,6 +899,7 @@ public class Signature {
              *     {@link String }
              *
              */
+            @XmlAttribute(name = "Clip")
             public String getClip() {
                 return clip;
             }

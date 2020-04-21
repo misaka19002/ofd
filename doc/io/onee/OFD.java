@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -21,73 +21,70 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="DocBody" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="DocInfo" type="{http://www.ofdspec.org/2016}CT_DocInfo"/>
- *                   &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/>
- *                   &lt;element name="Versions" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="Version" maxOccurs="unbounded">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
- *                                     &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
- *                                     &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *                                     &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Signatures" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="Version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="1.0" />
- *       &lt;attribute name="DocType" use="required" fixed="OFD">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="OFD"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="DocBody" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="DocInfo" type="{http://www.ofdspec.org/2016}CT_DocInfo"/&gt;
+ *                   &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+ *                   &lt;element name="Versions" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="Version" maxOccurs="unbounded"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+ *                                     &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *                                     &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *                                     &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Signatures" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Version" use="required" type="{http://www.w3.org/2001/XMLSchema}string" fixed="1.0" /&gt;
+ *       &lt;attribute name="DocType" use="required" fixed="OFD"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="OFD"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "", propOrder = {
     "docBody"
 })
 @XmlRootElement(name = "OFD")
 public class OFD {
 
-    @XmlElement(name = "DocBody", required = true)
     protected List<OFD.DocBody> docBody;
-    @XmlAttribute(name = "Version", required = true)
     protected String version;
-    @XmlAttribute(name = "DocType", required = true)
     protected String docType;
 
     /**
@@ -112,6 +109,7 @@ public class OFD {
      *
      *
      */
+    @XmlElement(name = "DocBody", required = true, type = OFD.DocBody.class)
     public List<OFD.DocBody> getDocBody() {
         if (docBody == null) {
             docBody = new ArrayList<OFD.DocBody>();
@@ -127,6 +125,7 @@ public class OFD {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Version", required = true)
     public String getVersion() {
         if (version == null) {
             return "1.0";
@@ -155,6 +154,7 @@ public class OFD {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "DocType", required = true)
     public String getDocType() {
         if (docType == null) {
             return "OFD";
@@ -182,44 +182,44 @@ public class OFD {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="DocInfo" type="{http://www.ofdspec.org/2016}CT_DocInfo"/>
-     *         &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/>
-     *         &lt;element name="Versions" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="Version" maxOccurs="unbounded">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-     *                           &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
-     *                           &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-     *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Signatures" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="DocInfo" type="{http://www.ofdspec.org/2016}CT_DocInfo"/&gt;
+     *         &lt;element name="DocRoot" type="{http://www.ofdspec.org/2016}ST_Loc"/&gt;
+     *         &lt;element name="Versions" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="Version" maxOccurs="unbounded"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+     *                           &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+     *                           &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+     *                           &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Signatures" type="{http://www.ofdspec.org/2016}ST_Loc" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "docInfo",
         "docRoot",
@@ -228,15 +228,9 @@ public class OFD {
     })
     public static class DocBody {
 
-        @XmlElement(name = "DocInfo", required = true)
         protected CTDocInfo docInfo;
-        @XmlElement(name = "DocRoot", required = true)
-        @XmlSchemaType(name = "anyURI")
         protected String docRoot;
-        @XmlElement(name = "Versions")
         protected OFD.DocBody.Versions versions;
-        @XmlElement(name = "Signatures")
-        @XmlSchemaType(name = "anyURI")
         protected String signatures;
 
         /**
@@ -247,6 +241,7 @@ public class OFD {
          *     {@link CTDocInfo }
          *
          */
+        @XmlElement(name = "DocInfo", required = true)
         public CTDocInfo getDocInfo() {
             return docInfo;
         }
@@ -271,6 +266,8 @@ public class OFD {
          *     {@link String }
          *
          */
+        @XmlElement(name = "DocRoot", required = true)
+        @XmlSchemaType(name = "anyURI")
         public String getDocRoot() {
             return docRoot;
         }
@@ -295,6 +292,7 @@ public class OFD {
          *     {@link OFD.DocBody.Versions }
          *
          */
+        @XmlElement(name = "Versions")
         public OFD.DocBody.Versions getVersions() {
             return versions;
         }
@@ -319,6 +317,8 @@ public class OFD {
          *     {@link String }
          *
          */
+        @XmlElement(name = "Signatures")
+        @XmlSchemaType(name = "anyURI")
         public String getSignatures() {
             return signatures;
         }
@@ -342,37 +342,36 @@ public class OFD {
          * <p>以下模式片段指定包含在此类中的预期内容。
          *
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="Version" maxOccurs="unbounded">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-         *                 &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
-         *                 &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-         *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="Version" maxOccurs="unbounded"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+         *                 &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+         *                 &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+         *                 &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          *
          *
          */
-        @XmlAccessorType(XmlAccessType.FIELD)
+        @XmlAccessorType(XmlAccessType.PROPERTY)
         @XmlType(name = "", propOrder = {
             "version"
         })
         public static class Versions {
 
-            @XmlElement(name = "Version", required = true)
             protected List<OFD.DocBody.Versions.Version> version;
 
             /**
@@ -397,6 +396,7 @@ public class OFD {
              *
              *
              */
+            @XmlElement(name = "Version", required = true, type = OFD.DocBody.Versions.Version.class)
             public List<OFD.DocBody.Versions.Version> getVersion() {
                 if (version == null) {
                     version = new ArrayList<OFD.DocBody.Versions.Version>();
@@ -411,34 +411,27 @@ public class OFD {
              * <p>以下模式片段指定包含在此类中的预期内容。
              *
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" />
-             *       &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" />
-             *       &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
-             *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="ID" use="required" type="{http://www.w3.org/2001/XMLSchema}ID" /&gt;
+             *       &lt;attribute name="Index" use="required" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+             *       &lt;attribute name="Current" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+             *       &lt;attribute name="BaseLoc" use="required" type="{http://www.ofdspec.org/2016}ST_Loc" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              *
              *
              */
-            @XmlAccessorType(XmlAccessType.FIELD)
+            @XmlAccessorType(XmlAccessType.PROPERTY)
             @XmlType(name = "")
             public static class Version {
 
-                @XmlAttribute(name = "ID", required = true)
-                @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-                @XmlID
-                @XmlSchemaType(name = "ID")
                 protected String id;
-                @XmlAttribute(name = "Index", required = true)
                 protected int index;
-                @XmlAttribute(name = "Current")
                 protected Boolean current;
-                @XmlAttribute(name = "BaseLoc", required = true)
                 protected String baseLoc;
 
                 /**
@@ -449,6 +442,10 @@ public class OFD {
                  *     {@link String }
                  *
                  */
+                @XmlAttribute(name = "ID", required = true)
+                @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+                @XmlID
+                @XmlSchemaType(name = "ID")
                 public String getID() {
                     return id;
                 }
@@ -469,6 +466,7 @@ public class OFD {
                  * 获取index属性的值。
                  *
                  */
+                @XmlAttribute(name = "Index", required = true)
                 public int getIndex() {
                     return index;
                 }
@@ -489,6 +487,7 @@ public class OFD {
                  *     {@link Boolean }
                  *
                  */
+                @XmlAttribute(name = "Current")
                 public boolean isCurrent() {
                     if (current == null) {
                         return false;
@@ -517,6 +516,7 @@ public class OFD {
                  *     {@link String }
                  *
                  */
+                @XmlAttribute(name = "BaseLoc", required = true)
                 public String getBaseLoc() {
                     return baseLoc;
                 }

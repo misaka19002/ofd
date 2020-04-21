@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
@@ -19,61 +19,61 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Text">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit">
- *       &lt;sequence>
- *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *         &lt;sequence maxOccurs="unbounded">
- *           &lt;element name="CGTransform" type="{http://www.ofdspec.org/2016}CT_CGTransform" maxOccurs="unbounded" minOccurs="0"/>
- *           &lt;element name="TextCode">
- *             &lt;complexType>
- *               &lt;simpleContent>
- *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                   &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                   &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" />
- *                   &lt;attribute name="DeltaX" type="{http://www.ofdspec.org/2016}ST_Array" />
- *                   &lt;attribute name="DeltaY" type="{http://www.ofdspec.org/2016}ST_Array" />
- *                 &lt;/extension>
- *               &lt;/simpleContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/sequence>
- *       &lt;/sequence>
- *       &lt;attribute name="Font" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="Size" use="required" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="Stroke" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *       &lt;attribute name="Fill" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *       &lt;attribute name="HScale" type="{http://www.w3.org/2001/XMLSchema}double" default="1.0" />
- *       &lt;attribute name="ReadDirection" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
- *       &lt;attribute name="CharDirection" type="{http://www.w3.org/2001/XMLSchema}int" default="0" />
- *       &lt;attribute name="Weight" default="400">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int">
- *             &lt;enumeration value="0"/>
- *             &lt;enumeration value="100"/>
- *             &lt;enumeration value="200"/>
- *             &lt;enumeration value="300"/>
- *             &lt;enumeration value="400"/>
- *             &lt;enumeration value="500"/>
- *             &lt;enumeration value="600"/>
- *             &lt;enumeration value="700"/>
- *             &lt;enumeration value="800"/>
- *             &lt;enumeration value="900"/>
- *             &lt;enumeration value="1000"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="Italic" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Text"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *         &lt;sequence maxOccurs="unbounded"&gt;
+ *           &lt;element name="CGTransform" type="{http://www.ofdspec.org/2016}CT_CGTransform" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *           &lt;element name="TextCode"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;simpleContent&gt;
+ *                 &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                   &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                   &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *                   &lt;attribute name="DeltaX" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *                   &lt;attribute name="DeltaY" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *                 &lt;/extension&gt;
+ *               &lt;/simpleContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/sequence&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Font" use="required" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="Size" use="required" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="Stroke" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="Fill" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *       &lt;attribute name="HScale" type="{http://www.w3.org/2001/XMLSchema}double" default="1.0" /&gt;
+ *       &lt;attribute name="ReadDirection" type="{http://www.w3.org/2001/XMLSchema}int" default="0" /&gt;
+ *       &lt;attribute name="CharDirection" type="{http://www.w3.org/2001/XMLSchema}int" default="0" /&gt;
+ *       &lt;attribute name="Weight" default="400"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int"&gt;
+ *             &lt;enumeration value="0"/&gt;
+ *             &lt;enumeration value="100"/&gt;
+ *             &lt;enumeration value="200"/&gt;
+ *             &lt;enumeration value="300"/&gt;
+ *             &lt;enumeration value="400"/&gt;
+ *             &lt;enumeration value="500"/&gt;
+ *             &lt;enumeration value="600"/&gt;
+ *             &lt;enumeration value="700"/&gt;
+ *             &lt;enumeration value="800"/&gt;
+ *             &lt;enumeration value="900"/&gt;
+ *             &lt;enumeration value="1000"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="Italic" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Text", propOrder = {
     "fillColor",
     "strokeColor",
@@ -86,32 +86,17 @@ public class CTText
     extends CTGraphicUnit
 {
 
-    @XmlElement(name = "FillColor")
     protected CTColor fillColor;
-    @XmlElement(name = "StrokeColor")
     protected CTColor strokeColor;
-    @XmlElements({
-        @XmlElement(name = "CGTransform", required = true, type = CTCGTransform.class),
-        @XmlElement(name = "TextCode", required = true, type = TextCode.class)
-    })
     protected List<Object> cgTransformAndTextCode;
-    @XmlAttribute(name = "Font", required = true)
     protected long font;
-    @XmlAttribute(name = "Size", required = true)
     protected double size;
-    @XmlAttribute(name = "Stroke")
     protected Boolean stroke;
-    @XmlAttribute(name = "Fill")
     protected Boolean fill;
-    @XmlAttribute(name = "HScale")
     protected Double hScale;
-    @XmlAttribute(name = "ReadDirection")
     protected Integer readDirection;
-    @XmlAttribute(name = "CharDirection")
     protected Integer charDirection;
-    @XmlAttribute(name = "Weight")
     protected Integer weight;
-    @XmlAttribute(name = "Italic")
     protected Boolean italic;
 
     /**
@@ -122,6 +107,7 @@ public class CTText
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "FillColor")
     public CTColor getFillColor() {
         return fillColor;
     }
@@ -146,6 +132,7 @@ public class CTText
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "StrokeColor")
     public CTColor getStrokeColor() {
         return strokeColor;
     }
@@ -185,6 +172,10 @@ public class CTText
      *
      *
      */
+    @XmlElements({
+        @XmlElement(name = "CGTransform", required = true, type = CTCGTransform.class),
+        @XmlElement(name = "TextCode", required = true, type = TextCode.class)
+    })
     public List<Object> getCGTransformAndTextCode() {
         if (cgTransformAndTextCode == null) {
             cgTransformAndTextCode = new ArrayList<Object>();
@@ -196,6 +187,7 @@ public class CTText
      * 获取font属性的值。
      *
      */
+    @XmlAttribute(name = "Font", required = true)
     public long getFont() {
         return font;
     }
@@ -212,6 +204,7 @@ public class CTText
      * 获取size属性的值。
      *
      */
+    @XmlAttribute(name = "Size", required = true)
     public double getSize() {
         return size;
     }
@@ -232,6 +225,7 @@ public class CTText
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Stroke")
     public boolean isStroke() {
         if (stroke == null) {
             return false;
@@ -260,6 +254,7 @@ public class CTText
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Fill")
     public boolean isFill() {
         if (fill == null) {
             return true;
@@ -288,6 +283,7 @@ public class CTText
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "HScale")
     public double getHScale() {
         if (hScale == null) {
             return  1.0D;
@@ -316,6 +312,7 @@ public class CTText
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "ReadDirection")
     public int getReadDirection() {
         if (readDirection == null) {
             return  0;
@@ -344,6 +341,7 @@ public class CTText
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "CharDirection")
     public int getCharDirection() {
         if (charDirection == null) {
             return  0;
@@ -372,6 +370,7 @@ public class CTText
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Weight")
     public int getWeight() {
         if (weight == null) {
             return  400;
@@ -400,6 +399,7 @@ public class CTText
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Italic")
     public boolean isItalic() {
         if (italic == null) {
             return false;
@@ -427,35 +427,30 @@ public class CTText
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *       &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *       &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *       &lt;attribute name="DeltaX" type="{http://www.ofdspec.org/2016}ST_Array" />
-     *       &lt;attribute name="DeltaY" type="{http://www.ofdspec.org/2016}ST_Array" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *       &lt;attribute name="X" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *       &lt;attribute name="Y" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *       &lt;attribute name="DeltaX" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+     *       &lt;attribute name="DeltaY" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "value"
     })
     public static class TextCode {
 
-        @XmlValue
         protected String value;
-        @XmlAttribute(name = "X")
         protected Double x;
-        @XmlAttribute(name = "Y")
         protected Double y;
-        @XmlAttribute(name = "DeltaX")
         protected String deltaX;
-        @XmlAttribute(name = "DeltaY")
         protected String deltaY;
 
         /**
@@ -466,6 +461,7 @@ public class CTText
          *     {@link String }
          *
          */
+        @XmlValue
         public String getValue() {
             return value;
         }
@@ -490,6 +486,7 @@ public class CTText
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "X")
         public Double getX() {
             return x;
         }
@@ -514,6 +511,7 @@ public class CTText
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "Y")
         public Double getY() {
             return y;
         }
@@ -538,6 +536,7 @@ public class CTText
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "DeltaX")
         public String getDeltaX() {
             return deltaX;
         }
@@ -562,6 +561,7 @@ public class CTText
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "DeltaY")
         public String getDeltaY() {
             return deltaY;
         }

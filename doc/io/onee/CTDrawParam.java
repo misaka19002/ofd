@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -17,28 +17,28 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_DrawParam">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="Relative" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" />
- *       &lt;attribute name="Join" type="{http://www.w3.org/2001/XMLSchema}string" default="Miter" />
- *       &lt;attribute name="Cap" type="{http://www.w3.org/2001/XMLSchema}string" default="Butt" />
- *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" />
- *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" />
- *       &lt;attribute name="MiterLimit" type="{http://www.w3.org/2001/XMLSchema}double" default="4.234" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_DrawParam"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Relative" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="LineWidth" type="{http://www.w3.org/2001/XMLSchema}double" default="0.353" /&gt;
+ *       &lt;attribute name="Join" type="{http://www.w3.org/2001/XMLSchema}string" default="Miter" /&gt;
+ *       &lt;attribute name="Cap" type="{http://www.w3.org/2001/XMLSchema}string" default="Butt" /&gt;
+ *       &lt;attribute name="DashOffset" type="{http://www.w3.org/2001/XMLSchema}double" default="0" /&gt;
+ *       &lt;attribute name="DashPattern" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *       &lt;attribute name="MiterLimit" type="{http://www.w3.org/2001/XMLSchema}double" default="4.234" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_DrawParam", propOrder = {
     "fillColor",
     "strokeColor"
@@ -48,23 +48,14 @@ import javax.xml.bind.annotation.*;
 })
 public class CTDrawParam {
 
-    @XmlElement(name = "FillColor")
     protected CTColor fillColor;
-    @XmlElement(name = "StrokeColor")
     protected CTColor strokeColor;
-    @XmlAttribute(name = "Relative")
     protected Long relative;
-    @XmlAttribute(name = "LineWidth")
     protected Double lineWidth;
-    @XmlAttribute(name = "Join")
     protected String join;
-    @XmlAttribute(name = "Cap")
     protected String cap;
-    @XmlAttribute(name = "DashOffset")
     protected Double dashOffset;
-    @XmlAttribute(name = "DashPattern")
     protected String dashPattern;
-    @XmlAttribute(name = "MiterLimit")
     protected Double miterLimit;
 
     /**
@@ -75,6 +66,7 @@ public class CTDrawParam {
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "FillColor")
     public CTColor getFillColor() {
         return fillColor;
     }
@@ -99,6 +91,7 @@ public class CTDrawParam {
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "StrokeColor")
     public CTColor getStrokeColor() {
         return strokeColor;
     }
@@ -123,6 +116,7 @@ public class CTDrawParam {
      *     {@link Long }
      *
      */
+    @XmlAttribute(name = "Relative")
     public Long getRelative() {
         return relative;
     }
@@ -147,6 +141,7 @@ public class CTDrawParam {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "LineWidth")
     public double getLineWidth() {
         if (lineWidth == null) {
             return  0.353D;
@@ -175,6 +170,7 @@ public class CTDrawParam {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Join")
     public String getJoin() {
         if (join == null) {
             return "Miter";
@@ -203,6 +199,7 @@ public class CTDrawParam {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Cap")
     public String getCap() {
         if (cap == null) {
             return "Butt";
@@ -231,6 +228,7 @@ public class CTDrawParam {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "DashOffset")
     public double getDashOffset() {
         if (dashOffset == null) {
             return  0.0D;
@@ -259,6 +257,7 @@ public class CTDrawParam {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "DashPattern")
     public String getDashPattern() {
         return dashPattern;
     }
@@ -283,6 +282,7 @@ public class CTDrawParam {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "MiterLimit")
     public double getMiterLimit() {
         if (miterLimit == null) {
             return  4.234D;

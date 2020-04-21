@@ -1,14 +1,19 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
 package io.onee.ofd.definition;
 
-import javax.xml.bind.annotation.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -17,32 +22,32 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Path">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit">
- *       &lt;sequence>
- *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/>
- *         &lt;element name="AbbreviatedData" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *       &lt;/sequence>
- *       &lt;attribute name="Stroke" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" />
- *       &lt;attribute name="Fill" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" />
- *       &lt;attribute name="Rule" default="NonZero">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="NonZero"/>
- *             &lt;enumeration value="Even-Odd"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Path"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.ofdspec.org/2016}CT_GraphicUnit"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="StrokeColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *         &lt;element name="FillColor" type="{http://www.ofdspec.org/2016}CT_Color" minOccurs="0"/&gt;
+ *         &lt;element name="AbbreviatedData" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Stroke" type="{http://www.w3.org/2001/XMLSchema}boolean" default="true" /&gt;
+ *       &lt;attribute name="Fill" type="{http://www.w3.org/2001/XMLSchema}boolean" default="false" /&gt;
+ *       &lt;attribute name="Rule" default="NonZero"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="NonZero"/&gt;
+ *             &lt;enumeration value="Even-Odd"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Path", propOrder = {
     "strokeColor",
     "fillColor",
@@ -55,17 +60,11 @@ public class CTPath
     extends CTGraphicUnit
 {
 
-    @XmlElement(name = "StrokeColor")
     protected CTColor strokeColor;
-    @XmlElement(name = "FillColor")
     protected CTColor fillColor;
-    @XmlElement(name = "AbbreviatedData", required = true)
     protected String abbreviatedData;
-    @XmlAttribute(name = "Stroke")
     protected Boolean stroke;
-    @XmlAttribute(name = "Fill")
     protected Boolean fill;
-    @XmlAttribute(name = "Rule")
     protected String rule;
 
     /**
@@ -76,6 +75,7 @@ public class CTPath
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "StrokeColor")
     public CTColor getStrokeColor() {
         return strokeColor;
     }
@@ -100,6 +100,7 @@ public class CTPath
      *     {@link CTColor }
      *
      */
+    @XmlElement(name = "FillColor")
     public CTColor getFillColor() {
         return fillColor;
     }
@@ -124,6 +125,7 @@ public class CTPath
      *     {@link String }
      *
      */
+    @XmlElement(name = "AbbreviatedData", required = true)
     public String getAbbreviatedData() {
         return abbreviatedData;
     }
@@ -148,6 +150,7 @@ public class CTPath
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Stroke")
     public boolean isStroke() {
         if (stroke == null) {
             return true;
@@ -176,6 +179,7 @@ public class CTPath
      *     {@link Boolean }
      *
      */
+    @XmlAttribute(name = "Fill")
     public boolean isFill() {
         if (fill == null) {
             return false;
@@ -204,6 +208,7 @@ public class CTPath
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Rule")
     public String getRule() {
         if (rule == null) {
             return "NonZero";

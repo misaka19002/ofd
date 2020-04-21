@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST 
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST 
 //
 
 
@@ -20,23 +20,23 @@ import javax.xml.bind.annotation.XmlType;
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="CT_PageArea">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="PhysicalBox" type="{http://www.ofdspec.org/2016}ST_Box"/>
- *         &lt;element name="ApplicationBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/>
- *         &lt;element name="ContentBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/>
- *         &lt;element name="BleedBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_PageArea"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="PhysicalBox" type="{http://www.ofdspec.org/2016}ST_Box"/&gt;
+ *         &lt;element name="ApplicationBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/&gt;
+ *         &lt;element name="ContentBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/&gt;
+ *         &lt;element name="BleedBox" type="{http://www.ofdspec.org/2016}ST_Box" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_PageArea", propOrder = {
     "physicalBox",
     "applicationBox",
@@ -45,13 +45,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CTPageArea {
 
-    @XmlElement(name = "PhysicalBox", required = true)
     protected String physicalBox;
-    @XmlElement(name = "ApplicationBox")
     protected String applicationBox;
-    @XmlElement(name = "ContentBox")
     protected String contentBox;
-    @XmlElement(name = "BleedBox")
     protected String bleedBox;
 
     /**
@@ -62,6 +58,7 @@ public class CTPageArea {
      *     {@link String }
      *     
      */
+    @XmlElement(name = "PhysicalBox", required = true)
     public String getPhysicalBox() {
         return physicalBox;
     }
@@ -86,6 +83,7 @@ public class CTPageArea {
      *     {@link String }
      *     
      */
+    @XmlElement(name = "ApplicationBox")
     public String getApplicationBox() {
         return applicationBox;
     }
@@ -110,6 +108,7 @@ public class CTPageArea {
      *     {@link String }
      *     
      */
+    @XmlElement(name = "ContentBox")
     public String getContentBox() {
         return contentBox;
     }
@@ -134,6 +133,7 @@ public class CTPageArea {
      *     {@link String }
      *     
      */
+    @XmlElement(name = "BleedBox")
     public String getBleedBox() {
         return bleedBox;
     }

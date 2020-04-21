@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -17,28 +17,28 @@ import javax.xml.bind.annotation.*;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Color">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice minOccurs="0">
- *         &lt;element name="Pattern" type="{http://www.ofdspec.org/2016}CT_Pattern"/>
- *         &lt;element name="AxialShd" type="{http://www.ofdspec.org/2016}CT_AxialShd"/>
- *         &lt;element name="RadialShd" type="{http://www.ofdspec.org/2016}CT_RadialShd"/>
- *         &lt;element name="GouraudShd" type="{http://www.ofdspec.org/2016}CT_GouraudShd"/>
- *         &lt;element name="LaGourandShd" type="{http://www.ofdspec.org/2016}CT_LaGouraudShd"/>
- *       &lt;/choice>
- *       &lt;attribute name="Value" type="{http://www.ofdspec.org/2016}ST_Array" />
- *       &lt;attribute name="Index" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="ColorSpace" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *       &lt;attribute name="Alpha" type="{http://www.w3.org/2001/XMLSchema}int" default="255" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Color"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice minOccurs="0"&gt;
+ *         &lt;element name="Pattern" type="{http://www.ofdspec.org/2016}CT_Pattern"/&gt;
+ *         &lt;element name="AxialShd" type="{http://www.ofdspec.org/2016}CT_AxialShd"/&gt;
+ *         &lt;element name="RadialShd" type="{http://www.ofdspec.org/2016}CT_RadialShd"/&gt;
+ *         &lt;element name="GouraudShd" type="{http://www.ofdspec.org/2016}CT_GouraudShd"/&gt;
+ *         &lt;element name="LaGourandShd" type="{http://www.ofdspec.org/2016}CT_LaGouraudShd"/&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attribute name="Value" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *       &lt;attribute name="Index" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="ColorSpace" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *       &lt;attribute name="Alpha" type="{http://www.w3.org/2001/XMLSchema}int" default="255" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Color", propOrder = {
     "pattern",
     "axialShd",
@@ -48,23 +48,14 @@ import javax.xml.bind.annotation.*;
 })
 public class CTColor {
 
-    @XmlElement(name = "Pattern")
     protected CTPattern pattern;
-    @XmlElement(name = "AxialShd")
     protected CTAxialShd axialShd;
-    @XmlElement(name = "RadialShd")
     protected CTRadialShd radialShd;
-    @XmlElement(name = "GouraudShd")
     protected CTGouraudShd gouraudShd;
-    @XmlElement(name = "LaGourandShd")
     protected CTLaGouraudShd laGourandShd;
-    @XmlAttribute(name = "Value")
     protected String value;
-    @XmlAttribute(name = "Index")
     protected Integer index;
-    @XmlAttribute(name = "ColorSpace")
     protected Long colorSpace;
-    @XmlAttribute(name = "Alpha")
     protected Integer alpha;
 
     /**
@@ -75,6 +66,7 @@ public class CTColor {
      *     {@link CTPattern }
      *
      */
+    @XmlElement(name = "Pattern")
     public CTPattern getPattern() {
         return pattern;
     }
@@ -99,6 +91,7 @@ public class CTColor {
      *     {@link CTAxialShd }
      *
      */
+    @XmlElement(name = "AxialShd")
     public CTAxialShd getAxialShd() {
         return axialShd;
     }
@@ -123,6 +116,7 @@ public class CTColor {
      *     {@link CTRadialShd }
      *
      */
+    @XmlElement(name = "RadialShd")
     public CTRadialShd getRadialShd() {
         return radialShd;
     }
@@ -147,6 +141,7 @@ public class CTColor {
      *     {@link CTGouraudShd }
      *
      */
+    @XmlElement(name = "GouraudShd")
     public CTGouraudShd getGouraudShd() {
         return gouraudShd;
     }
@@ -171,6 +166,7 @@ public class CTColor {
      *     {@link CTLaGouraudShd }
      *
      */
+    @XmlElement(name = "LaGourandShd")
     public CTLaGouraudShd getLaGourandShd() {
         return laGourandShd;
     }
@@ -195,6 +191,7 @@ public class CTColor {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "Value")
     public String getValue() {
         return value;
     }
@@ -219,6 +216,7 @@ public class CTColor {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Index")
     public Integer getIndex() {
         return index;
     }
@@ -243,6 +241,7 @@ public class CTColor {
      *     {@link Long }
      *
      */
+    @XmlAttribute(name = "ColorSpace")
     public Long getColorSpace() {
         return colorSpace;
     }
@@ -267,6 +266,7 @@ public class CTColor {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Alpha")
     public int getAlpha() {
         if (alpha == null) {
             return  255;

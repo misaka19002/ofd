@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,39 +19,38 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_Clip">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Area" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;choice>
- *                   &lt;element name="Path" type="{http://www.ofdspec.org/2016}CT_Path"/>
- *                   &lt;element name="Text" type="{http://www.ofdspec.org/2016}CT_Text"/>
- *                 &lt;/choice>
- *                 &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" />
- *                 &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_Clip"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Area" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;choice&gt;
+ *                   &lt;element name="Path" type="{http://www.ofdspec.org/2016}CT_Path"/&gt;
+ *                   &lt;element name="Text" type="{http://www.ofdspec.org/2016}CT_Text"/&gt;
+ *                 &lt;/choice&gt;
+ *                 &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+ *                 &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_Clip", propOrder = {
     "area"
 })
 public class CTClip {
 
-    @XmlElement(name = "Area", required = true)
     protected List<CTClip.Area> area;
 
     /**
@@ -76,6 +75,7 @@ public class CTClip {
      *
      *
      */
+    @XmlElement(name = "Area", required = true, type = CTClip.Area.class)
     public List<CTClip.Area> getArea() {
         if (area == null) {
             area = new ArrayList<CTClip.Area>();
@@ -90,36 +90,32 @@ public class CTClip {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice>
-     *         &lt;element name="Path" type="{http://www.ofdspec.org/2016}CT_Path"/>
-     *         &lt;element name="Text" type="{http://www.ofdspec.org/2016}CT_Text"/>
-     *       &lt;/choice>
-     *       &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" />
-     *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice&gt;
+     *         &lt;element name="Path" type="{http://www.ofdspec.org/2016}CT_Path"/&gt;
+     *         &lt;element name="Text" type="{http://www.ofdspec.org/2016}CT_Text"/&gt;
+     *       &lt;/choice&gt;
+     *       &lt;attribute name="DrawParam" type="{http://www.ofdspec.org/2016}ST_RefID" /&gt;
+     *       &lt;attribute name="CTM" type="{http://www.ofdspec.org/2016}ST_Array" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "path",
         "text"
     })
     public static class Area {
 
-        @XmlElement(name = "Path")
         protected CTPath path;
-        @XmlElement(name = "Text")
         protected CTText text;
-        @XmlAttribute(name = "DrawParam")
         protected Long drawParam;
-        @XmlAttribute(name = "CTM")
         protected String ctm;
 
         /**
@@ -130,6 +126,7 @@ public class CTClip {
          *     {@link CTPath }
          *
          */
+        @XmlElement(name = "Path")
         public CTPath getPath() {
             return path;
         }
@@ -154,6 +151,7 @@ public class CTClip {
          *     {@link CTText }
          *
          */
+        @XmlElement(name = "Text")
         public CTText getText() {
             return text;
         }
@@ -178,6 +176,7 @@ public class CTClip {
          *     {@link Long }
          *
          */
+        @XmlAttribute(name = "DrawParam")
         public Long getDrawParam() {
             return drawParam;
         }
@@ -202,6 +201,7 @@ public class CTClip {
          *     {@link String }
          *
          */
+        @XmlAttribute(name = "CTM")
         public String getCTM() {
             return ctm;
         }

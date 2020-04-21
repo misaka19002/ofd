@@ -1,8 +1,8 @@
 //
-// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.2.8-b130911.1802 生成的
-// 请访问 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a>
+// 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.16 时间 04:51:38 PM CST
+// 生成时间: 2020.04.21 时间 04:28:23 PM CST
 //
 
 
@@ -19,69 +19,63 @@ import java.util.List;
  * <p>以下模式片段指定包含在此类中的预期内容。
  *
  * <pre>
- * &lt;complexType name="CT_AxialShd">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Segment" maxOccurs="unbounded" minOccurs="2">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="MapType" default="Direct">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="Direct"/>
- *             &lt;enumeration value="Repeat"/>
- *             &lt;enumeration value="Reflect"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="MapUnit" type="{http://www.w3.org/2001/XMLSchema}double" />
- *       &lt;attribute name="Extend" default="0">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int">
- *             &lt;enumeration value="0"/>
- *             &lt;enumeration value="1"/>
- *             &lt;enumeration value="2"/>
- *             &lt;enumeration value="3"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="StartPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CT_AxialShd"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Segment" maxOccurs="unbounded" minOccurs="2"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="MapType" default="Direct"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="Direct"/&gt;
+ *             &lt;enumeration value="Repeat"/&gt;
+ *             &lt;enumeration value="Reflect"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="MapUnit" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="Extend" default="0"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}int"&gt;
+ *             &lt;enumeration value="0"/&gt;
+ *             &lt;enumeration value="1"/&gt;
+ *             &lt;enumeration value="2"/&gt;
+ *             &lt;enumeration value="3"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="StartPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *       &lt;attribute name="EndPoint" use="required" type="{http://www.ofdspec.org/2016}ST_Pos" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  *
  *
  */
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_AxialShd", propOrder = {
     "segment"
 })
 public class CTAxialShd {
 
-    @XmlElement(name = "Segment", required = true)
     protected List<CTAxialShd.Segment> segment;
-    @XmlAttribute(name = "MapType")
     protected String mapType;
-    @XmlAttribute(name = "MapUnit")
     protected Double mapUnit;
-    @XmlAttribute(name = "Extend")
     protected Integer extend;
-    @XmlAttribute(name = "StartPoint", required = true)
     protected String startPoint;
-    @XmlAttribute(name = "EndPoint", required = true)
     protected String endPoint;
 
     /**
@@ -106,6 +100,7 @@ public class CTAxialShd {
      *
      *
      */
+    @XmlElement(name = "Segment", required = true, type = CTAxialShd.Segment.class)
     public List<CTAxialShd.Segment> getSegment() {
         if (segment == null) {
             segment = new ArrayList<CTAxialShd.Segment>();
@@ -121,6 +116,7 @@ public class CTAxialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "MapType")
     public String getMapType() {
         if (mapType == null) {
             return "Direct";
@@ -149,6 +145,7 @@ public class CTAxialShd {
      *     {@link Double }
      *
      */
+    @XmlAttribute(name = "MapUnit")
     public Double getMapUnit() {
         return mapUnit;
     }
@@ -173,6 +170,7 @@ public class CTAxialShd {
      *     {@link Integer }
      *
      */
+    @XmlAttribute(name = "Extend")
     public int getExtend() {
         if (extend == null) {
             return  0;
@@ -201,6 +199,7 @@ public class CTAxialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "StartPoint", required = true)
     public String getStartPoint() {
         return startPoint;
     }
@@ -225,6 +224,7 @@ public class CTAxialShd {
      *     {@link String }
      *
      */
+    @XmlAttribute(name = "EndPoint", required = true)
     public String getEndPoint() {
         return endPoint;
     }
@@ -248,29 +248,27 @@ public class CTAxialShd {
      * <p>以下模式片段指定包含在此类中的预期内容。
      *
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Color" type="{http://www.ofdspec.org/2016}CT_Color"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="Position" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      *
      *
      */
-    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlAccessorType(XmlAccessType.PROPERTY)
     @XmlType(name = "", propOrder = {
         "color"
     })
     public static class Segment {
 
-        @XmlElement(name = "Color", required = true)
         protected CTColor color;
-        @XmlAttribute(name = "Position")
         protected Double position;
 
         /**
@@ -281,6 +279,7 @@ public class CTAxialShd {
          *     {@link CTColor }
          *
          */
+        @XmlElement(name = "Color", required = true)
         public CTColor getColor() {
             return color;
         }
@@ -305,6 +304,7 @@ public class CTAxialShd {
          *     {@link Double }
          *
          */
+        @XmlAttribute(name = "Position")
         public Double getPosition() {
             return position;
         }
