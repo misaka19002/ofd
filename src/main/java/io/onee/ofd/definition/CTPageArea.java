@@ -1,8 +1,8 @@
 //
 // 此文件是由 JavaTM Architecture for XML Binding (JAXB) 引用实现 v2.3.2 生成的
-// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+// 请访问 <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a>
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2020.04.21 时间 04:53:53 PM CST 
+// 生成时间: 2020.04.21 时间 04:53:53 PM CST
 //
 
 
@@ -16,9 +16,9 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * <p>CT_PageArea complex type的 Java 类。
- * 
+ *
  * <p>以下模式片段指定包含在此类中的预期内容。
- * 
+ *
  * <pre>
  * &lt;complexType name="CT_PageArea"&gt;
  *   &lt;complexContent&gt;
@@ -33,8 +33,8 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
  * </pre>
- * 
- * 
+ *
+ *
  */
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlType(name = "CT_PageArea", propOrder = {
@@ -52,11 +52,11 @@ public class CTPageArea {
 
     /**
      * 获取physicalBox属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @XmlElement(name = "PhysicalBox", required = true)
     public String getPhysicalBox() {
@@ -65,11 +65,11 @@ public class CTPageArea {
 
     /**
      * 设置physicalBox属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setPhysicalBox(String value) {
         this.physicalBox = value;
@@ -77,11 +77,11 @@ public class CTPageArea {
 
     /**
      * 获取applicationBox属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @XmlElement(name = "ApplicationBox")
     public String getApplicationBox() {
@@ -90,11 +90,11 @@ public class CTPageArea {
 
     /**
      * 设置applicationBox属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setApplicationBox(String value) {
         this.applicationBox = value;
@@ -102,11 +102,11 @@ public class CTPageArea {
 
     /**
      * 获取contentBox属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @XmlElement(name = "ContentBox")
     public String getContentBox() {
@@ -115,11 +115,11 @@ public class CTPageArea {
 
     /**
      * 设置contentBox属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setContentBox(String value) {
         this.contentBox = value;
@@ -127,11 +127,11 @@ public class CTPageArea {
 
     /**
      * 获取bleedBox属性的值。
-     * 
+     *
      * @return
      *     possible object is
      *     {@link String }
-     *     
+     *
      */
     @XmlElement(name = "BleedBox")
     public String getBleedBox() {
@@ -140,11 +140,11 @@ public class CTPageArea {
 
     /**
      * 设置bleedBox属性的值。
-     * 
+     *
      * @param value
      *     allowed object is
      *     {@link String }
-     *     
+     *
      */
     public void setBleedBox(String value) {
         this.bleedBox = value;
