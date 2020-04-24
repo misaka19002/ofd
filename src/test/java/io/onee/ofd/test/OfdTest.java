@@ -1,5 +1,8 @@
 package io.onee.ofd.test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
 import io.onee.ofd.definition.CTDocInfo;
 import io.onee.ofd.definition.OFD;
 import org.junit.Test;
@@ -18,6 +21,23 @@ public class OfdTest {
     public void blankOfd() {
         OFD ofd = new OFD();
         ByteArrayOutputStream os = new ByteArrayOutputStream();
+        JAXB.marshal(ofd, os);
+        System.out.println(os.toString());
+    }
+    
+    @Test
+    public void blankOfdJackson() throws JsonProcessingException {
+        OFD ofd = new OFD();
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+    
+        JaxbAnnotationModule module = new JaxbAnnotationModule();
+        XmlMapper objectMapper = XmlMapper.xmlBuilder().build();
+        objectMapper.registerModule(module);
+    
+        String jacksonResult = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(ofd);
+        System.out.println(jacksonResult);
+        System.out.println("---------------------------------------------------------------------------");
+        
         JAXB.marshal(ofd, os);
         System.out.println(os.toString());
     }
