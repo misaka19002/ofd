@@ -167,7 +167,7 @@ public class CTFont {
     }
 
     /**
-     * 设置charset属性的值。
+     * 设置charset属性的值。 symbol 、prc 、 big5 、 unicode。默认值为 unicode
      *
      * @param value
      *     allowed object is

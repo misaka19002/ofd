@@ -26,7 +26,6 @@ public class DocumentTest {
      *      - DefaultCS
      *     Pages √
      *      - Page √
-     *       - Page √
      *     Permissions x
      *     Actions x
      *     VPreferences x
@@ -58,15 +57,25 @@ public class DocumentTest {
     @Test
     public void simpleDocument() {
     
+        //commonData - pageArea
         CTPageArea pageArea = new CTPageArea();
         pageArea.setPhysicalBox("0 0 210 297");
-//        pageArea.setApplicationBox("0 0 210 297");
-//        pageArea.setContentBox("0 0 210 297");
+        //pageArea.setApplicationBox("0 0 210 297");
+        //pageArea.setContentBox("0 0 210 297");
         
+        //commonData - TemplatePage
+        Document.CommonData.TemplatePage templatePage = new Document.CommonData.TemplatePage();
+        templatePage.setID(1);
+        templatePage.setName("templateName");
+        templatePage.setZOrder("Background");
+        templatePage.setBaseLoc("TPLS/TPL_1/Content.xml");
         //commonData
         Document.CommonData commonData = new Document.CommonData();
         commonData.setMaxUnitID(1);
         commonData.setPageArea(pageArea);
+        commonData.getPublicRes().add("PublicRes.xml");
+        commonData.getDocumentRes().add("DocumentRes.xml");
+        commonData.getTemplatePage().add(templatePage);
     
         
         //pages
@@ -76,6 +85,11 @@ public class DocumentTest {
         
         Document.Pages pages = new Document.Pages();
         pages.getPage().add(page);
+        
+        //annotations delay
+        //attachments delay
+        //customTags delay
+        
         
         //组装
         Document document = new Document();

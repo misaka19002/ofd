@@ -86,7 +86,7 @@ public class CTMultiMedia {
     }
 
     /**
-     * 获取type属性的值。
+     * 获取type属性的值。Image、Audio、Video 取值
      *
      * @return
      *     possible object is

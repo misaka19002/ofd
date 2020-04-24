@@ -77,7 +77,7 @@ import java.util.List;
 @XmlType(name = "CT_Text", propOrder = {
     "fillColor",
     "strokeColor",
-    "cgTransformAndTextCode"
+    "CGTransformAndTextCode"
 })
 @XmlSeeAlso({
     CTPageBlock.TextObject.class
