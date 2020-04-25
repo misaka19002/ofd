@@ -1,15 +1,23 @@
 package io.onee.ofd.test;
 
+import com.ctc.wstx.stax.WstxOutputFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
+import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import io.onee.ofd.definition.CTDocInfo;
 import io.onee.ofd.definition.OFD;
+import io.onee.ofd.definition.ObjectFactory;
 import org.junit.Test;
 
 import javax.xml.bind.JAXB;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.Marshaller;
+import javax.xml.stream.XMLOutputFactory;
+import javax.xml.stream.XMLStreamWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.UUID;
 
 /**
@@ -81,6 +89,30 @@ public class OfdTest {
         ByteArrayOutputStream os = new ByteArrayOutputStream();
         JAXB.marshal(ofd, os);
         System.out.println(os.toString());
+        System.out.println("------------------------------------------------------------------");
+    
+        StringWriter stringWriter = new StringWriter();
+        //com.ctc.wstx.stax.WstxOutputFactory
+        XMLOutputFactory factory = WstxOutputFactory.newFactory();
+        try {
+            XMLStreamWriter writer1 = factory.createXMLStreamWriter(stringWriter);
+            XMLStreamWriter writer2 = new IndentingXMLStreamWriter(writer1);
+        
+            //xmlOutputFactory.createXMLStreamWriter(System.out);
+            //ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            //xmlOutputFactory.createXMLStreamWriter(bos);
+            JAXBContext jc = JAXBContext.newInstance(ObjectFactory.class);
+            Marshaller m = jc.createMarshaller();
+//            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        
+            m.marshal(ofd, writer2);
+            stringWriter.flush();
+            // output pretty printed
+        
+            System.out.println(stringWriter.toString());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     
         /**
          <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -97,14 +129,6 @@ public class OfdTest {
          </ofd:DocBody>
          </ofd:OFD>
          */
-    /*
-    
-        CTAction action = new CTAction();
-        JAXB.marshal(action, System.out);
-    
-        
-        CTPermission ctPermission = new CTPermission();
-        JAXB.marshal(ctPermission, System.out);*/
     }
     
     /*
