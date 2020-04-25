@@ -1,6 +1,9 @@
 package io.onee.ofd.test.page;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.dataformat.xml.JacksonXmlModule;
+import com.fasterxml.jackson.dataformat.xml.XmlMapper;
+import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
 import io.onee.ofd.definition.*;
 import org.junit.Test;
 
@@ -15,7 +18,7 @@ import javax.xml.bind.JAXB;
  * protected Content content;
  * protected Actions actions;
  */
-public class PageTest {
+public class PageJacksonTest {
     
     @Test
     public void simplePage() throws JsonProcessingException {
@@ -73,5 +76,18 @@ public class PageTest {
         page.setContent(content);
         
         JAXB.marshal(page,System.out);
+    
+        System.out.println("------------------------------------------------------------------");
+        
+        JaxbAnnotationModule jaxbModule = new JaxbAnnotationModule();
+        XmlMapper objectMapper = XmlMapper.xmlBuilder().build();
+        JacksonXmlModule xmlModule = new JacksonXmlModule();
+        xmlModule.setDefaultUseWrapper(false);
+        objectMapper.registerModule(jaxbModule);
+        objectMapper.registerModule(xmlModule);
+    
+        String jacksonResult = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(page);
+        System.out.println(jacksonResult);
+        System.out.println("------------------------------------------------------------------");
     }
 }
