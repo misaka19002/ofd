@@ -4,6 +4,7 @@ import com.ctc.wstx.stax.WstxOutputFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import com.fasterxml.jackson.module.jaxb.JaxbAnnotationModule;
+import com.sun.xml.internal.bind.v2.ContextFactory;
 import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import io.onee.ofd.definition.CTDocInfo;
 import io.onee.ofd.definition.OFD;
@@ -18,6 +19,7 @@ import javax.xml.stream.XMLStreamWriter;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.util.Collections;
 import java.util.UUID;
 
 /**
@@ -29,8 +31,61 @@ public class OfdTest {
     public void blankOfd() {
         OFD ofd = new OFD();
         ByteArrayOutputStream os = new ByteArrayOutputStream();
+        //生成方式1
         JAXB.marshal(ofd, os);
+        /**
+         <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+         <ofd:OFD xmlns:ofd="http://www.ofdspec.org/2016" DocType="OFD" Version="1.0"/>
+         */
         System.out.println(os.toString());
+        System.out.println("--------------------------------------------------------------------------------------------");
+        
+        
+        try {
+            //生成方式2
+            Class[] clazz = new Class[]{ObjectFactory.class};
+            Marshaller m1 = ContextFactory.createContext( clazz, Collections.emptyMap()).createMarshaller();
+            
+            StringWriter stringWriter11 = new StringWriter();
+            XMLStreamWriter writer11 = XMLOutputFactory.newFactory().createXMLStreamWriter(stringWriter11);
+            XMLStreamWriter writer22 = new IndentingXMLStreamWriter(writer11);
+    
+            m1.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+            m1.marshal(ofd,writer22);
+            /**
+             <?xml version='1.0' encoding='UTF-8'?>
+             <ofd:OFD xmlns:ofd="http://www.ofdspec.org/2016" DocType="OFD" Version="1.0"/>
+             */
+            System.out.println(stringWriter11.toString());
+            
+            
+            /**
+             <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+             <ofd:OFD xmlns:ofd="http://www.ofdspec.org/2016" DocType="OFD" Version="1.0"/>
+             */
+            m1.marshal(ofd, System.out);
+            System.out.println("--------------------------------------------------------------------------------------------");
+            
+            //生成方式3
+            JAXBContext jc = JAXBContext.newInstance(ObjectFactory.class);
+            Marshaller m = jc.createMarshaller();
+            m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT,true);
+            StringWriter stringWriter = new StringWriter();
+            XMLStreamWriter writer1 = XMLOutputFactory.newFactory().createXMLStreamWriter(stringWriter);
+            XMLStreamWriter writer2 = new IndentingXMLStreamWriter(writer1);
+            
+            m.marshal(ofd, writer2);
+    
+            /**
+             <?xml version='1.0' encoding='UTF-8'?>
+             <ofd:OFD xmlns:ofd="http://www.ofdspec.org/2016" DocType="OFD" Version="1.0"/>
+             */
+            System.out.println(stringWriter.toString());
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    
     }
     
     @Test
