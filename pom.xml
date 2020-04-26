@@ -23,10 +23,18 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- 测试jackson 序列化，jackson-xml依赖woodstox -->
         <dependency>
             <groupId>com.fasterxml.jackson.dataformat</groupId>
             <artifactId>jackson-dataformat-xml</artifactId>
             <version>2.10.3</version>
+        </dependency>
+
+        <!-- 测试woodstox序列化，woodstox-core仅依赖stax2-api，不依赖jackson -->
+        <dependency>
+            <groupId>com.fasterxml.woodstox</groupId>
+            <artifactId>woodstox-core</artifactId>
+            <version>6.1.1</version>
         </dependency>
 
     </dependencies>
