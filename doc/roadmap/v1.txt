@@ -1,0 +1,23 @@
+date:2020-05-14
+
+file.ofd
+├─Doc_0
+│ ├─Pages
+│ │ ├─Page_0
+│ │ │ └─Content.xml
+│ │ └─Page_1
+│ │   └─Content.xml
+│ ├─TPLS
+│ │ ├─TPLS_0
+│ │ │ └─Content.xml
+│ │ └─TPLS_1
+│ │   └─Content.xml
+│ ├─Res
+│ │ ├─font
+│ │ │ ├─font_0.otf
+│ │ │ └─font_1.ttf
+│ │ └─img
+│ │   └─aa.png
+│ ├─Document.xml
+│ └─DocumentRes.xml
+└─OFD.xml
