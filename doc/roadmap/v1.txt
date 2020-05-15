@@ -20,4 +20,4 @@ file.ofd
 │ │   └─aa.png
 │ ├─Document.xml
 │ └─DocumentRes.xml
-└─OFD.xml
+└─OFD.xml (√)

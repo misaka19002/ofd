@@ -9,6 +9,7 @@ import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import io.onee.ofd.definition.CTDocInfo;
 import io.onee.ofd.definition.OFD;
 import io.onee.ofd.definition.ObjectFactory;
+import io.onee.ofd.other.ODateTime;
 import org.junit.Test;
 
 import javax.xml.bind.JAXB;
@@ -126,6 +127,9 @@ public class OfdTest {
         //docBody - docInfo
         CTDocInfo docInfo = new CTDocInfo();
         docInfo.setDocID(UUID.randomUUID().toString());
+        //@XmlSchemaType(name = "date") 可取值date/time/dateTime
+        docInfo.setCreationDate(ODateTime.now());
+        docInfo.setModDate(ODateTime.now());
         
         //docBody - docInfo - customDatas
         CTDocInfo.CustomDatas customDatas = new CTDocInfo.CustomDatas();
@@ -134,6 +138,14 @@ public class OfdTest {
         data.setValue("customDataValue");
         customDatas.getCustomData().add(data);
         docInfo.setCustomDatas(customDatas);
+        
+        //docBody - versions
+        OFD.DocBody.Versions versions = new OFD.DocBody.Versions();
+        OFD.DocBody.Versions.Version version = new OFD.DocBody.Versions.Version();
+        //version.setBaseLoc(); //这里关联DocVersion
+        versions.getVersion().add(version);
+        
+        docBody.setVersions(versions);
         
         //docBody - docInfo
         docBody.setDocInfo(docInfo);
