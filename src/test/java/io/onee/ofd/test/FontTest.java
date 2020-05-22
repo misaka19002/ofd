@@ -72,8 +72,8 @@ public class FontTest {
         String dd = "abcdefghijklmnopqrstuvwxyz哈";
         for (char s : dd.toCharArray()) {
             int charWid = fm.charWidth(s);
-            double delta1 = getCharWidthScale(s, font.getSize2D());
-            double delta2 = getCharWidthScaleNew(s, font.getSize2D());
+            float delta1 = getCharWidthScale(s, font.getSize2D());
+            float delta2 = getCharWidthScaleNew(s, font.getSize2D());
             System.out.println(String.format("char: %s | charWidth: %s | height: %s | halfWid: %s | dynamicWid: %s", s, charWid, fm
                     .getHeight(), delta1, delta2));
         }
@@ -85,26 +85,25 @@ public class FontTest {
      * @param txt 字符
      * @return 0~1 占比
      */
-    public double getCharWidthScale(char txt, double pointSize) {
+    public float getCharWidthScale(char txt, float pointSize) {
         // 如果存在字符映射那么从字符映射中获取宽度占比
         //1 inch = 2.54cm;   1 inch = 72 point(点/磅); 所以1 point = 0.0003527778(m) = 0.3527778 (mm)
         // default metrics for compatibility with legacy code
+    
         double d = (txt >= 32 && txt <= 126) ? 0.5 : 1;
-        double rate = 0.3528d;
-        double mm = pointSize * rate * d;
-        return new BigDecimal(mm).setScale(3, ROUND_HALF_UP).doubleValue();
+        BigDecimal rate = new BigDecimal(0.352778);
+        BigDecimal mm = new BigDecimal(pointSize).multiply(rate).multiply(new BigDecimal(d));
+        return mm.setScale(3, ROUND_HALF_UP).floatValue();
     }
     
-    public double getCharWidthScaleNew(char txt, double pointSize) {
-        //todo 使用sfntly 计算 hmtxTable.advanceWidth(gid)/hheaTable.advanceWidthMax() 获得advCache,此方式获得的deltax于word上表现一致。
-        // 所有的 [32,126]之外字均使用 1.0的倍率。
-        double[] advCache = {};//length 95
-        if (txt >= 32 && txt <= 126) {
-            pointSize = advCache[txt - 32] * pointSize;
+    public float getCharWidthScaleNew(char txt, float pointSize) {
+        float[] advCache = new float[]{1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.0f, 0.0f, 1.0f, 1.0f, 0.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 0.5f, 0.5f, 0.5f, 1.0f, 0.5f, 0.714286f, 0.785714f, 0.5f, 0.285714f, 0.285714f, 0.5f, 0.714286f, 0.5f, 0.714286f, 0.5f, 0.642857f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.785714f, 0.714286f, 0.785714f, 0.5f, 1.0f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.5f, 0.571429f, 0.5f, 0.214286f, 0.428571f, 0.571429f, 0.428571f, 0.571429f, 0.5f, 0.5f, 0.428571f, 0.5f, 0.571429f, 0.428571f, 0.5f, 0.5f, 0.5f, 0.642857f, 0.5f, 0.428571f, 0.5f, 0.285714f, 0.642857f, 0.285714f, 0.357143f, 0.5f, 0.5f, 0.428571f, 0.357143f, 0.357143f, 0.357143f, 0.357143f, 0.357143f, 0.428571f, 0.357143f, 0.142857f, 0.285714f, 0.5f, 0.142857f, 0.571429f, 0.357143f, 0.357143f, 0.357143f, 0.357143f, 0.285714f, 0.357143f, 0.357143f, 0.357143f, 0.428571f, 0.571429f, 0.5f, 0.5f, 0.357143f, 0.285714f, 0.214286f, 0.285714f, 0.428571f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f, 1.0f};
+        if (txt < 256) {
+            pointSize = advCache[txt] * pointSize;
         }
-        double rate = 0.3528d;
-        double mm = pointSize * rate;
-        return new BigDecimal(mm).setScale(3, ROUND_HALF_UP).floatValue();
+        BigDecimal rate = new BigDecimal(0.352778);
+        BigDecimal mm = new BigDecimal(pointSize).multiply(rate);
+        return mm.setScale(3, ROUND_HALF_UP).floatValue();
     }
     
     

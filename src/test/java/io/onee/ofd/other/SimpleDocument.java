@@ -10,6 +10,7 @@ import java.util.zip.ZipOutputStream;
 
 import static io.onee.ofd.definition.Document.CommonData;
 import static io.onee.ofd.definition.Document.Pages;
+import static io.onee.ofd.other.SimpleOFD.PRETTY_OUTPUT;
 
 /**
  * Created by admin on 2020/5/15 9:35:37.
@@ -25,12 +26,12 @@ public class SimpleDocument implements Writable {
     
     public SimpleDocument() {
         CommonData commonData = new CommonData();
-        Pages pages = new Pages();
+        commonData.setPageArea(PageArea.A4.toCTPageArea());
         this.documentId = elementId.getAndIncrement();
         this.path = String.format("Doc_%s/Document.xml", documentId);
         this.document = new Document();
         this.document.setCommonData(commonData);
-        this.document.setPages(pages);
+        this.document.setPages(new Pages());
     }
     
     public String getPath() {
@@ -38,8 +39,9 @@ public class SimpleDocument implements Writable {
     }
     
     public SimplePage newPage() {
-        SimplePage simplePage = new SimplePage();
+        SimplePage simplePage = new SimplePage(elementId, String.format("Pages/Page_%s/Content.xml"));
         this.simplePages.add(simplePage);
+        document.getPages().getPage().add(simplePage.getPagesPage());
         return simplePage;
     }
     
@@ -48,13 +50,18 @@ public class SimpleDocument implements Writable {
      * @param pageIndex pageList index
      */
     public void removePage(int pageIndex) {
-        this.simplePages.remove(pageIndex);
+        //todo set simplePage params
+        SimplePage simplePage = this.simplePages.remove(pageIndex);
+        document.getPages().getPage().remove(simplePage.getPagesPage());
+        
     }
     
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
         try {
-            writeZipEntry(path, SimpleOFDWriter.toXmlString(document, true), zipOutputStream);
+            document.getCommonData().setMaxUnitID(elementId.get());
+            
+            writeZipEntry(path, SimpleOFDWriter.toXmlString(document, PRETTY_OUTPUT), zipOutputStream);
             simplePages.forEach(simplePage -> simplePage.toXml(zipOutputStream));
         } catch (IOException e) {
             e.printStackTrace();

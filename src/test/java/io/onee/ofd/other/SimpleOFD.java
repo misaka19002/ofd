@@ -15,6 +15,8 @@ import static io.onee.ofd.definition.OFD.DocBody;
  */
 public class SimpleOFD implements Writable {
     
+    static boolean PRETTY_OUTPUT = true;
+    
     private static String DEFAULT_CREATOR         = "ONEE_OFD";
     private static String DEFAULT_CREATOR_VERSION = "0.0.1";
     
@@ -58,17 +60,20 @@ public class SimpleOFD implements Writable {
         return this;
     }
     
+    public void setPrettyOutput(boolean prettyOutput) {
+        PRETTY_OUTPUT = prettyOutput;
+    }
+    
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
         try {
             //本元素生成
-            //todo write ofd.xml
-            writeZipEntry("OFD.xml", SimpleOFDWriter.toXmlString(ofd, true), zipOutputStream);
+            //write ofd.xml
+            writeZipEntry("OFD.xml", SimpleOFDWriter.toXmlString(ofd, PRETTY_OUTPUT), zipOutputStream);
         
             //子元素生成
-            //todo write doc
+            //write doc
             document.toXml(zipOutputStream);
-            
             zos.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -82,4 +87,6 @@ public class SimpleOFD implements Writable {
         this.toXml(zos);
         return bos;
     }
+    
+    
 }
