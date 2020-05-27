@@ -4,7 +4,7 @@ import io.onee.ofd.other.PageArea;
 import io.onee.ofd.other.SimpleOFD;
 import io.onee.ofd.other.SimplePage;
 import io.onee.ofd.other.TextContent;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

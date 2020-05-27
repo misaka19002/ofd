@@ -1,6 +1,6 @@
 package io.onee.ofd.roadmap;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 /**
  * Created by admin on 2020/5/14 17:57:17.

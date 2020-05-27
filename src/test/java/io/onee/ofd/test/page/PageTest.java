@@ -2,7 +2,7 @@ package io.onee.ofd.test.page;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import io.onee.ofd.definition.*;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXB;
 

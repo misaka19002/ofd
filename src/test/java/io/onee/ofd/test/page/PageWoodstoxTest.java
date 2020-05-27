@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import io.onee.ofd.definition.*;
 import io.onee.ofd.other.SimpleOFDWriter;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXB;
 import javax.xml.bind.JAXBContext;

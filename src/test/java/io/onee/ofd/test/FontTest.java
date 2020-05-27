@@ -1,6 +1,6 @@
 package io.onee.ofd.test;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import sun.font.FontDesignMetrics;
 
 import java.awt.*;

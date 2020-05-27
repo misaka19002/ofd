@@ -10,7 +10,7 @@ import io.onee.ofd.definition.CTDocInfo;
 import io.onee.ofd.definition.OFD;
 import io.onee.ofd.definition.ObjectFactory;
 import io.onee.ofd.other.ODateTime;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXB;
 import javax.xml.bind.JAXBContext;

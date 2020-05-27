@@ -1,7 +1,7 @@
 package io.onee.ofd.test.document;
 
 import io.onee.ofd.definition.Res;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import javax.xml.bind.JAXB;
 
