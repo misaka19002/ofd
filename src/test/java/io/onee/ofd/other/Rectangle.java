@@ -62,6 +62,8 @@ public class Rectangle {
     public CTPageArea toCTPageArea() {
         CTPageArea pageArea = new CTPageArea();
         pageArea.setPhysicalBox(this.toString());
+        pageArea.setApplicationBox(this.toString());
+        pageArea.setContentBox(this.toString());
         return pageArea;
     }
 }

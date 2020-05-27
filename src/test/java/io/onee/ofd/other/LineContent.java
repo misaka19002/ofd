@@ -2,6 +2,8 @@ package io.onee.ofd.other;
 
 import io.onee.ofd.definition.CTPageBlock;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * Created by admin on 2020/5/19 17:28:07.
  */
@@ -12,7 +14,8 @@ public class LineContent extends SimpleContent<CTPageBlock.PathObject> {
     public static double LINE_WIDTH_MIDDLE = 0.3d;
     public static double LINE_WIDTH_WIDE = 0.6d;
     
-    public LineContent() {
+    LineContent(AtomicInteger elementId) {
+        super(elementId);
         this.graphicUnit = new CTPageBlock.PathObject();
     }
     
@@ -35,7 +38,5 @@ public class LineContent extends SimpleContent<CTPageBlock.PathObject> {
      *
      */
     public void addValue() {
-        this.graphicUnit.setAbbreviatedData();
-    
     }
 }

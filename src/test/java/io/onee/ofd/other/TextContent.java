@@ -6,6 +6,7 @@ import io.onee.ofd.definition.CTText;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
 
 import static java.math.BigDecimal.ROUND_HALF_UP;
@@ -19,8 +20,15 @@ public class TextContent extends SimpleContent<CTPageBlock.TextObject> {
     double height = -1;
     List<Double> deltaX = new ArrayList<>();
     
-    public TextContent() {
+    TextContent(AtomicInteger elementId) {
+        super(elementId);
         this.graphicUnit = new CTPageBlock.TextObject();
+        this.graphicUnit.setID(elementId.getAndIncrement());
+        this.graphicUnit.setFont(SimpleRes.minFontId);
+    }
+    
+    public void setFontId(int fontId) {
+        this.graphicUnit.setFont(fontId);
     }
     
     public void setValue(String value) {
@@ -31,18 +39,23 @@ public class TextContent extends SimpleContent<CTPageBlock.TextObject> {
          *  </ofd:TextObject>
          */
         this.value = value;
-        this.graphicUnit.setBoundary(String.format("30 50 %s %s", this.getWidth(), this.getHeight()));
-        this.graphicUnit.setFont(1);
-        this.graphicUnit.setSize(this.fontSize);
+        //todo 调整 boundary
+        this.graphicUnit.setBoundary(String.format("15.1 25.4 %s %s", this.getWidth(), this.getHeight()));
+        this.graphicUnit.setSize(5);
         
         CTText.TextCode textCode = new CTText.TextCode();
         textCode.setValue(value);
+        //todo 调整 x,y 坐标
         textCode.setX(0d);
-        textCode.setY(0d);
+        textCode.setY(this.getAscent());
         textCode.setDeltaX(deltaX.stream().map(String::valueOf).collect(Collectors.joining(" ")));
         
         this.graphicUnit.getCGTransformAndTextCode().clear();
         this.graphicUnit.getCGTransformAndTextCode().add(textCode);
+    }
+    
+    public double getAscent() {
+        return this.ascent * rate;
     }
     
     public double getHeight() {

@@ -32,12 +32,13 @@ public class SimpleOFDWriter {
     
     public static String toXmlString(Object obj, boolean pretty) {
         try {
-            XMLStreamWriter writer = factory.createXMLStreamWriter(new StringWriter());
+            StringWriter stringWriter = new StringWriter();
+            XMLStreamWriter xmlStreamWriter = factory.createXMLStreamWriter(stringWriter);
             if (pretty) {
-                writer = new IndentingXMLStreamWriter(writer);
+                xmlStreamWriter = new IndentingXMLStreamWriter(xmlStreamWriter);
             }
-            m.marshal(obj, writer);
-            return writer.toString();
+            m.marshal(obj, xmlStreamWriter);
+            return stringWriter.toString();
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipOutputStream;
 
 import static io.onee.ofd.definition.Document.Pages;
-import static io.onee.ofd.other.SimpleOFD.PRETTY_OUTPUT;
+import static io.onee.ofd.other.SimpleOFD.*;
 
 /**
  * Created by admin on 2020/5/15 10:36:34.
@@ -24,14 +24,14 @@ public class SimplePage implements Writable {
     
     private AtomicInteger elementId;
     
-    public SimplePage(AtomicInteger elementId, String path) {
+    public SimplePage(AtomicInteger elementId) {
         Page.Content content = new Page.Content();
         Page.Content.Layer layer = new Page.Content.Layer();
         layer.setID(elementId.getAndIncrement());
         content.getLayer().add(layer);
-        
+    
         this.elementId = elementId;
-        this.pagesPage.setBaseLoc(path);
+        this.pagesPage.setBaseLoc(String.format("Pages/Page_%s/Content.xml", elementId.getAndIncrement()));
         this.pagesPage.setID(elementId.getAndIncrement());
         this.page.setArea(PageArea.A4.toCTPageArea());
         this.page.setContent(content);
@@ -49,8 +49,7 @@ public class SimplePage implements Writable {
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
         try {
-            writeZipEntry(pagesPage.getBaseLoc(), SimpleOFDWriter.toXmlString(page, PRETTY_OUTPUT), zipOutputStream);
-            
+            writeZipEntry(String.format("Doc_%s/%s", DOCID, pagesPage.getBaseLoc()), SimpleOFDWriter.toXmlString(page, PRETTY_OUTPUT), zipOutputStream);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -59,6 +58,19 @@ public class SimplePage implements Writable {
     public SimplePage setArea(CTPageArea ctPageArea) {
         this.page.setArea(ctPageArea);
         return this;
+    }
+    
+    public SimplePage setArea(PageArea pageArea) {
+        this.page.setArea(pageArea.toCTPageArea());
+        return this;
+    }
+    
+    public TextContent createTextContent() {
+        return new TextContent(this.elementId);
+    }
+    
+    public LineContent createLineContent() {
+        return new LineContent(this.elementId);
     }
     
     public SimplePage addContent(SimpleContent content) {
@@ -75,8 +87,7 @@ public class SimplePage implements Writable {
          *  </ofd:PathObject>
          */
         //draw layer
-        defaultLayer.getTextObjectOrPathObjectOrImageObject().add(content);
+        defaultLayer.getTextObjectOrPathObjectOrImageObject().add(content.graphicUnit);
         return this;
     }
-    
 }

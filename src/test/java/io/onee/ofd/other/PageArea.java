@@ -92,7 +92,8 @@ public class PageArea extends Rectangle{
     public CTPageArea toCTPageArea() {
         CTPageArea pageArea = new CTPageArea();
         pageArea.setPhysicalBox(super.toString());
-        pageArea.setApplicationBox(this.toString());
+        pageArea.setApplicationBox(super.toString());
+        pageArea.setContentBox(this.toString());
         return pageArea;
     }
 }

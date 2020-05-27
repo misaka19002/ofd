@@ -10,36 +10,34 @@ import java.util.zip.ZipOutputStream;
 
 import static io.onee.ofd.definition.Document.CommonData;
 import static io.onee.ofd.definition.Document.Pages;
-import static io.onee.ofd.other.SimpleOFD.PRETTY_OUTPUT;
+import static io.onee.ofd.other.SimpleOFD.*;
 
 /**
  * Created by admin on 2020/5/15 9:35:37.
  */
 public class SimpleDocument implements Writable {
-    private AtomicInteger elementId = new AtomicInteger(10);
+    private AtomicInteger elementId = new AtomicInteger(50);
     
-    private int      documentId;
     private Document document;
-    private String   path;
     
     private List<SimplePage> simplePages = new ArrayList<>();
     
     public SimpleDocument() {
         CommonData commonData = new CommonData();
         commonData.setPageArea(PageArea.A4.toCTPageArea());
-        this.documentId = elementId.getAndIncrement();
-        this.path = String.format("Doc_%s/Document.xml", documentId);
+        commonData.getPublicRes().add(getPublicRes().name);
+        commonData.getDocumentRes().add(getDocumentRes().name);
         this.document = new Document();
         this.document.setCommonData(commonData);
         this.document.setPages(new Pages());
     }
     
     public String getPath() {
-        return path;
+        return String.format("Doc_%s/Document.xml", DOCID);
     }
     
     public SimplePage newPage() {
-        SimplePage simplePage = new SimplePage(elementId, String.format("Pages/Page_%s/Content.xml"));
+        SimplePage simplePage = new SimplePage(elementId);
         this.simplePages.add(simplePage);
         document.getPages().getPage().add(simplePage.getPagesPage());
         return simplePage;
@@ -56,18 +54,24 @@ public class SimpleDocument implements Writable {
         
     }
     
+    public SimpleRes getPublicRes() {
+        return SimpleRes.PublicRes;
+    }
+    
+    public SimpleRes getDocumentRes() {
+        return SimpleRes.DocumentRes;
+    }
+    
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
         try {
             document.getCommonData().setMaxUnitID(elementId.get());
-            
-            writeZipEntry(path, SimpleOFDWriter.toXmlString(document, PRETTY_OUTPUT), zipOutputStream);
+            writeZipEntry(getPath(), SimpleOFDWriter.toXmlString(document, PRETTY_OUTPUT), zipOutputStream);
+            this.getPublicRes().toXml(zipOutputStream);
+            this.getDocumentRes().toXml(zipOutputStream);
             simplePages.forEach(simplePage -> simplePage.toXml(zipOutputStream));
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    
-    
-    
 }

@@ -17,6 +17,7 @@ public class SimpleOFD implements Writable {
     
     static boolean PRETTY_OUTPUT = true;
     
+    public static int DOCID = 50;
     private static String DEFAULT_CREATOR         = "ONEE_OFD";
     private static String DEFAULT_CREATOR_VERSION = "0.0.1";
     
@@ -66,11 +67,11 @@ public class SimpleOFD implements Writable {
     
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
+        
         try {
             //本元素生成
             //write ofd.xml
             writeZipEntry("OFD.xml", SimpleOFDWriter.toXmlString(ofd, PRETTY_OUTPUT), zipOutputStream);
-        
             //子元素生成
             //write doc
             document.toXml(zipOutputStream);

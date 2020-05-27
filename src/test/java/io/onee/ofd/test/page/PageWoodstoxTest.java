@@ -4,6 +4,7 @@ import com.ctc.wstx.stax.WstxOutputFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.sun.xml.internal.txw2.output.IndentingXMLStreamWriter;
 import io.onee.ofd.definition.*;
+import io.onee.ofd.other.SimpleOFDWriter;
 import org.junit.Test;
 
 import javax.xml.bind.JAXB;
@@ -328,7 +329,7 @@ public class PageWoodstoxTest {
         Page page = new Page();
         page.setArea(pageArea);
         page.setContent(content);
-    
+        SimpleOFDWriter.toXmlString(page);
         // 1w = 1032 ms   1064 ms
         // 10w = 2205 ms  2221 ms
         // 20w = 3280 ms  3222 ms  3283 ms 3386 ms
@@ -358,7 +359,7 @@ public class PageWoodstoxTest {
                 m.marshal(page, writer2);
                 //bos.flush();
                 
-                //System.out.println(bos.toString());
+                System.out.println(bos.toString());
             } catch (Exception e) {
                 e.printStackTrace();
             }
