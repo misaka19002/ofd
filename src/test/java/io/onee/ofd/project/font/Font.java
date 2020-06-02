@@ -79,7 +79,7 @@ public class Font {
     
     public boolean isBold() {
         //italic bold seri monospaced
-        if (getFontName().contains("bold") || getFontName().contains("Bold")) {
+        if (getFontName().toLowerCase().contains("bold") || getFontName().contains("Bold")) {
             return true;
         }
         return false;

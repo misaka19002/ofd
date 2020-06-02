@@ -25,7 +25,7 @@ public class FontFactoryImplTest {
         
         String test = "sflsdjfljsdlfj但是龙卷风螺丝钉解放螺丝钉家里附近都是螺丝钉解放拉开圣诞节理发师大家路附近上的垃圾分类收集的发丝的付款了交互上浪费机会扣税的fkskfj lskdjflksjdflkjlskdjf111316546462165";
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1000; i++) {
             font.stringWidth(test);
         }
         long end = System.currentTimeMillis();
@@ -44,7 +44,7 @@ public class FontFactoryImplTest {
     
         String test = "sflsdjfljsdlfj但是龙卷风螺丝钉解放螺丝钉家里附近都是螺丝钉解放拉开圣诞节理发师大家路附近上的垃圾分类收集的发丝的付款了交互上浪费机会扣税的fkskfj lskdjflksjdflkjlskdjf111316546462165";
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < 1000; i++) {
             font.stringWidth(test);
         }
         long end = System.currentTimeMillis();
