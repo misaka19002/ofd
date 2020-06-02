@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 import static org.apache.fontbox.ttf.NameRecord.*;
@@ -18,6 +19,7 @@ import static org.apache.fontbox.ttf.NameRecord.*;
  * Created by admin on 2020/5/27 14:53:21.
  */
 public class FontFactoryImpl {
+    private Logger logger = Logger.getLogger(FontFactoryImpl.class.getName());
     private String FONT_NAME = "SimSun";
     
     //key: fontName ,value: opentypefont
@@ -42,7 +44,7 @@ public class FontFactoryImpl {
         try {
             //ttc
             if (file.getPath().endsWith("ttc")) {
-                new TrueTypeCollection(new File("d:/data/simsun.ttc")).processAllFonts(x -> {
+                new TrueTypeCollection(file).processAllFonts(x -> {
                     register(x);
                 });
             } else {
@@ -57,6 +59,7 @@ public class FontFactoryImpl {
     public void register(TrueTypeFont font) throws IOException {
         Tuple2<String, String> name = this.getEnglishName(font.getNaming());
         if (fontNames.containsKey(name.f2)) {
+            logger.info(String.format("%s has been registered! skip!", name.f2));
             return;
         } else {
             this.fontNames.put(name.f1, Optional.of(font));

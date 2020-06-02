@@ -1,15 +1,30 @@
 package io.onee.ofd.project.font;
 
+import io.onee.ofd.other.StringUtil;
 import org.apache.fontbox.ttf.TrueTypeFont;
+
+import java.math.BigDecimal;
+import java.util.logging.Logger;
+
+import static java.math.BigDecimal.ROUND_HALF_UP;
 
 /**
  * Created by admin on 2020/5/27 14:53:05.
  */
 public class Font {
+    Logger logger = Logger.getLogger(Font.class.getName());
+    //字号(磅-point) 转 毫米(mm)
+    protected final double rate = 0.352778;
+    //默认14号字(14 point)
+    protected double size = 14.0;
+    //ascent descent (单位point)
+    protected double ascent = 11.197266;
+    protected double descent = 2.7890625;
+    
+    //trueType or openType
+    protected final TrueTypeFont ttf;
     
     private final String fontName;
-    //trueType or openType
-    private final TrueTypeFont ttf;
     
     public Font(String fontName, TrueTypeFont ttf) {
         this.fontName = fontName;
@@ -32,4 +47,41 @@ public class Font {
         return ttf != null;
     }
     
+    public String getFontName() {
+        return fontName;
+    }
+    
+    public double getSize() {
+        return size;
+    }
+    
+    public void setSize(double size) {
+        this.size = size;
+    }
+    
+    /**
+     * 获取字符串宽度，默认实现
+     */
+    public double charWidth(int ch) {
+        double advanceWidth = (ch >= 32 && ch <= 126) ? 0.5 : 1;
+        return new BigDecimal(size * rate * advanceWidth).setScale(3, ROUND_HALF_UP).doubleValue();
+    }
+    
+    /**
+     * 获取字符串宽度，默认实现
+     */
+    public double stringWidth(String str) {
+        if (StringUtil.isNotEmpty(str)) {
+            return str.chars().mapToDouble(this::charWidth).sum();
+        }
+        return 0;
+    }
+    
+    public boolean isBold() {
+        //italic bold seri monospaced
+        if (getFontName().contains("bold") || getFontName().contains("Bold")) {
+            return true;
+        }
+        return false;
+    }
 }

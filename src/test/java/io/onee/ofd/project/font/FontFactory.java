@@ -33,8 +33,12 @@ public final class FontFactory {
         if (optFont == null) {
             throw new FontException(String.format("font: [%s]  doesn't exist. please register first!", fontName));
         } else {
-            Font font = new Font(fontName,optFont.orElse(null));
-            return font;
+            TrueTypeFont font = optFont.orElse(null);
+            if (font == null) {
+                return new Font(fontName, font);
+            } else {
+                return new PhysicFont(fontName,font);
+            }
         }
     }
     
