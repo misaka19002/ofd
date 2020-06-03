@@ -6,6 +6,7 @@ import io.onee.ofd.definition.OFD;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.util.UUID;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipOutputStream;
 
 import static io.onee.ofd.definition.OFD.DocBody;
@@ -13,7 +14,7 @@ import static io.onee.ofd.definition.OFD.DocBody;
 /**
  * Created by admin on 2020/5/14 19:19:13.
  */
-public class SimpleOFD implements Writable {
+public class SimpleOFD extends Element implements Writable  {
     
     static boolean PRETTY_OUTPUT = true;
     
@@ -29,6 +30,7 @@ public class SimpleOFD implements Writable {
     private SimpleDocument document = new SimpleDocument();
     
     public SimpleOFD() {
+        this.elementId = new AtomicInteger();
         //docInfo
         CTDocInfo docInfo = new CTDocInfo();
         docInfo.setDocID(UUID.randomUUID().toString());

@@ -21,6 +21,7 @@ public class FontFactoryImplTest {
     public void fFactory_getFont() {
         FontFactory.register("d:/data/HYKaiTiJ.ttf");
         Font font = FontFactory.getFont("HYKaiTiJ");
+        font.setSize(20);
         Assertions.assertNotNull(font);
         
         String test = "sflsdjfljsdlfj但是龙卷风螺丝钉解放螺丝钉家里附近都是螺丝钉解放拉开圣诞节理发师大家路附近上的垃圾分类收集的发丝的付款了交互上浪费机会扣税的fkskfj lskdjflksjdflkjlskdjf111316546462165";
@@ -31,6 +32,19 @@ public class FontFactoryImplTest {
         long end = System.currentTimeMillis();
         System.out.println("耗时：" + (end - start)+" ms");
     
+    }
+    @Test
+    public void fFactory_width_override() throws Exception{
+        FontFactory.register("d:/data/HYKaiTiJ.ttf");
+        FontFactory.register("d:/data/simsun.ttc");
+        String test = "sss哈哈凡123";
+        Font font = FontFactory.getFont("SimSun");
+        double wid1 = font.stringWidth(test);
+        Font font1 = FontFactory.getFont("HYKaiTiJ");
+        double wid2 = font1.stringWidth(test);
+        System.out.println(wid1);
+        System.out.println(wid2);
+        
     }
     @Test
     public void fFactory_getFont_SimSun() throws Exception{

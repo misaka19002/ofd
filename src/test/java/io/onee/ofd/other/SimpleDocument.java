@@ -5,19 +5,17 @@ import io.onee.ofd.definition.Document;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipOutputStream;
 
 import static io.onee.ofd.definition.Document.CommonData;
 import static io.onee.ofd.definition.Document.Pages;
-import static io.onee.ofd.other.SimpleOFD.*;
+import static io.onee.ofd.other.SimpleOFD.DOCID;
+import static io.onee.ofd.other.SimpleOFD.PRETTY_OUTPUT;
 
 /**
  * Created by admin on 2020/5/15 9:35:37.
  */
-public class SimpleDocument implements Writable {
-    private AtomicInteger elementId = new AtomicInteger(50);
-    
+public class SimpleDocument extends Element implements Writable {
     private Document document;
     
     private List<SimplePage> simplePages = new ArrayList<>();
@@ -65,7 +63,7 @@ public class SimpleDocument implements Writable {
     @Override
     public void toXml(ZipOutputStream zipOutputStream) {
         try {
-            document.getCommonData().setMaxUnitID(elementId.get());
+            document.getCommonData().setMaxUnitID(elementId.getAndIncrement());
             writeZipEntry(getPath(), SimpleOFDWriter.toXmlString(document, PRETTY_OUTPUT), zipOutputStream);
             this.getPublicRes().toXml(zipOutputStream);
             this.getDocumentRes().toXml(zipOutputStream);

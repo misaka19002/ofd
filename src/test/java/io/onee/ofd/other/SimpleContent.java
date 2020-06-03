@@ -1,6 +1,8 @@
 package io.onee.ofd.other;
 
 import io.onee.ofd.definition.CTGraphicUnit;
+import io.onee.ofd.project.font.Font;
+import io.onee.ofd.project.font.FontFactory;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -12,13 +14,10 @@ public class SimpleContent<T extends CTGraphicUnit> {
     AtomicInteger elementId;
     
     T graphicUnit;
-    double fontSize = 14;
-    double ascent = 11.2;
-    double descent = 2.8;
-    //长度单位 point(字号) 转 mm 的比率
-    double rate = 0.352778d;
+    Font font = FontFactory.defaultFont();
     
     public SimpleContent(AtomicInteger elementId) {
         this.elementId = elementId;
     }
+    
 }

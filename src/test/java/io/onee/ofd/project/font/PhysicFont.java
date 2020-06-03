@@ -1,6 +1,5 @@
 package io.onee.ofd.project.font;
 
-import io.onee.ofd.other.StringUtil;
 import org.apache.fontbox.ttf.TrueTypeFont;
 
 import java.math.BigDecimal;
@@ -15,7 +14,7 @@ import static java.math.BigDecimal.ROUND_HALF_UP;
 public class PhysicFont extends Font{
     Logger logger = Logger.getLogger(PhysicFont.class.getName());
     
-    private double maxWidth = 1024;
+    private double maxWidth;
     
     public PhysicFont(String fontName, TrueTypeFont ttf) {
         super(fontName, ttf);
@@ -38,6 +37,7 @@ public class PhysicFont extends Font{
     /**
      * 获取字符串宽度，默认实现
      */
+    @Override
     public double charWidth(int ch) {
         try {
             int gid = ttf.getUnicodeCmapLookup().getGlyphId(ch);
@@ -49,15 +49,5 @@ public class PhysicFont extends Font{
         }
         return super.charWidth(ch);
     }
-    
-    /**
-     * 获取字符串宽度，默认实现
-     */
-    public double stringWidth(String str) {
-        if (StringUtil.isNotEmpty(str)) {
-            return str.chars().mapToDouble(this::charWidth).sum();
-        }
-        return 0;
-    }
-    
+   
 }

@@ -13,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import static io.onee.ofd.project.font.FontFactory.DEFAULT_FONT_NAME;
 import static org.apache.fontbox.ttf.NameRecord.*;
 
 /**
@@ -20,7 +21,6 @@ import static org.apache.fontbox.ttf.NameRecord.*;
  */
 public class FontFactoryImpl {
     private Logger logger = Logger.getLogger(FontFactoryImpl.class.getName());
-    private String FONT_NAME = "SimSun";
     
     //key: fontName ,value: opentypefont
     private Map<String, Optional<TrueTypeFont>> fontNames    = new ConcurrentHashMap<>();
@@ -29,8 +29,8 @@ public class FontFactoryImpl {
     private OTFParser                           parser       = new OTFParser(false, true);
     
     public FontFactoryImpl() {
-        fontNames.put(FONT_NAME, Optional.empty());
-        fontFamilies.put(FONT_NAME, FONT_NAME);
+        fontNames.put(DEFAULT_FONT_NAME, Optional.empty());
+        fontFamilies.put(DEFAULT_FONT_NAME, DEFAULT_FONT_NAME);
     }
     
     public void register(String path) {

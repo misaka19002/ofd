@@ -1,9 +1,6 @@
 package io.onee.ofd.test;
 
-import io.onee.ofd.other.PageArea;
-import io.onee.ofd.other.SimpleOFD;
-import io.onee.ofd.other.SimplePage;
-import io.onee.ofd.other.TextContent;
+import io.onee.ofd.other.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -11,12 +8,23 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.zip.ZipOutputStream;
 
 /**
  * Created by admin on 2020/5/26 14:25:35.
  */
 public class SimpleOFDTest {
 
+    @Test
+    public void simpleDocumentTest() {
+        SimpleOFD ofd = new SimpleOFD();
+        SimpleDocument document = new SimpleDocument();
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        ZipOutputStream zipOutputStream = new ZipOutputStream(baos);
+        ofd.addElement(document);
+        document.toXml(zipOutputStream);
+        System.out.println("aa");
+    }
     @Test
     public void simpleofdTest() {
         //ofd

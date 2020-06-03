@@ -1,15 +1,14 @@
 package io.onee.ofd.project.box;
 
+import io.onee.ofd.other.Rectangle;
+import io.onee.ofd.other.SimpleContent;
+
+import java.util.List;
+
 /**
- * Created by admin on 2020/5/29 13:26:31.
+ * Created by admin on 2020/6/3 14:39:46.
  */
-public class Box {
-    double x;
-    double y;
-    double width;
-    double height;
-    
-    double padding;
-    double margin;
-    double border;
+public abstract class Box extends Rectangle {
+    protected Rectangle parent;
+    protected List<SimpleContent> contentList;
 }

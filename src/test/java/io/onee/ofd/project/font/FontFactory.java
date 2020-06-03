@@ -12,7 +12,7 @@ import java.util.Set;
  * Created by admin on 2020/5/27 14:53:28.
  */
 public final class FontFactory {
-    
+    public static String DEFAULT_FONT_NAME = "SimSun";
     
     private FontFactory() {}
     
@@ -40,6 +40,9 @@ public final class FontFactory {
                 return new PhysicFont(fontName,font);
             }
         }
+    }
+    public static Font defaultFont() {
+        return getFont(DEFAULT_FONT_NAME);
     }
     
     public static Set<String> registeredFontNames() {
