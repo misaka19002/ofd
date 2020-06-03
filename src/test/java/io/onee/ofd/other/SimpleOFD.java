@@ -5,6 +5,8 @@ import io.onee.ofd.definition.OFD;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.zip.ZipOutputStream;
@@ -14,9 +16,10 @@ import static io.onee.ofd.definition.OFD.DocBody;
 /**
  * Created by admin on 2020/5/14 19:19:13.
  */
-public class SimpleOFD extends Element implements Writable  {
+public class SimpleOFD extends Element<SimpleOFD, SimpleDocument> implements Writable  {
     
     static boolean PRETTY_OUTPUT = true;
+    private static final String OFD_XML = "OFD.XML";
     
     public static int DOCID = 50;
     private static String DEFAULT_CREATOR         = "ONEE_OFD";
@@ -26,11 +29,20 @@ public class SimpleOFD extends Element implements Writable  {
     private ByteArrayOutputStream bos = new ByteArrayOutputStream(51200);
     private ZipOutputStream zos = new ZipOutputStream(bos);
     
-    private OFD ofd = new OFD();
-    private SimpleDocument document = new SimpleDocument();
+    private OFD  ofd = new OFD();
     
     public SimpleOFD() {
         this.elementId = new AtomicInteger();
+        this.child = new ArrayList<>();
+    }
+    
+    public List<SimpleDocument> getSimpleDocument() {
+        return this.child;
+    }
+    
+    @Override
+    public SimpleOFD addElement(SimpleDocument document) {
+        super.addElement(document);
         //docInfo
         CTDocInfo docInfo = new CTDocInfo();
         docInfo.setDocID(UUID.randomUUID().toString());
@@ -43,13 +55,10 @@ public class SimpleOFD extends Element implements Writable  {
         docBody.setDocRoot(document.getPath());
         //DocBody.Versions versions = new DocBody.Versions();
         //versions.getVersion().add(new DocBody.Versions.Version());
-        
+    
         //add docBody
         this.ofd.getDocBody().add(docBody);
-    }
-    
-    public SimpleDocument getSimpleDocument() {
-        return this.document;
+        return this;
     }
     
     /**
@@ -73,10 +82,10 @@ public class SimpleOFD extends Element implements Writable  {
         try {
             //本元素生成
             //write ofd.xml
-            writeZipEntry("OFD.xml", SimpleOFDWriter.toXmlString(ofd, PRETTY_OUTPUT), zipOutputStream);
+            writeZipEntry(OFD_XML, SimpleOFDWriter.toXmlString(ofd, PRETTY_OUTPUT), zipOutputStream);
             //子元素生成
             //write doc
-            document.toXml(zipOutputStream);
+            this.child.forEach(x -> x.toXml(zipOutputStream));
             zos.close();
         } catch (IOException e) {
             e.printStackTrace();
